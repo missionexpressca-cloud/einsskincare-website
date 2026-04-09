@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eins Contact</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo-text">Eins</a>
+    </div>
+
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="brand.html" data-i18n="nav.brand">Brand</a>
+      <a href="products.html" data-i18n="nav.products">Products</a>
+      <a href="partner.html" data-i18n="nav.partner">Partner</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="lang-switch">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('zh')">中文</button>
+      <button onclick="setLanguage('fr')">FR</button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <img src="assets/img/hero/contact-hero.jpg" alt="Contact Eins">
+    <div class="page-hero-overlay">
+      <h1 data-i18n="contactPage.title">Contact Eins</h1>
+      <p data-i18n="contactPage.subtitle">For business partnerships, product inquiries, and brand communication.</p>
+    </div>
+  </section>
+
+  <section class="content-section two-col">
+    <div>
+      <h2 data-i18n="contactPage.infoTitle">Contact Information</h2>
+      <p><strong>Email:</strong> hello@einsskincare.com</p>
+      <p><strong>Website:</strong> einsskincare.com</p>
+      <p><strong>Brand:</strong> Eins Skincare</p>
+    </div>
+
+    <div>
+      <h2 data-i18n="contactPage.formTitle">Leave a Message</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <input type="text" placeholder="Subject">
+        <textarea rows="6" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn-primary" data-i18n="contactPage.sendButton">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="content-section narrow">
+    <h2 data-i18n="contactPage.noteTitle">Business Note</h2>
+    <p data-i18n="contactPage.noteText">
+      For partnership inquiries, please include your company name, market area, and preferred cooperation model in your message.
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2026 Eins Skincare · einsskincare.com</p>
+  </footer>
+
+  <script src="assets/js/lang.js"></script>
+</body>
+</html>
