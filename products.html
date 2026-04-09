@@ -1,85 +1,135 @@
-<section class="products-grid">
-  <div class="product-card">
-    <img src="assets/img/products/orange-cream/cover.jpg" alt="Orange Radiance Cream">
-    <h3 data-i18n="products.orangeCream.name">Orange Radiance Cream</h3>
-    <p data-i18n="products.orangeCream.subtitle">Antioxidant brightening cream for oily skin</p>
-    <a href="product-orange-cream.html" data-i18n="common.viewMore">View More</a>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eins Products</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo-text">Eins</a>
+    </div>
 
-  <div class="product-card">
-    <img src="assets/img/products/cream-50/cover.jpg" alt="50% Repair Cream">
-    <h3 data-i18n="products.cream50.name">50% Repair Cream</h3>
-    <p data-i18n="products.cream50.subtitle">Firming and barrier support cream</p>
-    <a href="product-50-cream.html" data-i18n="common.viewMore">View More</a>
-  </div>
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="brand.html" data-i18n="nav.brand">Brand</a>
+      <a href="products.html" data-i18n="nav.products">Products</a>
+      <a href="partner.html" data-i18n="nav.partner">Partner</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
 
-  <div class="product-card">
-    <img src="assets/img/products/essence-lotion/cover.jpg" alt="Caviar Essence Lotion">
-    <h3 data-i18n="products.essenceLotion.name">Caviar Essence Lotion</h3>
-    <p data-i18n="products.essenceLotion.subtitle">Luxurious revitalizing essence lotion</p>
-    <a href="product-essence-lotion.html" data-i18n="common.viewMore">View More</a>
-  </div>
+    <div class="lang-switch">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('zh')">中文</button>
+      <button onclick="setLanguage('fr')">FR</button>
+    </div>
+  </header>
 
-  <div class="product-card">
-    <img src="assets/img/products/eye-cream/cover.jpg" alt="Rose Pro-Xylane Eye Cream">
-    <h3 data-i18n="products.eyeCream.name">Rose Pro-Xylane Eye Cream</h3>
-    <p data-i18n="products.eyeCream.subtitle">Hydrating anti-aging eye care</p>
-    <a href="product-eye-cream.html" data-i18n="common.viewMore">View More</a>
-  </div>
+  <section class="page-hero">
+    <img src="assets/img/hero/products-hero.jpg" alt="Eins products">
+    <div class="page-hero-overlay">
+      <h1 data-i18n="productsPage.title">Product Collection</h1>
+      <p data-i18n="productsPage.subtitle">A complete skincare range designed around repair, radiance, hydration, and anti-aging care.</p>
+    </div>
+  </section>
 
-  <div class="product-card">
-    <img src="assets/img/products/orchid-oil/cover.jpg" alt="Orchid Facial Oil">
-    <h3 data-i18n="products.orchidOil.name">Orchid Facial Oil</h3>
-    <p data-i18n="products.orchidOil.subtitle">Nourishing antioxidant facial oil</p>
-    <a href="product-orchid-oil.html" data-i18n="common.viewMore">View More</a>
-  </div>
+  <section class="section-intro">
+    <h2 data-i18n="productsPage.gridTitle">Explore Our Collection</h2>
+    <p data-i18n="productsPage.gridDesc">Discover targeted solutions for brightening, repair, hydration, and daily skin balance.</p>
+  </section>
 
-  <div class="product-card">
-    <img src="assets/img/products/purple-rice-serum/cover.jpg" alt="Purple Rice Serum">
-    <h3 data-i18n="products.purpleRiceSerum.name">Purple Rice Serum</h3>
-    <p data-i18n="products.purpleRiceSerum.subtitle">Plumping and smoothing serum</p>
-    <a href="product-purple-rice-serum.html" data-i18n="common.viewMore">View More</a>
-  </div>
+  <section class="products-grid">
+    <div class="product-card">
+      <img src="assets/img/products/orange-cream/cover.jpg" alt="Orange Radiance Cream">
+      <h3 data-i18n="products.orangeCream.name">Orange Radiance Cream</h3>
+      <p data-i18n="products.orangeCream.subtitle">Antioxidant brightening cream for oily skin</p>
+      <a href="product-orange-cream.html" data-i18n="common.viewMore">View More</a>
+    </div>
 
-  <div class="product-card">
-    <img src="assets/img/products/white-truffle-mask/cover.jpg" alt="White Truffle Sleeping Mask">
-    <h3 data-i18n="products.whiteTruffleMask.name">White Truffle Sleeping Mask</h3>
-    <p data-i18n="products.whiteTruffleMask.subtitle">Overnight radiance and recovery mask</p>
-    <a href="product-white-truffle-mask.html" data-i18n="common.viewMore">View More</a>
-  </div>
+    <div class="product-card">
+      <img src="assets/img/products/cream-50/cover.jpg" alt="50% Repair Cream">
+      <h3 data-i18n="products.cream50.name">50% Repair Cream</h3>
+      <p data-i18n="products.cream50.subtitle">Firming and barrier support cream</p>
+      <a href="product-50-cream.html" data-i18n="common.viewMore">View More</a>
+    </div>
 
-  <div class="product-card">
-    <img src="assets/img/products/oily-toner/cover.jpg" alt="Balancing Toner">
-    <h3 data-i18n="products.oilyToner.name">Balancing Toner</h3>
-    <p data-i18n="products.oilyToner.subtitle">Fresh hydration for oily skin</p>
-    <a href="product-oily-toner.html" data-i18n="common.viewMore">View More</a>
-  </div>
+    <div class="product-card">
+      <img src="assets/img/products/essence-lotion/cover.jpg" alt="Caviar Essence Lotion">
+      <h3 data-i18n="products.essenceLotion.name">Caviar Essence Lotion</h3>
+      <p data-i18n="products.essenceLotion.subtitle">Luxurious revitalizing essence lotion</p>
+      <a href="product-essence-lotion.html" data-i18n="common.viewMore">View More</a>
+    </div>
 
-  <div class="product-card">
-    <img src="assets/img/products/sea-fennel-emulsion/cover.jpg" alt="Sea Fennel Emulsion">
-    <h3 data-i18n="products.seaFennelEmulsion.name">Sea Fennel Emulsion</h3>
-    <p data-i18n="products.seaFennelEmulsion.subtitle">Lightweight repair emulsion for oily skin</p>
-    <a href="product-sea-fennel-emulsion.html" data-i18n="common.viewMore">View More</a>
-  </div>
+    <div class="product-card">
+      <img src="assets/img/products/eye-cream/cover.jpg" alt="Rose Pro-Xylane Eye Cream">
+      <h3 data-i18n="products.eyeCream.name">Rose Pro-Xylane Eye Cream</h3>
+      <p data-i18n="products.eyeCream.subtitle">Hydrating anti-aging eye care</p>
+      <a href="product-eye-cream.html" data-i18n="common.viewMore">View More</a>
+    </div>
 
-  <div class="product-card">
-    <img src="assets/img/products/olive-mask/cover.jpg" alt="Olive Repair Mask">
-    <h3 data-i18n="products.oliveMask.name">Olive Repair Mask</h3>
-    <p data-i18n="products.oliveMask.subtitle">Soothing and barrier-repair sheet mask</p>
-    <a href="product-olive-mask.html" data-i18n="common.viewMore">View More</a>
-  </div>
+    <div class="product-card">
+      <img src="assets/img/products/orchid-oil/cover.jpg" alt="Orchid Facial Oil">
+      <h3 data-i18n="products.orchidOil.name">Orchid Facial Oil</h3>
+      <p data-i18n="products.orchidOil.subtitle">Nourishing antioxidant facial oil</p>
+      <a href="product-orchid-oil.html" data-i18n="common.viewMore">View More</a>
+    </div>
 
-  <div class="product-card">
-    <img src="assets/img/products/sea-grape-mask/cover.jpg" alt="Sea Grape Hydrating Mask">
-    <h3 data-i18n="products.seaGrapeMask.name">Sea Grape Hydrating Mask</h3>
-    <p data-i18n="products.seaGrapeMask.subtitle">Deep hydration and moisture-lock mask</p>
-    <a href="product-sea-grape-mask.html" data-i18n="common.viewMore">View More</a>
-  </div>
+    <div class="product-card">
+      <img src="assets/img/products/purple-rice-serum/cover.jpg" alt="Purple Rice Serum">
+      <h3 data-i18n="products.purpleRiceSerum.name">Purple Rice Serum</h3>
+      <p data-i18n="products.purpleRiceSerum.subtitle">Plumping and smoothing serum</p>
+      <a href="product-purple-rice-serum.html" data-i18n="common.viewMore">View More</a>
+    </div>
 
-  <div class="product-card">
-    <img src="assets/img/products/astaxanthin-mask/cover.jpg" alt="Astaxanthin Brightening Mask">
-    <h3 data-i18n="products.astaxanthinMask.name">Astaxanthin Brightening Mask</h3>
-    <p data-i18n="products.astaxanthinMask.subtitle">Antioxidant glow-boosting sheet mask</p>
-    <a href="product-astaxanthin-mask.html" data-i18n="common.viewMore">View More</a>
-  </div>
-</section>
+    <div class="product-card">
+      <img src="assets/img/products/white-truffle-mask/cover.jpg" alt="White Truffle Sleeping Mask">
+      <h3 data-i18n="products.whiteTruffleMask.name">White Truffle Sleeping Mask</h3>
+      <p data-i18n="products.whiteTruffleMask.subtitle">Overnight radiance and recovery mask</p>
+      <a href="product-white-truffle-mask.html" data-i18n="common.viewMore">View More</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/img/products/oily-toner/cover.jpg" alt="Balancing Toner">
+      <h3 data-i18n="products.oilyToner.name">Balancing Toner</h3>
+      <p data-i18n="products.oilyToner.subtitle">Fresh hydration for oily skin</p>
+      <a href="product-oily-toner.html" data-i18n="common.viewMore">View More</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/img/products/sea-fennel-emulsion/cover.jpg" alt="Sea Fennel Emulsion">
+      <h3 data-i18n="products.seaFennelEmulsion.name">Sea Fennel Emulsion</h3>
+      <p data-i18n="products.seaFennelEmulsion.subtitle">Lightweight repair emulsion for oily skin</p>
+      <a href="product-sea-fennel-emulsion.html" data-i18n="common.viewMore">View More</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/img/products/olive-mask/cover.jpg" alt="Olive Repair Mask">
+      <h3 data-i18n="products.oliveMask.name">Olive Repair Mask</h3>
+      <p data-i18n="products.oliveMask.subtitle">Soothing and barrier-repair sheet mask</p>
+      <a href="product-olive-mask.html" data-i18n="common.viewMore">View More</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/img/products/sea-grape-mask/cover.jpg" alt="Sea Grape Hydrating Mask">
+      <h3 data-i18n="products.seaGrapeMask.name">Sea Grape Hydrating Mask</h3>
+      <p data-i18n="products.seaGrapeMask.subtitle">Deep hydration and moisture-lock mask</p>
+      <a href="product-sea-grape-mask.html" data-i18n="common.viewMore">View More</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/img/products/astaxanthin-mask/cover.jpg" alt="Astaxanthin Brightening Mask">
+      <h3 data-i18n="products.astaxanthinMask.name">Astaxanthin Brightening Mask</h3>
+      <p data-i18n="products.astaxanthinMask.subtitle">Antioxidant glow-boosting sheet mask</p>
+      <a href="product-astaxanthin-mask.html" data-i18n="common.viewMore">View More</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2026 Eins Skincare · einsskincare.com</p>
+  </footer>
+
+  <script src="assets/js/lang.js"></script>
+</body>
+</html>
