@@ -226,12 +226,29 @@
         }
       };
 
-      function getLang() {
-        return localStorage.getItem("language") || document.documentElement.lang || "en";
+      function resolveLang(preferred) {
+        const candidates = [
+          preferred,
+          document.documentElement.getAttribute("lang"),
+          (() => { try { return localStorage.getItem("eins-language"); } catch (error) { return null; } })(),
+          (() => { try { return localStorage.getItem("language"); } catch (error) { return null; } })(),
+          "en"
+        ];
+        const lang = candidates.find((value) => value && copy[value]);
+        return lang || "en";
       }
 
-      function applyCopy() {
-        const lang = copy[getLang()] ? getLang() : "en";
+      function syncLangStorage(lang) {
+        try {
+          localStorage.setItem("language", lang);
+          localStorage.setItem("eins-language", lang);
+        } catch (error) {}
+      }
+
+      function applyCopy(preferredLang) {
+        const lang = resolveLang(preferredLang);
+        document.documentElement.setAttribute("lang", lang);
+        syncLangStorage(lang);
         Object.entries(copy[lang]).forEach(([id, value]) => {
           const el = document.getElementById(id);
           if (el) el.textContent = value;
@@ -242,12 +259,16 @@
       if (typeof originalSetLanguage === "function") {
         window.setLanguage = function (lang) {
           originalSetLanguage(lang);
-          setTimeout(applyCopy, 0);
+          setTimeout(() => applyCopy(lang), 0);
+        };
+      } else {
+        window.setLanguage = function (lang) {
+          applyCopy(lang);
         };
       }
 
       document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(applyCopy, 0);
+        setTimeout(() => applyCopy(), 0);
       });
     })();
   </script>

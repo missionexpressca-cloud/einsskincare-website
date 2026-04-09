@@ -1368,7 +1368,7 @@
 
       const savedLang = (() => {
         try {
-          return localStorage.getItem("language") || localStorage.getItem("eins-language");
+          return document.documentElement.getAttribute("lang") || localStorage.getItem("eins-language") || localStorage.getItem("language");
         } catch (error) {
           return null;
         }
