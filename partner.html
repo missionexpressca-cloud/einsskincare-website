@@ -5,11 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eins Partnership</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 16px 40px;
+    }
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+      flex-shrink: 0;
+    }
+    .brand-logo img {
+      height: 72px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .brand-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+    .brand-logo-text strong {
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+      color: #2f2721;
+    }
+    .brand-logo-text span {
+      font-size: 0.86rem;
+      letter-spacing: 0.04em;
+      color: #6d5d50;
+    }
+    @media (max-width: 900px) {
+      .site-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 20px;
+      }
+      .brand-logo img {
+        height: 64px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="logo-wrap">
-      <a href="index.html" class="logo-text">Eins</a>
+      <a href="index.html" class="brand-logo" aria-label="Eins Home">
+        <img src="assets/img/logo/logo.png" alt="Eins logo">
+        <div class="brand-logo-text">
+          <strong>EINS</strong>
+          <span>Skincare</span>
+        </div>
+      </a>
     </div>
 
     <nav>
