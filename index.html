@@ -1,935 +1,141 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eins | Luxury Skincare</title>
-  <style>
-    :root {
-      --bg: #f7f3ee;
-      --panel: rgba(255,255,255,0.78);
-      --panel-2: #fcfaf7;
-      --text: #231f1a;
-      --muted: #7d746b;
-      --line: rgba(110, 90, 70, 0.14);
-      --shadow: 0 18px 45px rgba(70,50,30,0.06);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --radius-sm: 999px;
-      --max: 1600px;
-    }
-
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    img { max-width: 100%; display: block; }
-    button { font: inherit; }
-    a { color: inherit; text-decoration: none; }
-
-    .page {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 16px;
-    }
-
-    .panel {
-      background: var(--panel);
-      border: 1px solid rgba(255,255,255,0.7);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
-    }
-
-    .header {
-      padding: 28px;
-      margin-bottom: 16px;
-    }
-
-    .header-top {
-      display: flex;
-      gap: 24px;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .eyebrow {
-      font-size: 12px;
-      letter-spacing: 0.45em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    h1 {
-      margin: 10px 0 0;
-      font-size: clamp(34px, 6vw, 64px);
-      line-height: 1.02;
-      letter-spacing: -0.03em;
-    }
-
-    .lead {
-      max-width: 900px;
-      margin-top: 16px;
-      color: #5f564d;
-      font-size: 16px;
-      line-height: 1.9;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(120px, 1fr));
-      gap: 12px;
-      min-width: 320px;
-    }
-
-    .stat {
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(250,248,245,0.86);
-      padding: 16px;
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 22px;
-    }
-
-    .stat span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 12px;
-      letter-spacing: 0.05em;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: 320px minmax(0, 1fr);
-      gap: 16px;
-    }
-
-    .sidebar {
-      padding: 18px;
-      align-self: start;
-      position: sticky;
-      top: 16px;
-    }
-
-    .brand-box {
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(247,241,233,0.92));
-      margin-bottom: 16px;
-    }
-
-    .brand-name {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-
-    .brand-desc {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #6e645b;
-      line-height: 1.8;
-    }
-
-    .filter-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .chip {
-      border: 0;
-      border-radius: var(--radius-sm);
-      padding: 10px 16px;
-      cursor: pointer;
-      background: #efebe6;
-      color: #63584f;
-      transition: 0.22s ease;
-    }
-
-    .chip:hover { background: #e5ded6; }
-    .chip.active { background: #191613; color: #fff; }
-
-    .menu-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 8px 0 12px;
-      color: #8c8278;
-      font-size: 12px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-    }
-
-    .product-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .menu-item {
-      width: 100%;
-      text-align: left;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: rgba(255,255,255,0.85);
-      padding: 18px;
-      cursor: pointer;
-      transition: 0.24s ease;
-    }
-
-    .menu-item:hover {
-      transform: translateY(-1px);
-      border-color: rgba(80,60,40,0.22);
-      background: #fdfbf8;
-    }
-
-    .menu-item.active {
-      background: #191613;
-      color: #fff;
-      border-color: #191613;
-      box-shadow: 0 18px 30px rgba(25,22,19,0.18);
-    }
-
-    .menu-row {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .menu-title {
-      font-size: 17px;
-      font-weight: 600;
-    }
-
-    .menu-sub {
-      margin-top: 6px;
-      font-size: 11px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: #9f9489;
-    }
-
-    .menu-item.active .menu-sub { color: rgba(255,255,255,0.66); }
-
-    .tag {
-      padding: 6px 10px;
-      border-radius: var(--radius-sm);
-      font-size: 10px;
-      white-space: nowrap;
-      letter-spacing: 0.04em;
-      background: rgba(0,0,0,0.05);
-    }
-
-    .menu-item.active .tag {
-      background: rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.92);
-    }
-
-    .main {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1.04fr 0.96fr;
-      gap: 16px;
-      padding: 16px;
-    }
-
-    .visual {
-      min-height: 620px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 30px;
-      border: 1px solid var(--line);
-      background: #f1ece6;
-    }
-
-    .visual-bg, .visual-image {
-      position: absolute;
-      inset: 0;
-    }
-
-    .visual-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.30;
-      mix-blend-mode: multiply;
-    }
-
-    .visual-note,
-    .visual-top {
-      position: absolute;
-      left: 20px;
-      right: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 2;
-      font-size: 11px;
-      color: #796f66;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-    }
-
-    .visual-top { top: 20px; }
-
-    .visual-note {
-      bottom: 20px;
-      justify-content: flex-start;
-      letter-spacing: 0.03em;
-      text-transform: none;
-      font-size: 13px;
-    }
-
-    .visual-note span {
-      border: 1px solid rgba(255,255,255,0.7);
-      background: rgba(255,255,255,0.75);
-      padding: 10px 16px;
-      border-radius: 999px;
-      backdrop-filter: blur(8px);
-    }
-
-    .bottle-card {
-      position: absolute;
-      left: 50%;
-      top: 53%;
-      width: 52%;
-      height: 58%;
-      transform: translate(-50%, -50%);
-      border-radius: 36px;
-      border: 1px solid rgba(255,255,255,0.72);
-      background: rgba(255,255,255,0.72);
-      box-shadow: 0 35px 80px rgba(90,70,40,0.18);
-      backdrop-filter: blur(12px);
-      z-index: 1;
-    }
-
-    .bottle-cap {
-      position: absolute;
-      left: 50%;
-      top: 30%;
-      width: 34%;
-      height: 11%;
-      transform: translateX(-50%);
-      border-radius: 24px 24px 14px 14px;
-      box-shadow: 0 10px 28px rgba(40,30,20,0.18);
-      z-index: 2;
-    }
-
-    .bottle-label {
-      position: absolute;
-      left: 50%;
-      top: 38%;
-      width: 42%;
-      transform: translateX(-50%);
-      text-align: center;
-      z-index: 3;
-    }
-
-    .bottle-mini {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.42em;
-      color: #857a71;
-    }
-
-    .bottle-title {
-      margin-top: 14px;
-      font-size: clamp(24px, 2.2vw, 34px);
-      font-weight: 600;
-      color: #2f2923;
-    }
-
-    .bottle-sub {
-      margin-top: 8px;
-      font-size: 11px;
-      color: #857a71;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-    }
-
-    .glow {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(34px);
-      z-index: 0;
-    }
-
-    .content {
-      border-radius: 30px;
-      border: 1px solid var(--line);
-      background: var(--panel-2);
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-self: flex-start;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: #fff;
-      padding: 7px 12px;
-      font-size: 12px;
-      color: #7c7369;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-    }
-
-    .product-title {
-      margin: 18px 0 0;
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.02;
-      letter-spacing: -0.03em;
-    }
-
-    .product-sub {
-      margin-top: 10px;
-      font-size: 13px;
-      color: #8b8177;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-    }
-
-    .desc {
-      margin-top: 24px;
-      color: #5f564d;
-      font-size: 16px;
-      line-height: 1.95;
-    }
-
-    .benefits {
-      margin-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .benefit {
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 999px;
-      padding: 10px 16px;
-      font-size: 14px;
-      color: #4b4239;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .info-card {
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 22px;
-      padding: 18px;
-    }
-
-    .info-card.full { grid-column: 1 / -1; }
-
-    .label {
-      font-size: 11px;
-      color: #92867b;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-    }
-
-    .value {
-      margin-top: 8px;
-      font-size: 19px;
-      line-height: 1.5;
-      color: #251f19;
-    }
-
-    .actions {
-      margin-top: 28px;
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      border-radius: 999px;
-      padding: 14px 22px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: 0.22s ease;
-    }
-
-    .btn-primary {
-      background: #191613;
-      color: #fff;
-    }
-
-    .btn-secondary {
-      background: #fff;
-      border-color: rgba(80,60,40,0.2);
-      color: #51473e;
-    }
-
-    .section-grid {
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 16px;
-    }
-
-    .section {
-      padding: 30px;
-    }
-
-    h2 {
-      margin: 12px 0 0;
-      font-size: clamp(28px, 4vw, 42px);
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-    }
-
-    .section-text {
-      margin-top: 22px;
-      color: #5f564d;
-      font-size: 16px;
-      line-height: 1.95;
-      max-width: 1000px;
-    }
-
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .focus-card,
-    .note-card,
-    .gallery-card {
-      border: 1px solid var(--line);
-      background: rgba(250,248,245,0.86);
-      border-radius: 22px;
-      overflow: hidden;
-    }
-
-    .focus-card { padding: 18px; }
-    .note-card { padding: 18px; margin-top: 14px; color: #5f564d; font-size: 14px; line-height: 1.85; }
-
-    .gallery-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .gallery {
-      margin-top: 24px;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .gallery-card {
-      cursor: pointer;
-      transition: 0.28s ease;
-      text-align: left;
-    }
-
-    .gallery-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 22px 36px rgba(60,45,30,0.12);
-    }
-
-    .gallery-visual {
-      height: 220px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .gallery-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.30;
-      mix-blend-mode: multiply;
-      transition: transform 0.4s ease;
-    }
-
-    .gallery-card:hover .gallery-visual img { transform: scale(1.05); }
-
-    .gallery-caption {
-      position: absolute;
-      left: 16px;
-      right: 16px;
-      bottom: 16px;
-      border: 1px solid rgba(255,255,255,0.7);
-      background: rgba(255,255,255,0.74);
-      border-radius: 18px;
-      padding: 12px 14px;
-      backdrop-filter: blur(8px);
-    }
-
-    .gallery-caption strong {
-      display: block;
-      font-size: 15px;
-      color: #251f19;
-    }
-
-    .gallery-caption span {
-      display: block;
-      margin-top: 4px;
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #8e8379;
-    }
-
-    .footer {
-      padding: 24px 28px;
-      border: 1px dashed rgba(100,80,60,0.25);
-      background: #fbf8f5;
-      border-radius: 30px;
-      color: #6f655b;
-      font-size: 14px;
-      line-height: 1.9;
-    }
-
-    @media (max-width: 1280px) {
-      .layout, .hero, .section-grid, .gallery { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
-      .stats { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
-      .focus-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 860px) {
-      .page { padding: 12px; }
-      .header, .section, .content, .sidebar { padding: 20px; }
-      .visual { min-height: 480px; }
-      .info-grid, .stats { grid-template-columns: 1fr; }
-      .product-title { font-size: 38px; }
-      .bottle-title { font-size: 24px; }
-      .gallery-visual { height: 180px; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eins Skincare</title>
+  <meta name="description" content="Eins Skincare - Science-led skincare centered on effective ingredients.">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="page">
-    <header class="panel header">
-      <div class="header-top">
-        <div>
-          <div class="eyebrow">Eins luxury skincare</div>
-          <h1>Eins 高端护肤</h1>
-          <div class="lead">
-            产品故事、质地卖点、夜间修护与系列延展。
-          </div>
-        </div>
-        <div class="stats">
-          <div class="stat"><strong id="stat-count">14</strong><span>在售设定产品</span></div>
-          <div class="stat"><strong>Eins</strong><span>品牌名称</span></div>
-          <div class="stat"><strong>Luxury</strong><span>版式方向</span></div>
-          <div class="stat"><strong>CN + EN</strong><span>标题风格</span></div>
-        </div>
-      </div>
-    </header>
-
-    <div class="layout">
-      <aside class="panel sidebar">
-        <div class="brand-box">
-          <div class="eyebrow">Brand</div>
-          <div class="brand-name">Eins</div>
-          <div class="brand-desc">后续可以继续加入 Logo、价格、购买入口、About 页面和成分详情页。</div>
-        </div>
-        <div class="filter-wrap" id="filters"></div>
-        <div class="menu-head">
-          <span>Product menu</span>
-          <span id="menu-count">14 items</span>
-        </div>
-        <div class="product-list" id="product-list"></div>
-      </aside>
-
-      <main class="main">
-        <section class="panel hero">
-          <div class="visual" id="visual">
-            <div class="visual-bg" id="visual-bg"></div>
-            <img class="visual-image" id="visual-image" src="" alt="产品视觉" />
-            <div class="visual-top"><span>Eins editorial visual</span><span>Web draft</span></div>
-            <div class="glow" id="glow-1"></div>
-            <div class="glow" id="glow-2"></div>
-            <div class="bottle-card"></div>
-            <div class="bottle-cap" id="bottle-cap"></div>
-            <div class="bottle-label">
-              <div class="bottle-mini">Eins</div>
-              <div class="bottle-title" id="bottle-title"></div>
-              <div class="bottle-sub" id="bottle-sub"></div>
-            </div>
-            <div class="visual-note"><span>当前视觉为公开网络关键词图 + Eins 产品瓶器示意</span></div>
-          </div>
-
-          <div class="content">
-            <div>
-              <div class="pill" id="badge"></div>
-              <div class="product-title" id="title"></div>
-              <div class="product-sub" id="subtitle"></div>
-              <div class="desc" id="description"></div>
-              <div class="benefits" id="benefits"></div>
-            </div>
-
-            <div>
-              <div class="info-grid">
-                <div class="info-card">
-                  <div class="label">Skin type</div>
-                  <div class="value" id="skin"></div>
-                </div>
-                <div class="info-card">
-                  <div class="label">Texture</div>
-                  <div class="value" id="texture"></div>
-                </div>
-                <div class="info-card full">
-                  <div class="label">Routine suggestion</div>
-                  <div class="value" id="routine"></div>
-                </div>
-              </div>
-              <div class="actions">
-                <button class="btn btn-primary">咨询这款产品</button>
-                <button class="btn btn-secondary">加入系列清单</button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section-grid">
-          <div class="panel section">
-            <div class="eyebrow">Eins product story</div>
-            <h2>页面文案方向</h2>
-            <div class="section-text" id="story"></div>
-            <div class="focus-grid" id="focus-grid"></div>
-          </div>
-
-          <div class="panel section">
-            <div class="eyebrow">Launch notes</div>
-            <h2>Eins 上线前建议</h2>
-            <div class="note-card">1. 当前版本已经避开直接展示对标品牌，只保留 Eins 自己的产品目录名称与自有描述方向。</div>
-            <div class="note-card">2. 视觉位先使用公开网络关键词图 + 自有瓶器示意，正式上线建议统一替换成授权产品图或品牌拍摄图。</div>
-            <div class="note-card">3. 下一步最值得补的是：Eins Logo、价格、购买按钮、功效页与成分页的真实内容。</div>
-          </div>
-        </section>
-
-        <section class="panel section">
-          <div class="gallery-head">
-            <div>
-              <div class="eyebrow">Eins series lineup</div>
-              <h2>系列浏览</h2>
-            </div>
-            <div style="color:#7f756b;font-size:14px;">适合继续扩展为分类页、详情页和单独购买页</div>
-          </div>
-          <div class="gallery" id="gallery"></div>
-        </section>
-
-        <footer class="footer">
-          本页为可直接放进 <code>index.html</code> 的静态原型。当前重点是先把 Eins 的网页结构、层级、产品调性和导航做出来；图片为公开网络关键词视觉与示意瓶器组合，正式商用前建议统一替换为自有授权素材。
-        </footer>
-      </main>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo-text">Eins</a>
     </div>
-  </div>
 
-  <script>
-    const products = [
-      { id: "vit-c-cream", name: "橘灿面霜", subtitle: "Radiance Soft Cream for Oily Skin", badge: "油皮 + 提亮", kind: "cream", skin: "偏油 / 混合肌", texture: "轻盈乳霜，推开后偏柔雾感", routine: "早晚精华后，取黄豆大小按压上脸", benefits: ["提亮气色", "细腻肤感", "轻润不厚重", "日间通勤友好"], description: "为偏油肌设计的亮肤面霜路线，强调轻盈包裹感、匀亮观感与更清爽的收尾。页面表达偏高端、柔光、净透。", story: "视觉灵感围绕橙色活性、光泽感与现代实验室美学展开，适合放在日间焕亮线的主推位置。", ingredientFocus: ["橙色活性灵感", "抗氧化印象", "柔光提气色"], image: "https://loremflickr.com/1200/1500/orange,skincare,cream?lock=11", accentFrom: "#ffb36b", accentTo: "#d96b2b" },
-      { id: "50-cream", name: "50%面霜", subtitle: "Recovery Barrier Cream", badge: "修护厚敷线", kind: "cream", skin: "干敏 / 受损屏障肌", texture: "绵密膏霜，夜间更有存在感", routine: "夜间作面霜或局部加厚修护", benefits: ["屏障感", "安抚干燥", "夜间修护", "包裹柔润"], description: "以高修护感面霜为方向，强调夜间稳定、厚实包覆与安抚肌肤状态的感受，适合做品牌里的高阶修护单品。", story: "页面建议用黑白金与奶油质地图层，营造专业修护与奢护并存的高级感。", ingredientFocus: ["高修护感受", "夜间护理场景", "厚实乳霜质地"], image: "https://loremflickr.com/1200/1500/cream,cosmetics,luxury?lock=12", accentFrom: "#f5f1eb", accentTo: "#6d6058" },
-      { id: "essence-lotion", name: "精华露", subtitle: "Prep Essence Lotion", badge: "前导精华水", kind: "essence", skin: "全肤质", texture: "轻盈水露，拍开后带轻润感", routine: "洁面后第一步，轻拍 2–3 层", benefits: ["前导保湿", "细腻肤感", "提升后续使用感", "柔润发光"], description: "定位在精华前的高端前导露，强调水感细腻、柔润包裹与后续吸收体验，适合作为系列仪式感入口。", story: "建议画面使用液态流光、银白或鱼子光感元素，突出精致、润泽、贵气的第一步。", ingredientFocus: ["前导精华概念", "轻润弹感", "水感奢护"], image: "https://loremflickr.com/1200/1500/serum,water,beauty?lock=13", accentFrom: "#d8dbe6", accentTo: "#7c8597" },
-      { id: "eye-cream", name: "眼霜", subtitle: "Revitalizing Eye Cream", badge: "滋润版", kind: "eye", skin: "干燥眼周 / 熟龄护理", texture: "丰润柔滑，延展性高", routine: "早晚米粒大小，点涂后顺着眼周轻按", benefits: ["柔润眼周", "平滑观感", "细腻包覆", "夜间更适合"], description: "一支偏奢养路线的眼霜，重点不做复杂承诺，而是突出细腻、柔滑、丰润和高端眼周护理的体验。", story: "右侧视觉适合奶金、丝缎与花瓣光泽，强化眼周护理的精致感和高端触感。", ingredientFocus: ["高奢眼周护理", "丰润滋养", "柔滑肤感"], image: "https://loremflickr.com/1200/1500/eye,cream,cosmetics?lock=14", accentFrom: "#ead6b0", accentTo: "#b88e57" },
-      { id: "dark-circle-eye", name: "黑眼圈眼霜", subtitle: "Bright Eye Gel-Cream", badge: "自研方向", kind: "eye", skin: "熬夜党 / 暗沉眼周", texture: "轻盈啫喱霜，适合早间", routine: "晨间优先，妆前薄涂更合适", benefits: ["清爽提神", "改善暗沉观感", "妆前友好", "不易厚重"], description: "自研眼周产品可走清醒感路线，突出轻薄、早间、通勤和熬夜肌使用场景，和滋润版眼霜形成互补。", story: "页面建议使用浅金与淡紫灰，营造眼周提亮、醒肤、都市通勤的节奏感。", ingredientFocus: ["早间醒肤", "轻薄眼周护理", "暗沉观感优化"], image: "https://loremflickr.com/1200/1500/eye,serum,beauty?lock=15", accentFrom: "#d9d4e9", accentTo: "#7a6f99" },
-      { id: "orchid-oil", name: "兰花油", subtitle: "Botanical Orchid Face Oil", badge: "油养发光", kind: "oil", skin: "干燥 / 缺光泽肌", texture: "植萃油感，按摩后呈柔亮光泽", routine: "晚间 2–3 滴加面霜或单独按摩", benefits: ["提升光泽", "柔润肤感", "按摩友好", "秋冬氛围感强"], description: "适合做品牌里的植物油明星款，突出花植气息、油养光泽、夜间松弛感与高颜值瓶器。", story: "以兰花、植物油滴与丝绒紫调打造更有记忆点的植物奢护线。", ingredientFocus: ["兰花植物灵感", "油养修护", "光泽松弛感"], image: "https://loremflickr.com/1200/1500/orchid,oil,skincare?lock=16", accentFrom: "#d8c4e8", accentTo: "#8d6ab0" },
-      { id: "tone-serum", name: "色修", subtitle: "Tone Correcting Serum", badge: "匀净透亮", kind: "serum", skin: "暗沉 / 色差困扰", texture: "精华质地，顺滑带少量润感", routine: "洁面后精华步骤全脸按压", benefits: ["匀净观感", "提升通透感", "细腻肤感", "适合叠加"], description: "这支精华适合走匀净、通透、细腻的表达，强调高级淡紫色视觉和精华液体的科技感。", story: "推荐做成半透明紫调精华瓶，右侧大图用液滴、玻璃、紫米或果实微光做氛围素材。", ingredientFocus: ["淡紫科技感", "匀净发光", "细腻精华体验"], image: "https://loremflickr.com/1200/1500/purple,serum,glass?lock=17", accentFrom: "#d7c6f2", accentTo: "#815dc7" },
-      { id: "white-truffle-mask", name: "白松露睡眠面膜", subtitle: "White Truffle Overnight Mask", badge: "夜间修护", kind: "mask", skin: "干燥 / 熬夜肌", texture: "绵密睡眠膜，包裹感明显", routine: "晚间护肤最后一步薄敷过夜", benefits: ["夜间修护感", "醒来更柔亮", "丰润包覆", "仪式感强"], description: "可作为高端夜间护理主打，重点突出睡前修护、次日柔亮和更贵气的白松露故事。", story: "建议画面使用白松露、绸缎奶油、烛光卧室感，强化夜间奢护场景。", ingredientFocus: ["白松露灵感", "夜间恢复", "柔亮醒肤"], image: "https://loremflickr.com/1200/1500/truffle,cream,beauty?lock=18", accentFrom: "#f4e3c8", accentTo: "#b88a4a" },
-      { id: "balancing-water", name: "水（油皮）", subtitle: "Balancing Skin Water", badge: "油皮水", kind: "toner", skin: "偏油 / 混合肌", texture: "清透水感，收尾轻盈", routine: "洁面后拍开或搭配化妆棉轻拭", benefits: ["清爽补水", "帮助平衡肤感", "适合夏季", "后续更服帖"], description: "这支水更适合走高级清透路线，不做厚重保湿表达，而是强调油皮喜欢的轻、净、润平衡。", story: "视觉建议用冰川水、玻璃反光、薄雾蓝白，传达高端但不黏腻的平衡感。", ingredientFocus: ["清透补水", "平衡油感", "轻净路线"], image: "https://loremflickr.com/1200/1500/water,glass,skincare?lock=19", accentFrom: "#d8edf5", accentTo: "#63a9c1" },
-      { id: "sea-fennel-emulsion", name: "海茴香乳", subtitle: "Sea Fennel Matte Emulsion", badge: "油皮乳", kind: "emulsion", skin: "偏油 / 压力肌", texture: "轻乳液，偏柔雾清爽感", routine: "水后乳液步骤，白天优先", benefits: ["清爽锁水", "柔雾肤感", "适合闷热季节", "通勤舒适"], description: "海茴香主题很适合油皮乳液线，方向上强调海洋植萃、轻乳、舒适平衡与更干净的肤面观感。", story: "页面建议使用海盐、海风、海岸植物的视觉系统，做出区别于常规乳液的记忆点。", ingredientFocus: ["海茴香植物灵感", "清爽乳液", "油皮平衡"], image: "https://loremflickr.com/1200/1500/ocean,botanical,cosmetics?lock=20", accentFrom: "#cfe7db", accentTo: "#4f9b7a" },
-      { id: "hydrosol", name: "纯露", subtitle: "Botanical Hydrosol Mist", badge: "自研纯露", kind: "mist", skin: "全肤质 / 晒后或空调房", texture: "雾化水感，适合随手喷", routine: "洁面后或日间补水随时使用", benefits: ["快速补水", "舒缓氛围", "喷雾便捷", "配套性强"], description: "纯露类单品适合做品牌气质款，画面可更自然、更植物，也适合作为品牌入门价位的高颜值产品。", story: "建议后续细分玫瑰、橙花、洋甘菊等不同线别，用颜色区分系列。", ingredientFocus: ["植物蒸馏感", "细雾补水", "系列化空间大"], image: "https://loremflickr.com/1200/1500/flower,water,bottle?lock=21", accentFrom: "#e8d9d4", accentTo: "#c58e81" },
-      { id: "olive-mask", name: "油橄榄面膜", subtitle: "Olive Water-Oil Mask", badge: "维稳", kind: "mask", skin: "干燥 / 换季不稳", texture: "水油膜布概念，丰润贴肤", routine: "夜间或换季急救，敷 10–15 分钟", benefits: ["维稳保湿", "舒适包覆", "换季友好", "柔润饱满"], description: "适合做成水油双层概念面膜，重点放在维稳、补油补水同步和敷后柔软感。", story: "视觉上可把橄榄叶、油滴、水相乳化作为主要设计元素。", ingredientFocus: ["橄榄滋养", "水油双层概念", "维稳舒适"], image: "https://loremflickr.com/1200/1500/olive,mask,beauty?lock=22", accentFrom: "#dfe8c6", accentTo: "#809a45" },
-      { id: "seagrape-mask", name: "海葡萄面膜", subtitle: "Seagrape Hydrating Gel Mask", badge: "补水", kind: "mask", skin: "缺水 / 熬夜 / 空调房", texture: "冰润水凝感", routine: "晒后或妆前补水都适合", benefits: ["深度补水", "冰感清爽", "舒缓肤感", "妆前服帖"], description: "这款面膜适合打成夏季补水明星，用更清凉、更通透、更海洋系的视觉语汇。", story: "页面可以强化海葡萄、透明啫喱、水膜质感，做出一眼就懂的补水记忆。", ingredientFocus: ["海葡萄灵感", "水凝补水", "清凉透明感"], image: "https://loremflickr.com/1200/1500/seaweed,water,beauty?lock=23", accentFrom: "#c9efe8", accentTo: "#39a7a1" },
-      { id: "astaxanthin-mask", name: "虾青素面膜", subtitle: "Astaxanthin Morning Mask", badge: "提亮", kind: "mask", skin: "暗沉 / 早八通勤肌", texture: "清爽精华膜，晨间更合适", routine: "早晨快速敷 5–10 分钟", benefits: ["晨间焕亮", "提神醒肤", "轻盈不粘", "快速上妆前护理"], description: "可定位为晨间提亮面膜，强调高效、轻快、抗氧化印象与早间通勤场景。", story: "视觉推荐日出橘红、咖啡色调或冷感膜布材质，让它和晚安面膜形成明显分工。", ingredientFocus: ["虾青素灵感", "晨间提亮", "快节奏护理"], image: "https://loremflickr.com/1200/1500/red,serum,beauty?lock=24", accentFrom: "#ffcfb3", accentTo: "#df6d3f" }
-    ];
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="brand.html" data-i18n="nav.brand">Brand</a>
+      <a href="products.html" data-i18n="nav.products">Products</a>
+      <a href="partner.html" data-i18n="nav.partner">Partner</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
 
-    const kinds = [
-      { key: "all", label: "全部产品" },
-      { key: "cream", label: "面霜" },
-      { key: "essence", label: "精华 / 精华露" },
-      { key: "eye", label: "眼部" },
-      { key: "oil", label: "精油" },
-      { key: "serum", label: "精华" },
-      { key: "toner", label: "化妆水" },
-      { key: "emulsion", label: "乳液" },
-      { key: "mist", label: "纯露 / 喷雾" },
-      { key: "mask", label: "面膜" }
-    ];
+    <div class="lang-switch">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('zh')">中文</button>
+      <button onclick="setLanguage('fr')">FR</button>
+    </div>
+  </header>
 
-    let currentFilter = 'all';
-    let currentId = products[0].id;
+  <section class="hero has-image">
+    <img src="assets/img/hero/home-hero.jpg" alt="Eins Skincare">
+    <div class="hero-content">
+      <h1 data-i18n="home.heroTitle">Eins Skincare</h1>
+      <p data-i18n="home.heroSubtitle">Science-led skincare, centered on effective ingredients.</p>
+      <div class="hero-actions">
+        <a href="products.html" class="btn-primary" data-i18n="home.ctaProducts">Explore Products</a>
+        <a href="brand.html" class="btn-secondary" data-i18n="home.ctaBrand">About Eins</a>
+      </div>
+    </div>
+  </section>
 
-    const filtersEl = document.getElementById('filters');
-    const listEl = document.getElementById('product-list');
-    const galleryEl = document.getElementById('gallery');
-    const menuCountEl = document.getElementById('menu-count');
-    const statCountEl = document.getElementById('stat-count');
+  <section class="content-section narrow center">
+    <h2 data-i18n="home.brandIntroTitle">A Modern Skincare Brand Built on Effective Formulation</h2>
+    <p data-i18n="home.brandIntroText">
+      Eins focuses on ingredient logic, refined textures, and clear product direction. We believe skincare should be effective, honest, and accessible.
+    </p>
+  </section>
 
-    function getFilteredProducts() {
-      return currentFilter === 'all' ? products : products.filter(item => item.kind === currentFilter);
-    }
+  <section class="content-section">
+    <h2 class="center" data-i18n="home.categoryTitle">Core Skincare Directions</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3 data-i18n="home.category1Title">Brightening & Antioxidant Care</h3>
+        <p data-i18n="home.category1Text">Designed for dull-looking skin, uneven tone, and daily antioxidant support.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="home.category2Title">Repair & Barrier Support</h3>
+        <p data-i18n="home.category2Text">Focused on skin comfort, repair routines, and fragile skin conditions.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="home.category3Title">Firming & Anti-aging Care</h3>
+        <p data-i18n="home.category3Text">Targeted at early aging signs, visible lines, and skin resilience.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="home.category4Title">Hydration & Daily Balance</h3>
+        <p data-i18n="home.category4Text">Created for moisture support, smoother skin feel, and daily comfort.</p>
+      </div>
+    </div>
+  </section>
 
-    function ensureCurrentVisible() {
-      const filtered = getFilteredProducts();
-      if (!filtered.find(item => item.id === currentId)) {
-        currentId = filtered[0]?.id || products[0].id;
-      }
-    }
+  <section class="content-section">
+    <h2 class="center" data-i18n="home.featuredTitle">Featured Products</h2>
+    <p class="center narrow" data-i18n="home.featuredText">
+      Explore selected products from the Eins collection, with reserved image positions ready for future product photography.
+    </p>
 
-    function renderFilters() {
-      filtersEl.innerHTML = '';
-      kinds.forEach(item => {
-        const btn = document.createElement('button');
-        btn.className = 'chip' + (currentFilter === item.key ? ' active' : '');
-        btn.textContent = item.label;
-        btn.onclick = () => {
-          currentFilter = item.key;
-          ensureCurrentVisible();
-          renderAll();
-        };
-        filtersEl.appendChild(btn);
-      });
-    }
+    <section class="products-grid">
+      <div class="product-card">
+        <img src="assets/img/products/orange-cream/cover.jpg" alt="Orange Radiance Cream">
+        <h3 data-i18n="products.orangeCream.name">Orange Radiance Cream</h3>
+        <p data-i18n="products.orangeCream.subtitle">Antioxidant brightening cream for oily skin</p>
+        <a href="product-orange-cream.html" data-i18n="common.viewMore">View More</a>
+      </div>
 
-    function renderList() {
-      const filtered = getFilteredProducts();
-      menuCountEl.textContent = filtered.length + ' items';
-      statCountEl.textContent = products.length;
-      listEl.innerHTML = '';
+      <div class="product-card">
+        <img src="assets/img/products/cream-50/cover.jpg" alt="50% Repair Cream">
+        <h3 data-i18n="products.cream50.name">50% Repair Cream</h3>
+        <p data-i18n="products.cream50.subtitle">Firming and barrier support cream</p>
+        <a href="product-50-cream.html" data-i18n="common.viewMore">View More</a>
+      </div>
 
-      filtered.forEach(item => {
-        const btn = document.createElement('button');
-        btn.className = 'menu-item' + (item.id === currentId ? ' active' : '');
-        btn.innerHTML = `
-          <div class="menu-row">
-            <div>
-              <div class="menu-title">${item.name}</div>
-              <div class="menu-sub">${item.subtitle}</div>
-            </div>
-            <div class="tag">${item.badge}</div>
-          </div>
-        `;
-        btn.onclick = () => {
-          currentId = item.id;
-          renderAll();
-        };
-        listEl.appendChild(btn);
-      });
-    }
+      <div class="product-card">
+        <img src="assets/img/products/essence-lotion/cover.jpg" alt="Caviar Essence Lotion">
+        <h3 data-i18n="products.essenceLotion.name">Caviar Essence Lotion</h3>
+        <p data-i18n="products.essenceLotion.subtitle">Luxurious revitalizing essence lotion</p>
+        <a href="product-essence-lotion.html" data-i18n="common.viewMore">View More</a>
+      </div>
 
-    function renderHero() {
-      const filtered = getFilteredProducts();
-      const active = filtered.find(item => item.id === currentId) || products[0];
+      <div class="product-card">
+        <img src="assets/img/products/white-truffle-mask/cover.jpg" alt="White Truffle Sleeping Mask">
+        <h3 data-i18n="products.whiteTruffleMask.name">White Truffle Sleeping Mask</h3>
+        <p data-i18n="products.whiteTruffleMask.subtitle">Overnight radiance and recovery mask</p>
+        <a href="product-white-truffle-mask.html" data-i18n="common.viewMore">View More</a>
+      </div>
+    </section>
+  </section>
 
-      document.getElementById('badge').textContent = active.badge;
-      document.getElementById('title').textContent = active.name;
-      document.getElementById('subtitle').textContent = active.subtitle;
-      document.getElementById('description').textContent = active.description;
-      document.getElementById('skin').textContent = active.skin;
-      document.getElementById('texture').textContent = active.texture;
-      document.getElementById('routine').textContent = active.routine;
-      document.getElementById('story').textContent = active.story;
-      document.getElementById('bottle-title').textContent = active.name;
-      document.getElementById('bottle-sub').textContent = active.subtitle;
-      document.getElementById('visual-image').src = active.image;
+  <section class="content-section">
+    <h2 class="center" data-i18n="home.whyTitle">Why Eins</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3 data-i18n="home.why1Title">Ingredient-Focused</h3>
+        <p data-i18n="home.why1Text">We prioritize effective formulation logic and meaningful active ingredients.</p>
+      </div>
+      <div class="info-card">
+        <h3 data-i18n="home.why2Title">Refined Experience</h3>
+        <p data-i18n="home.why2Text">Textures are designed for comfort, usability, and daily skincare habits.</p>
+      </div>
+      <div class="info-card">
+        <h3 data-i18n="home.why3Title">Long-Term Value</h3>
+        <p data-i18n="home.why3Text">We believe quality skincare should remain accessible and relevant over time.</p>
+      </div>
+    </div>
+  </section>
 
-      document.getElementById('visual-bg').style.background = `radial-gradient(circle at 20% 20%, ${active.accentFrom}55, transparent 35%), radial-gradient(circle at 80% 25%, ${active.accentTo}33, transparent 30%), linear-gradient(160deg, #fbf8f4 0%, #f3eee8 42%, #eae2d8 100%)`;
-      document.getElementById('bottle-cap').style.background = `linear-gradient(180deg, ${active.accentTo}, ${active.accentFrom})`;
+  <section class="content-section narrow center">
+    <h2 data-i18n="home.partnerTitle">Open to Partnership</h2>
+    <p data-i18n="home.partnerText">
+      Eins welcomes channel partners, retail collaborators, and international opportunities built on clear product value and long-term brand growth.
+    </p>
+    <a href="partner.html" class="btn-primary" data-i18n="home.partnerButton">Partner With Us</a>
+  </section>
 
-      const glow1 = document.getElementById('glow-1');
-      glow1.style.left = '40px';
-      glow1.style.top = '40px';
-      glow1.style.width = '100px';
-      glow1.style.height = '100px';
-      glow1.style.background = active.accentFrom + '66';
+  <footer class="site-footer">
+    <p>© 2026 Eins Skincare · einsskincare.com</p>
+  </footer>
 
-      const glow2 = document.getElementById('glow-2');
-      glow2.style.right = '40px';
-      glow2.style.bottom = '40px';
-      glow2.style.width = '120px';
-      glow2.style.height = '120px';
-      glow2.style.background = active.accentTo + '55';
-
-      const benefitsEl = document.getElementById('benefits');
-      benefitsEl.innerHTML = '';
-      active.benefits.forEach(text => {
-        const span = document.createElement('span');
-        span.className = 'benefit';
-        span.textContent = text;
-        benefitsEl.appendChild(span);
-      });
-
-      const focusGrid = document.getElementById('focus-grid');
-      focusGrid.innerHTML = '';
-      active.ingredientFocus.forEach(text => {
-        const div = document.createElement('div');
-        div.className = 'focus-card';
-        div.innerHTML = `<div class="eyebrow" style="letter-spacing:0.22em;">Focus</div><div style="margin-top:10px;font-size:20px;font-weight:600;color:#251f19;">${text}</div>`;
-        focusGrid.appendChild(div);
-      });
-    }
-
-    function renderGallery() {
-      galleryEl.innerHTML = '';
-      products.forEach(item => {
-        const card = document.createElement('button');
-        card.className = 'gallery-card';
-        card.innerHTML = `
-          <div class="gallery-visual" style="background: linear-gradient(160deg, ${item.accentFrom}, #f7f2ec 55%, ${item.accentTo}22 100%);">
-            <img src="${item.image}" alt="${item.name}" />
-            <div class="gallery-caption">
-              <strong>${item.name}</strong>
-              <span>${item.subtitle}</span>
-            </div>
-          </div>
-        `;
-        card.onclick = () => {
-          currentFilter = 'all';
-          currentId = item.id;
-          renderAll();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-        galleryEl.appendChild(card);
-      });
-    }
-
-    function renderAll() {
-      ensureCurrentVisible();
-      renderFilters();
-      renderList();
-      renderHero();
-      renderGallery();
-    }
-
-    renderAll();
-  </script>
+  <script src="assets/js/lang.js"></script>
 </body>
 </html>
