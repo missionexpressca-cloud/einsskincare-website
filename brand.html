@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eins Brand</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo-text">Eins</a>
+    </div>
+
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="brand.html" data-i18n="nav.brand">Brand</a>
+      <a href="products.html" data-i18n="nav.products">Products</a>
+      <a href="partner.html" data-i18n="nav.partner">Partner</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="lang-switch">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('zh')">中文</button>
+      <button onclick="setLanguage('fr')">FR</button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <img src="assets/img/hero/brand-hero.jpg" alt="Eins brand">
+    <div class="page-hero-overlay">
+      <h1 data-i18n="brandPage.title">About Eins</h1>
+      <p data-i18n="brandPage.subtitle">Science-led skincare, centered on effective ingredients.</p>
+    </div>
+  </section>
+
+  <section class="content-section narrow">
+    <h2 data-i18n="brandPage.storyTitle">Our Story</h2>
+    <p data-i18n="brandPage.storyText">
+      Eins was created to bring skincare back to what truly matters: effective ingredients, clear formulation logic, and honest value.
+    </p>
+  </section>
+
+  <section class="content-section two-col">
+    <div>
+      <h2 data-i18n="brandPage.missionTitle">Our Mission</h2>
+      <p data-i18n="brandPage.missionText">
+        We believe that high-quality skincare should not be defined by price alone. Our goal is to make effective skincare more accessible.
+      </p>
+    </div>
+
+    <div>
+      <h2 data-i18n="brandPage.positioningTitle">Brand Positioning</h2>
+      <p data-i18n="brandPage.positioningText">
+        Eins is a skincare brand focused on efficacy, refined textures, simplified formulas, and long-term value for modern consumers.
+      </p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2 data-i18n="brandPage.valuesTitle">What We Stand For</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3 data-i18n="brandPage.value1Title">Efficacy First</h3>
+        <p data-i18n="brandPage.value1Text">We focus on ingredients and formulas that serve real skin needs.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="brandPage.value2Title">Ingredient Logic</h3>
+        <p data-i18n="brandPage.value2Text">We prioritize core active ingredients over unnecessary complexity.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="brandPage.value3Title">Refined Simplicity</h3>
+        <p data-i18n="brandPage.value3Text">We reduce excess in fragrance, packaging, and marketing noise.</p>
+      </div>
+      <div class="feature-card">
+        <h3 data-i18n="brandPage.value4Title">Accessible Quality</h3>
+        <p data-i18n="brandPage.value4Text">We aim to make better skincare choices available to more people.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section narrow">
+    <h2 data-i18n="brandPage.audienceTitle">Who We Create For</h2>
+    <p data-i18n="brandPage.audienceText">
+      Eins is designed for thoughtful skincare users who care about results, ingredient quality, and long-term value.
+    </p>
+  </section>
+
+  <footer class="site-footer">
+    <p>© 2026 Eins Skincare · einsskincare.com</p>
+  </footer>
+
+  <script src="assets/js/lang.js"></script>
+</body>
+</html>
