@@ -1335,6 +1335,7 @@
         });
 
         try {
+          localStorage.setItem("language", lang);
           localStorage.setItem("eins-language", lang);
         } catch (error) {}
       }
@@ -1344,6 +1345,16 @@
           applyTranslations(this.dataset.lang);
         });
       });
+
+      const originalSetLanguage = window.setLanguage;
+      if (typeof originalSetLanguage === "function") {
+        window.setLanguage = function (lang) {
+          originalSetLanguage(lang);
+          applyTranslations(lang);
+        };
+      } else {
+        window.setLanguage = applyTranslations;
+      }
 
       const mainImage = document.getElementById("mainProductImage");
       const thumbButtons = document.querySelectorAll(".thumb-btn");
@@ -1357,7 +1368,7 @@
 
       const savedLang = (() => {
         try {
-          return localStorage.getItem("eins-language");
+          return localStorage.getItem("language") || localStorage.getItem("eins-language");
         } catch (error) {
           return null;
         }
