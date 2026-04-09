@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eins | 50% Repair Cream</title>
+  <meta
+    name="description"
+    content="Discover Eins 50% Repair Cream — a rich repair cream designed to support skin comfort, barrier care, and a firmer-looking finish."
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .product-page {
+      background: linear-gradient(180deg, #fbf8f2 0%, #ffffff 32%, #fbf8f2 100%);
+      color: #3d342c;
+    }
+
+    .product-page .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .product-page .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 248, 242, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(126, 98, 70, 0.12);
+    }
+
+    .product-page .header-inner {
+      min-height: 96px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .product-page .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-page .brand-logo img {
+      width: auto;
+      height: 72px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .product-page .brand-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .product-page .brand-logo-text strong {
+      font-size: 1.15rem;
+      letter-spacing: 0.08em;
+    }
+
+    .product-page .brand-logo-text span {
+      font-size: 0.86rem;
+      opacity: 0.78;
+      letter-spacing: 0.04em;
+    }
+
+    .product-page .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .product-page .main-nav a {
+      text-decoration: none;
+      color: #4b4037;
+      font-size: 0.96rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .product-page .main-nav a:hover,
+    .product-page .main-nav a.active {
+      opacity: 0.72;
+    }
+
+    .product-page .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .product-page .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(126, 98, 70, 0.18);
+      background: #fff;
+    }
+
+    .product-page .lang-switch button {
+      border: 0;
+      background: transparent;
+      color: #5a4b40;
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+    }
+
+    .product-page .lang-switch button.active {
+      background: #c8a97e;
+      color: #fff;
+    }
+
+    .product-page .page-hero {
+      padding: 54px 0 30px;
+    }
+
+    .product-page .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: #877363;
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+
+    .product-page .breadcrumb a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .product-page .page-hero-top {
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .product-page .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(200, 169, 126, 0.14);
+      color: #8a6d52;
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .product-page .page-hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 4vw, 3.55rem);
+      line-height: 1.08;
+      color: #2f2721;
+    }
+
+    .product-page .page-hero p.lead {
+      margin: 0;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: #65574b;
+      max-width: 620px;
+    }
+
+    .product-page .hero-card {
+      background: linear-gradient(180deg, #fff 0%, #f8f3eb 100%);
+      border: 1px solid rgba(126, 98, 70, 0.12);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(78, 59, 40, 0.08);
+    }
+
+    .product-page .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .product-page .hero-mini-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(126, 98, 70, 0.1);
+    }
+
+    .product-page .hero-mini-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #3a3129;
+    }
+
+    .product-page .hero-mini-card span {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #7a6859;
+    }
+
+    .product-page .product-main {
+      padding: 20px 0 34px;
+    }
+
+    .product-page .product-main-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .product-page .product-gallery-card,
+    .product-page .product-summary-card,
+    .product-page .section-card {
+      background: #fff;
+      border: 1px solid rgba(126, 98, 70, 0.11);
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(78, 59, 40, 0.06);
+    }
+
+    .product-page .product-gallery-card {
+      padding: 22px;
+    }
+
+    .product-page .main-image-wrap {
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #f8f3eb 0%, #f3ede5 100%);
+      border: 1px solid rgba(126, 98, 70, 0.08);
+    }
+
+    .product-page .main-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-page .thumb-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .product-page .thumb-btn {
+      border: 1px solid rgba(126, 98, 70, 0.14);
+      background: #fff;
+      border-radius: 16px;
+      padding: 0;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      aspect-ratio: 1 / 1;
+    }
+
+    .product-page .thumb-btn:hover,
+    .product-page .thumb-btn.active {
+      transform: translateY(-2px);
+      border-color: rgba(200, 169, 126, 0.75);
+    }
+
+    .product-page .thumb-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-page .product-summary-card {
+      padding: 30px;
+    }
+
+    .product-page .product-badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(200, 169, 126, 0.14);
+      color: #8a6d52;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .product-page .product-summary-card h2 {
+      margin: 0 0 12px;
+      font-size: 2.2rem;
+      line-height: 1.12;
+      color: #2e251f;
+    }
+
+    .product-page .product-subtitle {
+      margin: 0 0 20px;
+      color: #6f6053;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .product-page .product-points {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .product-page .product-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #4f4339;
+      line-height: 1.65;
+    }
+
+    .product-page .product-points li::before {
+      content: "✦";
+      color: #c8a97e;
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+
+    .product-page .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .product-page .btn-primary,
+    .product-page .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-size: 0.96rem;
+    }
+
+    .product-page .btn-primary {
+      background: #b79267;
+      color: #fff;
+      border: 1px solid #b79267;
+    }
+
+    .product-page .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .product-page .btn-secondary {
+      background: transparent;
+      color: #5a4a3e;
+      border: 1px solid rgba(126, 98, 70, 0.2);
+    }
+
+    .product-page .btn-secondary:hover {
+      background: rgba(200, 169, 126, 0.08);
+    }
+
+    .product-page .product-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .product-page .meta-item {
+      padding: 16px;
+      border-radius: 18px;
+      background: #faf7f2;
+      border: 1px solid rgba(126, 98, 70, 0.08);
+    }
+
+    .product-page .meta-item span {
+      display: block;
+      font-size: 0.82rem;
+      color: #8a786a;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .product-page .meta-item strong {
+      display: block;
+      font-size: 1rem;
+      color: #3a3129;
+      line-height: 1.5;
+    }
+
+    .product-page section.content-section {
+      padding: 34px 0;
+    }
+
+    .product-page .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .product-page .section-heading h3 {
+      margin: 0;
+      font-size: 1.9rem;
+      color: #2f2721;
+    }
+
+    .product-page .section-heading p {
+      margin: 0;
+      color: #746457;
+      line-height: 1.8;
+      max-width: 620px;
+    }
+
+    .product-page .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .product-page .feature-card {
+      padding: 24px;
+    }
+
+    .product-page .feature-no {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(200, 169, 126, 0.15);
+      color: #8a6d52;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .product-page .feature-card h4 {
+      margin: 0 0 10px;
+      font-size: 1.16rem;
+      color: #322922;
+    }
+
+    .product-page .feature-card p {
+      margin: 0;
+      line-height: 1.8;
+      color: #6d5d50;
+    }
+
+    .product-page .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .product-page .story-card {
+      padding: 28px;
+    }
+
+    .product-page .story-card h4 {
+      margin: 0 0 14px;
+      font-size: 1.32rem;
+      color: #322922;
+    }
+
+    .product-page .story-card p,
+    .product-page .story-card li {
+      color: #6c5d50;
+      line-height: 1.82;
+    }
+
+    .product-page .story-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .product-page .visual-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .product-page .visual-card {
+      overflow: hidden;
+    }
+
+    .product-page .visual-card img {
+      width: 100%;
+      aspect-ratio: 4 / 4.3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-page .visual-card .visual-text {
+      padding: 18px 20px 22px;
+    }
+
+    .product-page .visual-card h4 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      color: #342a23;
+    }
+
+    .product-page .visual-card p {
+      margin: 0;
+      line-height: 1.75;
+      color: #6d5d50;
+    }
+
+    .product-page .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .product-page .spec-card {
+      padding: 22px;
+    }
+
+    .product-page .spec-card span {
+      display: block;
+      font-size: 0.82rem;
+      color: #8a786a;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .product-page .spec-card strong {
+      display: block;
+      color: #332a23;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .product-page .cta-section {
+      padding: 16px 0 72px;
+    }
+
+    .product-page .cta-card {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: center;
+      background: linear-gradient(135deg, #f8f1e7 0%, #fff 100%);
+    }
+
+    .product-page .cta-card h3 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+      color: #2e251f;
+    }
+
+    .product-page .cta-card p {
+      margin: 0;
+      line-height: 1.8;
+      color: #67584c;
+      max-width: 640px;
+    }
+
+    .product-page .cta-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .product-page .site-footer {
+      background: #2c241e;
+      color: rgba(255, 255, 255, 0.82);
+      padding: 38px 0 30px;
+    }
+
+    .product-page .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .product-page .footer-brand h4,
+    .product-page .footer-links h4,
+    .product-page .footer-contact h4 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .product-page .footer-brand p,
+    .product-page .footer-contact p {
+      margin: 0;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .product-page .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .product-page .footer-links a,
+    .product-page .footer-contact a {
+      color: rgba(255, 255, 255, 0.82);
+      text-decoration: none;
+    }
+
+    .product-page .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    @media (max-width: 1080px) {
+      .product-page .page-hero-top,
+      .product-page .product-main-grid,
+      .product-page .story-grid,
+      .product-page .cta-card,
+      .product-page .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-page .feature-grid,
+      .product-page .visual-strip,
+      .product-page .spec-grid,
+      .product-page .hero-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-page .cta-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .product-page .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px 0;
+      }
+
+      .product-page .main-nav {
+        justify-content: center;
+      }
+
+      .product-page .header-actions {
+        justify-content: center;
+      }
+
+      .product-page .brand-logo img {
+        height: 64px;
+      }
+
+      .product-page .feature-grid,
+      .product-page .visual-strip,
+      .product-page .spec-grid,
+      .product-page .hero-card-grid,
+      .product-page .product-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .product-page .thumb-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .product-page .page-hero {
+        padding-top: 34px;
+      }
+
+      .product-page .product-summary-card,
+      .product-page .product-gallery-card,
+      .product-page .story-card,
+      .product-page .feature-card,
+      .product-page .spec-card,
+      .product-page .cta-card {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .product-page .thumb-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body class="product-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Eins Home">
+        <img
+          src="assets/img/logo/logo.png"
+          alt="Eins Logo"
+          onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+        />
+        <div class="brand-logo-text">
+          <strong>EINS</strong>
+          <span data-i18n="site.tagline">Skincare</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="brand.html" data-i18n="nav.brand">Brand</a>
+        <a href="products.html" class="active" data-i18n="nav.products">Products</a>
+        <a href="partner.html" data-i18n="nav.partner">Partner</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language Switcher">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="zh">中文</button>
+          <button type="button" data-lang="fr">FR</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html" data-i18n="breadcrumb.home">Home</a>
+          <span>/</span>
+          <a href="products.html" data-i18n="breadcrumb.products">Products</a>
+          <span>/</span>
+          <span data-i18n="product.cream50.breadcrumb">50% Repair Cream</span>
+        </div>
+
+        <div class="page-hero-top">
+          <div>
+            <span class="eyebrow" data-i18n="product.cream50.eyebrow">Product Detail</span>
+            <h1 data-i18n="product.cream50.title">50% Repair Cream</h1>
+            <p class="lead" data-i18n="product.cream50.heroText">
+              A rich repair cream designed to support skin comfort, barrier care, and a firmer-looking finish,
+              presented with a premium, restorative product identity.
+            </p>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card-grid">
+              <div class="hero-mini-card">
+                <strong data-i18n="product.cream50.heroCard1Title">Comfort Repair</strong>
+                <span data-i18n="product.cream50.heroCard1Text">
+                  Designed for richer nourishment and a more cocooning skin feel.
+                </span>
+              </div>
+              <div class="hero-mini-card">
+                <strong data-i18n="product.cream50.heroCard2Title">Barrier Support</strong>
+                <span data-i18n="product.cream50.heroCard2Text">
+                  Supports a calm, protected, and well-cared-for appearance.
+                </span>
+              </div>
+              <div class="hero-mini-card">
+                <strong data-i18n="product.cream50.heroCard3Title">Premium Night Care</strong>
+                <span data-i18n="product.cream50.heroCard3Text">
+                  A restorative cream page suitable for future hero product presentation.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-main">
+      <div class="container">
+        <div class="product-main-grid">
+          <div class="product-gallery-card">
+            <div class="main-image-wrap">
+              <img
+                id="mainProductImage"
+                src="assets/img/products/cream-50/product-main.png"
+                alt="50% Repair Cream"
+                onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+              />
+            </div>
+
+            <div class="thumb-grid">
+              <button
+                class="thumb-btn active"
+                type="button"
+                data-full="assets/img/products/cream-50/product-main.png"
+                aria-label="Main image"
+              >
+                <img
+                  src="assets/img/products/cream-50/product-cover.png"
+                  alt="50% Repair Cream Cover"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+
+              <button
+                class="thumb-btn"
+                type="button"
+                data-full="assets/img/products/cream-50/detail-ingredient.png"
+                aria-label="Detail image 1"
+              >
+                <img
+                  src="assets/img/products/cream-50/detail-ingredient.png"
+                  alt="50% Repair Cream Detail 1"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+
+              <button
+                class="thumb-btn"
+                type="button"
+                data-full="assets/img/products/cream-50/detail-lifestyle.png"
+                aria-label="Detail image 2"
+              >
+                <img
+                  src="assets/img/products/cream-50/detail-lifestyle.png"
+                  alt="50% Repair Cream Detail 2"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+
+              <button
+                class="thumb-btn"
+                type="button"
+                data-full="assets/img/products/cream-50/detail-packaging.png"
+                aria-label="Detail image 3"
+              >
+                <img
+                  src="assets/img/products/cream-50/detail-packaging.png"
+                  alt="50% Repair Cream Detail 3"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+
+              <button
+                class="thumb-btn"
+                type="button"
+                data-full="assets/img/products/cream-50/texture-closeup.png"
+                aria-label="Texture image"
+              >
+                <img
+                  src="assets/img/products/cream-50/texture-closeup.png"
+                  alt="50% Repair Cream Texture"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="product-summary-card">
+            <span class="product-badge" data-i18n="product.cream50.badge">Repair Cream</span>
+            <h2 data-i18n="product.cream50.title">50% Repair Cream</h2>
+            <p class="product-subtitle" data-i18n="product.cream50.summary">
+              Built as a rich repair cream within the Eins collection, this page is structured for a premium restorative
+              positioning, with space for future final ingredient details, claims, and retail content.
+            </p>
+
+            <ul class="product-points">
+              <li data-i18n="product.cream50.point1">
+                Supports a comfort-focused repair story with a richer cream presentation.
+              </li>
+              <li data-i18n="product.cream50.point2">
+                Suitable for barrier support, nourishment, and firmer-looking skin positioning.
+              </li>
+              <li data-i18n="product.cream50.point3">
+                Designed as a premium cream page for future packaging, imagery, and partner use.
+              </li>
+            </ul>
+
+            <div class="button-row">
+              <a href="contact.html" class="btn-primary" data-i18n="product.cream50.cta1">Inquiry Now</a>
+              <a href="partner.html" class="btn-secondary" data-i18n="product.cream50.cta2">Become a Partner</a>
+            </div>
+
+            <div class="product-meta">
+              <div class="meta-item">
+                <span data-i18n="product.cream50.meta1Label">Texture</span>
+                <strong data-i18n="product.cream50.meta1Value">Rich & Comforting</strong>
+              </div>
+              <div class="meta-item">
+                <span data-i18n="product.cream50.meta2Label">Routine Step</span>
+                <strong data-i18n="product.cream50.meta2Value">Repair Cream</strong>
+              </div>
+              <div class="meta-item">
+                <span data-i18n="product.cream50.meta3Label">Display Status</span>
+                <strong data-i18n="product.cream50.meta3Value">Brand Page Ready</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h3 data-i18n="product.cream50.featuresTitle">Why It Stands Out</h3>
+          </div>
+          <p data-i18n="product.cream50.featuresText">
+            This page presents 50% Repair Cream as a richer and more restorative cream within the brand,
+            suitable for premium skincare storytelling and future final launch materials.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="section-card feature-card">
+            <div class="feature-no">01</div>
+            <h4 data-i18n="product.cream50.feature1Title">Repair-Led Positioning</h4>
+            <p data-i18n="product.cream50.feature1Text">
+              Built around the idea of comfort, recovery, and a more supported skin barrier feel.
+            </p>
+          </div>
+
+          <div class="section-card feature-card">
+            <div class="feature-no">02</div>
+            <h4 data-i18n="product.cream50.feature2Title">Premium Jar Format</h4>
+            <p data-i18n="product.cream50.feature2Text">
+              The cream jar presentation helps communicate a richer, more intensive care experience.
+            </p>
+          </div>
+
+          <div class="section-card feature-card">
+            <div class="feature-no">03</div>
+            <h4 data-i18n="product.cream50.feature3Title">Easy to Expand</h4>
+            <p data-i18n="product.cream50.feature3Text">
+              Final net content, INCI, claims, and shopping functions can be added later without changing page structure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="section-card story-card">
+            <h4 data-i18n="product.cream50.story1Title">Formula Story</h4>
+            <p data-i18n="product.cream50.story1Text">
+              50% Repair Cream is positioned as a richer restorative cream in the Eins product line,
+              focusing on skin comfort, barrier care, and a firmer-looking finish. It is suitable for
+              premium cream storytelling, investment decks, and future retail channel communication.
+            </p>
+          </div>
+
+          <div class="section-card story-card">
+            <h4 data-i18n="product.cream50.story2Title">How to Use</h4>
+            <ul>
+              <li data-i18n="product.cream50.story2Point1">
+                Apply after toner, essence, or serum as the cream step of your skincare routine.
+              </li>
+              <li data-i18n="product.cream50.story2Point2">
+                Smooth a suitable amount evenly across face and neck with gentle upward motions.
+              </li>
+              <li data-i18n="product.cream50.story2Point3">
+                Especially suitable for evening use or richer comfort-care routines.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h3 data-i18n="product.cream50.visualTitle">Visual Content Ready Area</h3>
+          </div>
+          <p data-i18n="product.cream50.visualText">
+            These three modules are prepared for future real product photography and detail imagery.
+            Keep the file names unchanged and only replace the image files in the cream-50 folder.
+          </p>
+        </div>
+
+        <div class="visual-strip">
+          <div class="section-card visual-card">
+            <img
+              src="assets/img/products/cream-50/detail-ingredient.png"
+              alt="50% Repair Cream Feature 1"
+              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+            />
+            <div class="visual-text">
+              <h4 data-i18n="product.cream50.visual1Title">Hero Ingredient Visual</h4>
+              <p data-i18n="product.cream50.visual1Text">
+                Reserved for future repair concept visuals, ingredient mood photography, or premium campaign art.
+              </p>
+            </div>
+          </div>
+
+          <div class="section-card visual-card">
+            <img
+              src="assets/img/products/cream-50/detail-lifestyle.png"
+              alt="50% Repair Cream Feature 2"
+              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+            />
+            <div class="visual-text">
+              <h4 data-i18n="product.cream50.visual2Title">Application Scene</h4>
+              <p data-i18n="product.cream50.visual2Text">
+                Reserved for richer cream usage scenes, lifestyle setup, or premium packaging display.
+              </p>
+            </div>
+          </div>
+
+          <div class="section-card visual-card">
+            <img
+              src="assets/img/products/cream-50/texture-closeup.png"
+              alt="50% Repair Cream Texture Visual"
+              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+            />
+            <div class="visual-text">
+              <h4 data-i18n="product.cream50.visual3Title">Texture Close-Up</h4>
+              <p data-i18n="product.cream50.visual3Text">
+                Reserved for cream texture imagery, close-up product details, or finish presentation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h3 data-i18n="product.cream50.specTitle">Product Information</h3>
+          </div>
+          <p data-i18n="product.cream50.specText">
+            This section is intentionally structured for future product finalization and can be updated
+            after packaging, INCI, and SKU details are confirmed.
+          </p>
+        </div>
+
+        <div class="spec-grid">
+          <div class="section-card spec-card">
+            <span data-i18n="product.cream50.spec1Label">Product Name</span>
+            <strong data-i18n="product.cream50.spec1Value">50% Repair Cream</strong>
+          </div>
+
+          <div class="section-card spec-card">
+            <span data-i18n="product.cream50.spec2Label">Category</span>
+            <strong data-i18n="product.cream50.spec2Value">Face Cream</strong>
+          </div>
+
+          <div class="section-card spec-card">
+            <span data-i18n="product.cream50.spec3Label">Image Folder</span>
+            <strong>assets/img/products/cream-50/</strong>
+          </div>
+
+          <div class="section-card spec-card">
+            <span data-i18n="product.cream50.spec4Label">Reserved Files</span>
+            <strong>product-cover.png / product-main.png / detail-ingredient.png / detail-lifestyle.png / detail-packaging.png / texture-closeup.png</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="section-card cta-card">
+          <div>
+            <h3 data-i18n="product.cream50.ctaBlockTitle">Interested in Eins Products?</h3>
+            <p data-i18n="product.cream50.ctaBlockText">
+              Contact us for brand introduction, product cooperation, private label discussion,
+              or future retail and channel opportunities.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a href="partner.html" class="btn-secondary" data-i18n="product.cream50.ctaBlockBtn1">View Partnership Page</a>
+            <a href="contact.html" class="btn-primary" data-i18n="product.cream50.ctaBlockBtn2">Contact Eins</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>EINS</h4>
+          <p data-i18n="footer.brandText">
+            Science-inspired skincare with a refined, modern identity. Crafted for long-term value,
+            elegant presentation, and scalable brand growth.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="brand.html" data-i18n="nav.brand">Brand</a></li>
+            <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+            <li><a href="partner.html" data-i18n="nav.partner">Partner</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 data-i18n="footer.contactTitle">Contact</h4>
+          <p>
+            <a href="https://www.einsskincare.com/" target="_blank" rel="noopener">einsskincare.com</a><br />
+            <a href="contact.html" data-i18n="footer.contactLink">Send us an inquiry</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> Eins.</span>
+        <span data-i18n="footer.rights">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/lang.js"></script>
+  <script>
+    (function () {
+      const pageTranslations = {
+        en: {
+          "site.tagline": "Skincare",
+          "nav.home": "Home",
+          "nav.brand": "Brand",
+          "nav.products": "Products",
+          "nav.partner": "Partner",
+          "nav.contact": "Contact",
+
+          "breadcrumb.home": "Home",
+          "breadcrumb.products": "Products",
+
+          "product.cream50.breadcrumb": "50% Repair Cream",
+          "product.cream50.eyebrow": "Product Detail",
+          "product.cream50.title": "50% Repair Cream",
+          "product.cream50.heroText":
+            "A rich repair cream designed to support skin comfort, barrier care, and a firmer-looking finish, presented with a premium, restorative product identity.",
+
+          "product.cream50.heroCard1Title": "Comfort Repair",
+          "product.cream50.heroCard1Text":
+            "Designed for richer nourishment and a more cocooning skin feel.",
+          "product.cream50.heroCard2Title": "Barrier Support",
+          "product.cream50.heroCard2Text":
+            "Supports a calm, protected, and well-cared-for appearance.",
+          "product.cream50.heroCard3Title": "Premium Night Care",
+          "product.cream50.heroCard3Text":
+            "A restorative cream page suitable for future hero product presentation.",
+
+          "product.cream50.badge": "Repair Cream",
+          "product.cream50.summary":
+            "Built as a rich repair cream within the Eins collection, this page is structured for a premium restorative positioning, with space for future final ingredient details, claims, and retail content.",
+          "product.cream50.point1":
+            "Supports a comfort-focused repair story with a richer cream presentation.",
+          "product.cream50.point2":
+            "Suitable for barrier support, nourishment, and firmer-looking skin positioning.",
+          "product.cream50.point3":
+            "Designed as a premium cream page for future packaging, imagery, and partner use.",
+          "product.cream50.cta1": "Inquiry Now",
+          "product.cream50.cta2": "Become a Partner",
+
+          "product.cream50.meta1Label": "Texture",
+          "product.cream50.meta1Value": "Rich & Comforting",
+          "product.cream50.meta2Label": "Routine Step",
+          "product.cream50.meta2Value": "Repair Cream",
+          "product.cream50.meta3Label": "Display Status",
+          "product.cream50.meta3Value": "Brand Page Ready",
+
+          "product.cream50.featuresTitle": "Why It Stands Out",
+          "product.cream50.featuresText":
+            "This page presents 50% Repair Cream as a richer and more restorative cream within the brand, suitable for premium skincare storytelling and future final launch materials.",
+
+          "product.cream50.feature1Title": "Repair-Led Positioning",
+          "product.cream50.feature1Text":
+            "Built around the idea of comfort, recovery, and a more supported skin barrier feel.",
+          "product.cream50.feature2Title": "Premium Jar Format",
+          "product.cream50.feature2Text":
+            "The cream jar presentation helps communicate a richer, more intensive care experience.",
+          "product.cream50.feature3Title": "Easy to Expand",
+          "product.cream50.feature3Text":
+            "Final net content, INCI, claims, and shopping functions can be added later without changing page structure.",
+
+          "product.cream50.story1Title": "Formula Story",
+          "product.cream50.story1Text":
+            "50% Repair Cream is positioned as a richer restorative cream in the Eins product line, focusing on skin comfort, barrier care, and a firmer-looking finish. It is suitable for premium cream storytelling, investment decks, and future retail channel communication.",
+          "product.cream50.story2Title": "How to Use",
+          "product.cream50.story2Point1":
+            "Apply after toner, essence, or serum as the cream step of your skincare routine.",
+          "product.cream50.story2Point2":
+            "Smooth a suitable amount evenly across face and neck with gentle upward motions.",
+          "product.cream50.story2Point3":
+            "Especially suitable for evening use or richer comfort-care routines.",
+
+          "product.cream50.visualTitle": "Visual Content Ready Area",
+          "product.cream50.visualText":
+            "These three modules are prepared for future real product photography and detail imagery. Keep the file names unchanged and only replace the image files in the cream-50 folder.",
+          "product.cream50.visual1Title": "Hero Ingredient Visual",
+          "product.cream50.visual1Text":
+            "Reserved for future repair concept visuals, ingredient mood photography, or premium campaign art.",
+          "product.cream50.visual2Title": "Application Scene",
+          "product.cream50.visual2Text":
+            "Reserved for richer cream usage scenes, lifestyle setup, or premium packaging display.",
+          "product.cream50.visual3Title": "Texture Close-Up",
+          "product.cream50.visual3Text":
+            "Reserved for cream texture imagery, close-up product details, or finish presentation.",
+
+          "product.cream50.specTitle": "Product Information",
+          "product.cream50.specText":
+            "This section is intentionally structured for future product finalization and can be updated after packaging, INCI, and SKU details are confirmed.",
+          "product.cream50.spec1Label": "Product Name",
+          "product.cream50.spec1Value": "50% Repair Cream",
+          "product.cream50.spec2Label": "Category",
+          "product.cream50.spec2Value": "Face Cream",
+          "product.cream50.spec3Label": "Image Folder",
+          "product.cream50.spec4Label": "Reserved Files",
+
+          "product.cream50.ctaBlockTitle": "Interested in Eins Products?",
+          "product.cream50.ctaBlockText":
+            "Contact us for brand introduction, product cooperation, private label discussion, or future retail and channel opportunities.",
+          "product.cream50.ctaBlockBtn1": "View Partnership Page",
+          "product.cream50.ctaBlockBtn2": "Contact Eins",
+
+          "footer.brandText":
+            "Science-inspired skincare with a refined, modern identity. Crafted for long-term value, elegant presentation, and scalable brand growth.",
+          "footer.quickLinks": "Quick Links",
+          "footer.contactTitle": "Contact",
+          "footer.contactLink": "Send us an inquiry",
+          "footer.rights": "All rights reserved."
+        },
+
+        zh: {
+          "site.tagline": "护肤品牌",
+          "nav.home": "首页",
+          "nav.brand": "品牌",
+          "nav.products": "产品",
+          "nav.partner": "招商合作",
+          "nav.contact": "联系我们",
+
+          "breadcrumb.home": "首页",
+          "breadcrumb.products": "产品中心",
+
+          "product.cream50.breadcrumb": "50% 面霜",
+          "product.cream50.eyebrow": "产品详情",
+          "product.cream50.title": "50% 面霜",
+          "product.cream50.heroText":
+            "一款更强调修护感、滋养感与屏障护理方向的高端面霜，适合以修护晚霜或密集护理面霜的定位进行品牌展示。",
+
+          "product.cream50.heroCard1Title": "舒缓修护",
+          "product.cream50.heroCard1Text":
+            "整体定位偏向更厚润、更安抚、更有包裹感的面霜体验。",
+          "product.cream50.heroCard2Title": "屏障支持",
+          "product.cream50.heroCard2Text":
+            "适合表达稳定肤感、修护护理与更安心的护肤印象。",
+          "product.cream50.heroCard3Title": "高端晚霜感",
+          "product.cream50.heroCard3Text":
+            "可作为品牌线中的重点修护面霜页，用于后续主推展示。",
+
+          "product.cream50.badge": "修护面霜",
+          "product.cream50.summary":
+            "本页将 50% 面霜定位为 Eins 系列中的高端修护面霜，页面结构已适配后续正式成分信息、卖点说明、渠道资料与零售内容补充。",
+          "product.cream50.point1":
+            "页面表达更偏滋养、修护、舒缓与高端晚霜感。",
+          "product.cream50.point2":
+            "适合作为屏障修护类主推单品或夜间护理面霜展示页。",
+          "product.cream50.point3":
+            "后续可直接替换产品图与补充正式资料，无需改动页面结构。",
+          "product.cream50.cta1": "立即咨询",
+          "product.cream50.cta2": "查看合作",
+
+          "product.cream50.meta1Label": "质地",
+          "product.cream50.meta1Value": "丰润滋养质地",
+          "product.cream50.meta2Label": "护肤步骤",
+          "product.cream50.meta2Value": "修护面霜",
+          "product.cream50.meta3Label": "页面状态",
+          "product.cream50.meta3Value": "可用于官网展示",
+
+          "product.cream50.featuresTitle": "产品页亮点",
+          "product.cream50.featuresText":
+            "这一版内容将 50% 面霜表达为更具修护感与高端护理感的面霜，适合后续继续完善包装、图片与多语言信息。",
+
+          "product.cream50.feature1Title": "修护定位清晰",
+          "product.cream50.feature1Text":
+            "围绕舒缓、修护、护理与更强包裹感展开，适合作为修护型面霜主推。",
+          "product.cream50.feature2Title": "罐装更匹配",
+          "product.cream50.feature2Text":
+            "相较于泵瓶，这类面霜更适合用罐装表达更丰润、更密集护理的感受。",
+          "product.cream50.feature3Title": "便于继续扩展",
+          "product.cream50.feature3Text":
+            "净含量、INCI、功效说明、购买链接等内容后续都可直接补入。",
+
+          "product.cream50.story1Title": "产品故事",
+          "product.cream50.story1Text":
+            "50% 面霜在 Eins 产品线中可作为一款更高修护感、更高滋养感的面霜进行呈现，整体适合屏障护理、舒缓修护及夜间护理方向。当前版本更偏官网展示与招商展示用途，后续可继续叠加包装、成分表与销售资料。",
+          "product.cream50.story2Title": "使用方式",
+          "product.cream50.story2Point1":
+            "建议在爽肤水、精华或精华露之后使用，作为护肤流程中的面霜步骤。",
+          "product.cream50.story2Point2":
+            "取适量均匀涂抹于面部与颈部，轻柔按摩吸收。",
+          "product.cream50.story2Point3":
+            "尤其适合晚间护理或需要更丰富肤感的护肤流程。",
+
+          "product.cream50.visualTitle": "图片内容预留区",
+          "product.cream50.visualText":
+            "下面三个模块已为后续真实产品图和卖点图预留位置。保持 cream-50 文件夹中的文件名不变，未来直接替换同名图片即可。",
+          "product.cream50.visual1Title": "核心卖点图",
+          "product.cream50.visual1Text":
+            "可替换为修护概念图、主成分图或品牌主视觉海报。",
+          "product.cream50.visual2Title": "使用场景图",
+          "product.cream50.visual2Text":
+            "可替换为面霜使用场景、生活方式摆拍图或高端护理场景图。",
+          "product.cream50.visual3Title": "质地图",
+          "product.cream50.visual3Text":
+            "可替换为膏体质地特写、取膏细节图或肤感表现图。",
+
+          "product.cream50.specTitle": "产品信息",
+          "product.cream50.specText":
+            "本区块已按后续正式产品落地需求预留，可在包装、INCI、SKU 等信息确认后直接更新。",
+          "product.cream50.spec1Label": "产品名称",
+          "product.cream50.spec1Value": "50% 面霜",
+          "product.cream50.spec2Label": "产品类别",
+          "product.cream50.spec2Value": "面部面霜",
+          "product.cream50.spec3Label": "图片目录",
+          "product.cream50.spec4Label": "预留文件名",
+
+          "product.cream50.ctaBlockTitle": "对 Eins 产品感兴趣？",
+          "product.cream50.ctaBlockText":
+            "欢迎联系我们获取品牌介绍、产品合作、贴牌定制或后续零售与渠道合作信息。",
+          "product.cream50.ctaBlockBtn1": "查看招商页",
+          "product.cream50.ctaBlockBtn2": "联系 Eins",
+
+          "footer.brandText":
+            "以科学护肤为灵感，呈现现代、精致、有长期价值感的护肤品牌形象。",
+          "footer.quickLinks": "快捷链接",
+          "footer.contactTitle": "联系信息",
+          "footer.contactLink": "提交咨询",
+          "footer.rights": "保留所有权利。"
+        },
+
+        fr: {
+          "site.tagline": "Soin de la peau",
+          "nav.home": "Accueil",
+          "nav.brand": "Marque",
+          "nav.products": "Produits",
+          "nav.partner": "Partenariat",
+          "nav.contact": "Contact",
+
+          "breadcrumb.home": "Accueil",
+          "breadcrumb.products": "Produits",
+
+          "product.cream50.breadcrumb": "Crème Réparatrice 50%",
+          "product.cream50.eyebrow": "Détail Produit",
+          "product.cream50.title": "Crème Réparatrice 50%",
+          "product.cream50.heroText":
+            "Une crème riche pensée pour le confort cutané, le soin de la barrière et une finition visiblement plus ferme, avec une identité premium et réparatrice.",
+
+          "product.cream50.heroCard1Title": "Réparation Confort",
+          "product.cream50.heroCard1Text":
+            "Pensée pour une nutrition plus riche et une sensation plus enveloppante.",
+          "product.cream50.heroCard2Title": "Soutien Barrière",
+          "product.cream50.heroCard2Text":
+            "Aide à exprimer une peau apaisée, protégée et bien soignée.",
+          "product.cream50.heroCard3Title": "Soin Nuit Premium",
+          "product.cream50.heroCard3Text":
+            "Une page crème réparatrice adaptée à une future présentation produit héro.",
+
+          "product.cream50.badge": "Crème Réparatrice",
+          "product.cream50.summary":
+            "Construite comme une crème riche réparatrice au sein de la collection Eins, cette page est structurée pour un positionnement premium réparateur, avec un espace prêt pour les futurs détails ingrédients, allégations et contenus retail.",
+          "product.cream50.point1":
+            "Soutient un storytelling axé sur le confort et la réparation avec une présentation plus riche.",
+          "product.cream50.point2":
+            "Convient à un positionnement autour du soutien de la barrière, de la nutrition et d’une peau visiblement plus ferme.",
+          "product.cream50.point3":
+            "Conçue comme une page crème premium pour les futurs visuels, packagings et usages partenaires.",
+          "product.cream50.cta1": "Faire une demande",
+          "product.cream50.cta2": "Devenir partenaire",
+
+          "product.cream50.meta1Label": "Texture",
+          "product.cream50.meta1Value": "Riche & Réconfortante",
+          "product.cream50.meta2Label": "Étape Routine",
+          "product.cream50.meta2Value": "Crème Réparatrice",
+          "product.cream50.meta3Label": "Statut d’Affichage",
+          "product.cream50.meta3Value": "Page Marque Prête",
+
+          "product.cream50.featuresTitle": "Pourquoi Elle Se Distingue",
+          "product.cream50.featuresText":
+            "Cette page présente la Crème Réparatrice 50% comme une crème plus riche et plus restauratrice au sein de la marque, adaptée au storytelling skincare premium et aux futurs supports de lancement.",
+
+          "product.cream50.feature1Title": "Positionnement Réparation",
+          "product.cream50.feature1Text":
+            "Construite autour du confort, de la récupération et d’une sensation de barrière mieux soutenue.",
+          "product.cream50.feature2Title": "Format Pot Premium",
+          "product.cream50.feature2Text":
+            "La présentation en pot aide à exprimer une expérience plus riche et plus intensive.",
+          "product.cream50.feature3Title": "Facile à Étendre",
+          "product.cream50.feature3Text":
+            "Le contenu net final, l’INCI, les allégations et les fonctions d’achat pourront être ajoutés plus tard sans changer la structure.",
+
+          "product.cream50.story1Title": "Histoire de la Formule",
+          "product.cream50.story1Text":
+            "La Crème Réparatrice 50% est positionnée comme une crème restauratrice plus riche dans la ligne Eins, axée sur le confort cutané, le soin de la barrière et une finition visiblement plus ferme. Elle convient au storytelling premium, aux présentations commerciales et à la communication retail future.",
+          "product.cream50.story2Title": "Conseils d’Utilisation",
+          "product.cream50.story2Point1":
+            "Appliquer après la lotion, l’essence ou le sérum comme étape crème de votre routine.",
+          "product.cream50.story2Point2":
+            "Répartir une quantité adaptée uniformément sur le visage et le cou avec des mouvements doux vers le haut.",
+          "product.cream50.story2Point3":
+            "Convient particulièrement aux routines du soir ou aux soins recherchant plus de confort.",
+
+          "product.cream50.visualTitle": "Zone Prête pour le Contenu Visuel",
+          "product.cream50.visualText":
+            "Ces trois modules sont préparés pour les futures photographies produit et visuels détaillés. Conservez les noms de fichiers inchangés et remplacez seulement les images dans le dossier cream-50.",
+          "product.cream50.visual1Title": "Visuel Ingrédient Héros",
+          "product.cream50.visual1Text":
+            "Réservé pour de futurs visuels de réparation, ambiance ingrédient ou création de campagne premium.",
+          "product.cream50.visual2Title": "Scène d’Application",
+          "product.cream50.visual2Text":
+            "Réservé pour des scènes d’usage plus riches, un setup lifestyle ou une présentation premium du packaging.",
+          "product.cream50.visual3Title": "Zoom Texture",
+          "product.cream50.visual3Text":
+            "Réservé pour une image de texture, des détails rapprochés produit ou la présentation du fini.",
+
+          "product.cream50.specTitle": "Informations Produit",
+          "product.cream50.specText":
+            "Cette section est volontairement structurée pour la finalisation future du produit et pourra être mise à jour après validation du packaging, de l’INCI et des références SKU.",
+          "product.cream50.spec1Label": "Nom du Produit",
+          "product.cream50.spec1Value": "Crème Réparatrice 50%",
+          "product.cream50.spec2Label": "Catégorie",
+          "product.cream50.spec2Value": "Crème Visage",
+          "product.cream50.spec3Label": "Dossier Images",
+          "product.cream50.spec4Label": "Fichiers Réservés",
+
+          "product.cream50.ctaBlockTitle": "Intéressé par les produits Eins ?",
+          "product.cream50.ctaBlockText":
+            "Contactez-nous pour une présentation de la marque, une coopération produit, un projet private label ou de futures opportunités retail et distribution.",
+          "product.cream50.ctaBlockBtn1": "Voir la page partenariat",
+          "product.cream50.ctaBlockBtn2": "Contacter Eins",
+
+          "footer.brandText":
+            "Une approche skincare inspirée par la science, avec une identité raffinée, moderne et pensée pour une croissance durable.",
+          "footer.quickLinks": "Liens Rapides",
+          "footer.contactTitle": "Contact",
+          "footer.contactLink": "Envoyer une demande",
+          "footer.rights": "Tous droits réservés."
+        }
+      };
+
+      function getCurrentLang() {
+        return (
+          localStorage.getItem("language") ||
+          localStorage.getItem("lang") ||
+          document.documentElement.getAttribute("lang") ||
+          "en"
+        );
+      }
+
+      function setCurrentLang(lang) {
+        localStorage.setItem("language", lang);
+        localStorage.setItem("lang", lang);
+        document.documentElement.setAttribute("lang", lang);
+      }
+
+      function applyPageTranslations(lang) {
+        const dict = pageTranslations[lang] || pageTranslations.en;
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          const key = el.getAttribute("data-i18n");
+          if (dict[key]) {
+            el.textContent = dict[key];
+          }
+        });
+
+        document.title =
+          lang === "zh"
+            ? "Eins | 50% 面霜"
+            : lang === "fr"
+            ? "Eins | Crème Réparatrice 50%"
+            : "Eins | 50% Repair Cream";
+
+        document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+          btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+        });
+      }
+
+      document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const lang = btn.getAttribute("data-lang");
+          setCurrentLang(lang);
+          applyPageTranslations(lang);
+        });
+      });
+
+      applyPageTranslations(getCurrentLang());
+    })();
+
+    (function () {
+      const mainImage = document.getElementById("mainProductImage");
+      const thumbButtons = document.querySelectorAll(".thumb-btn");
+
+      thumbButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const newSrc = button.getAttribute("data-full");
+          if (newSrc && mainImage) {
+            mainImage.src = newSrc;
+          }
+          thumbButtons.forEach(function (btn) {
+            btn.classList.remove("active");
+          });
+          button.classList.add("active");
+        });
+      });
+    })();
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
