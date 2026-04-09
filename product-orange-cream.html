@@ -6,7 +6,7 @@
   <title>Eins | Orange Radiance Cream</title>
   <meta
     name="description"
-    content="Discover Eins Orange Radiance Cream — a nourishing daily cream designed to help skin look smoother, softer, and more radiant."
+    content="Discover Eins Orange Radiance Cream — a firming and barrier support cream designed for a smoother, calmer, and more resilient-looking finish."
   />
   <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -31,7 +31,7 @@
     }
 
     .product-page .header-inner {
-      min-height: 96px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -41,14 +41,14 @@
     .product-page .brand-logo {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       text-decoration: none;
       color: inherit;
     }
 
     .product-page .brand-logo img {
-      width: auto;
-      height: 72px;
+      width: 44px;
+      height: 44px;
       object-fit: contain;
       display: block;
     }
@@ -56,17 +56,17 @@
     .product-page .brand-logo-text {
       display: flex;
       flex-direction: column;
-      line-height: 1.05;
+      line-height: 1.1;
     }
 
     .product-page .brand-logo-text strong {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       letter-spacing: 0.08em;
     }
 
     .product-page .brand-logo-text span {
-      font-size: 0.86rem;
-      opacity: 0.78;
+      font-size: 0.78rem;
+      opacity: 0.75;
       letter-spacing: 0.04em;
     }
 
@@ -250,7 +250,7 @@
 
     .product-page .thumb-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 12px;
       margin-top: 16px;
     }
@@ -667,10 +667,6 @@
         justify-content: center;
       }
 
-      .product-page .brand-logo img {
-        height: 64px;
-      }
-
       .product-page .feature-grid,
       .product-page .visual-strip,
       .product-page .spec-grid,
@@ -680,7 +676,7 @@
       }
 
       .product-page .thumb-grid {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .product-page .page-hero {
@@ -699,7 +695,7 @@
 
     @media (max-width: 560px) {
       .product-page .thumb-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -754,29 +750,29 @@
             <span class="eyebrow" data-i18n="product.orange.eyebrow">Product Detail</span>
             <h1 data-i18n="product.orange.title">Orange Radiance Cream</h1>
             <p class="lead" data-i18n="product.orange.heroText">
-              A daily cream designed for a smoother, softer, and more radiant-looking finish,
-              with a rich yet elegant feel that fits the refined identity of Eins.
+              A firming and barrier support cream designed for daily comfort, a richer care step,
+              and a calmer, smoother-looking finish within the Eins collection.
             </p>
           </div>
 
           <div class="hero-card">
             <div class="hero-card-grid">
               <div class="hero-mini-card">
-                <strong data-i18n="product.orange.heroCard1Title">Daily Comfort</strong>
+                <strong data-i18n="product.orange.heroCard1Title">Antioxidant Radiance</strong>
                 <span data-i18n="product.orange.heroCard1Text">
-                  Creamy care created for everyday use and a nourished skin feel.
+                  Built around idebenone, niacinamide, and an antioxidant complex for a fresher-looking complexion.
                 </span>
               </div>
               <div class="hero-mini-card">
-                <strong data-i18n="product.orange.heroCard2Title">Radiant Finish</strong>
+                <strong data-i18n="product.orange.heroCard2Title">Lightweight Comfort</strong>
                 <span data-i18n="product.orange.heroCard2Text">
-                  Helps skin appear fresher, brighter, and naturally polished.
+                  Creamy enough to feel nourishing, yet lighter and cleaner on skin than a heavy cream profile.
                 </span>
               </div>
               <div class="hero-mini-card">
-                <strong data-i18n="product.orange.heroCard3Title">Brand-Ready Page</strong>
+                <strong data-i18n="product.orange.heroCard3Title">50 mL Format</strong>
                 <span data-i18n="product.orange.heroCard3Text">
-                  Structured for future product imagery, claims, and channel presentation.
+                  Standardized product page structure with image slots ready for future updates.
                 </span>
               </div>
             </div>
@@ -789,6 +785,7 @@
       <div class="container">
         <div class="product-main-grid">
           <div class="product-gallery-card">
+            <!-- Standardized image paths for cream-50 folder -->
             <div class="main-image-wrap">
               <img
                 id="mainProductImage"
@@ -799,92 +796,44 @@
             </div>
 
             <div class="thumb-grid">
-              <button
-                class="thumb-btn active"
-                type="button"
-                data-full="assets/img/products/orange-cream/product-main.png"
-                aria-label="Main image"
-              >
-                <img
-                  src="assets/img/products/orange-cream/product-cover.png"
-                  alt="Orange Radiance Cream Cover"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn" type="button" data-full="assets/img/products/orange-cream/product-cover.png" aria-label="Cover image">
+                <img src="assets/img/products/orange-cream/product-cover.png" alt="Orange Radiance Cream Cover" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
 
-              <button
-                class="thumb-btn"
-                type="button"
-                data-full="assets/img/products/orange-cream/detail-ingredient.png"
-                aria-label="Detail image 1"
-              >
-                <img
-                  src="assets/img/products/orange-cream/detail-ingredient.png"
-                  alt="Orange Radiance Cream Detail 1"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn active" type="button" data-full="assets/img/products/orange-cream/product-main.png" aria-label="Main image">
+                <img src="assets/img/products/orange-cream/product-main.png" alt="Orange Radiance Cream Main" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
 
-              <button
-                class="thumb-btn"
-                type="button"
-                data-full="assets/img/products/orange-cream/detail-lifestyle.png"
-                aria-label="Detail image 2"
-              >
-                <img
-                  src="assets/img/products/orange-cream/detail-lifestyle.png"
-                  alt="Orange Radiance Cream Detail 2"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn" type="button" data-full="assets/img/products/orange-cream/detail-ingredient.png" aria-label="Ingredient detail image">
+                <img src="assets/img/products/orange-cream/detail-ingredient.png" alt="Orange Radiance Cream Ingredient Detail" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
 
-              <button
-                class="thumb-btn"
-                type="button"
-                data-full="assets/img/products/orange-cream/detail-packaging.png"
-                aria-label="Detail image 3"
-              >
-                <img
-                  src="assets/img/products/orange-cream/detail-packaging.png"
-                  alt="Orange Radiance Cream Detail 3"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn" type="button" data-full="assets/img/products/orange-cream/detail-lifestyle.png" aria-label="Lifestyle detail image">
+                <img src="assets/img/products/orange-cream/detail-lifestyle.png" alt="Orange Radiance Cream Lifestyle Detail" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
 
-              <button
-                class="thumb-btn"
-                type="button"
-                data-full="assets/img/products/orange-cream/texture-closeup.png"
-                aria-label="Texture image"
-              >
-                <img
-                  src="assets/img/products/orange-cream/texture-closeup.png"
-                  alt="Orange Radiance Cream Texture"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn" type="button" data-full="assets/img/products/orange-cream/detail-packaging.png" aria-label="Packaging detail image">
+                <img src="assets/img/products/orange-cream/detail-packaging.png" alt="Orange Radiance Cream Packaging Detail" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+              </button>
+
+              <button class="thumb-btn" type="button" data-full="assets/img/products/orange-cream/texture-closeup.png" aria-label="Texture image">
+                <img src="assets/img/products/orange-cream/texture-closeup.png" alt="Orange Radiance Cream Texture Closeup" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
             </div>
           </div>
 
           <div class="product-summary-card">
-            <span class="product-badge" data-i18n="product.orange.badge">Signature Cream</span>
+            <span class="product-badge" data-i18n="product.orange.badge">Repair Collection</span>
             <h2 data-i18n="product.orange.title">Orange Radiance Cream</h2>
             <p class="product-subtitle" data-i18n="product.orange.summary">
-              Created as a soft, elegant cream within the Eins skincare collection, this page
-              presents a premium product structure ready for future final imagery, ingredient
-              details, and retail information updates.
+              Presented as a firming and barrier support cream, this page is built for product storytelling,
+              premium channel presentation, and future replacement of final brand visuals without changing the structure.
             </p>
 
             <ul class="product-points">
-              <li data-i18n="product.orange.point1">
-                Helps support a smoother and more refined-looking skin appearance.
-              </li>
-              <li data-i18n="product.orange.point2">
-                Rich cream texture with a comfortable finish suitable for daily routines.
-              </li>
-              <li data-i18n="product.orange.point3">
-                Designed for brand presentation, product storytelling, and future partner use.
-              </li>
+              <li data-i18n="product.orange.point1">Supports a brighter, clearer-looking complexion with antioxidant-focused daily care.</li>
+              <li data-i18n="product.orange.point2">Light cream texture designed for oily to combination skin that dislikes a heavy finish.</li>
+              <li data-i18n="product.orange.point3">Ideal for dullness, daily city stress, and skin that needs a fresher glow.</li>
             </ul>
 
             <div class="button-row">
@@ -895,15 +844,15 @@
             <div class="product-meta">
               <div class="meta-item">
                 <span data-i18n="product.orange.meta1Label">Texture</span>
-                <strong data-i18n="product.orange.meta1Value">Creamy & Smooth</strong>
+                <strong data-i18n="product.orange.meta1Value">Rich Cream</strong>
               </div>
               <div class="meta-item">
                 <span data-i18n="product.orange.meta2Label">Routine Step</span>
                 <strong data-i18n="product.orange.meta2Value">Moisturizer</strong>
               </div>
               <div class="meta-item">
-                <span data-i18n="product.orange.meta3Label">Display Status</span>
-                <strong data-i18n="product.orange.meta3Value">Brand Page Ready</strong>
+                <span data-i18n="product.orange.meta3Label">Net Content</span>
+                <strong data-i18n="product.orange.meta3Value">50 mL / 1.75 FL OZ</strong>
               </div>
             </div>
           </div>
@@ -915,36 +864,36 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <h3 data-i18n="product.orange.featuresTitle">Why It Stands Out</h3>
+            <h3 data-i18n="product.orange.featuresTitle">Core Benefits</h3>
           </div>
           <p data-i18n="product.orange.featuresText">
-            The page content below is written in a premium, flexible style suitable for future
-            packaging adjustments, product imaging replacement, and multilingual brand rollout.
+            The section below keeps the same premium template logic as the existing product pages,
+            while aligning the image system to the unified PNG naming structure for cream-50.
           </p>
         </div>
 
         <div class="feature-grid">
           <div class="section-card feature-card">
             <div class="feature-no">01</div>
-            <h4 data-i18n="product.orange.feature1Title">Refined Daily Cream</h4>
+            <h4 data-i18n="product.orange.feature1Title">Antioxidant Brightening</h4>
             <p data-i18n="product.orange.feature1Text">
-              A polished moisturizer concept that aligns with a clean, sophisticated skincare brand presentation.
+              Built around idebenone, niacinamide, and antioxidant support to help skin look clearer and more awake.
             </p>
           </div>
 
           <div class="section-card feature-card">
             <div class="feature-no">02</div>
-            <h4 data-i18n="product.orange.feature2Title">Radiance-Led Story</h4>
+            <h4 data-i18n="product.orange.feature2Title">Comfort Without Heaviness</h4>
             <p data-i18n="product.orange.feature2Text">
-              The naming and visual direction support a bright, energetic, and elegant product positioning.
+              Designed to reduce the stuffy feeling that oily skin often dislikes in richer cream textures.
             </p>
           </div>
 
           <div class="section-card feature-card">
             <div class="feature-no">03</div>
-            <h4 data-i18n="product.orange.feature3Title">Easy to Expand</h4>
+            <h4 data-i18n="product.orange.feature3Title">Daily Balance</h4>
             <p data-i18n="product.orange.feature3Text">
-              Product claims, final net content, ingredient details, and shopping links can be added later without changing the page structure.
+              Suitable for everyday use when skin looks dull, tired, or slightly uneven in tone.
             </p>
           </div>
         </div>
@@ -955,27 +904,18 @@
       <div class="container">
         <div class="story-grid">
           <div class="section-card story-card">
-            <h4 data-i18n="product.orange.story1Title">Formula Story</h4>
+            <h4 data-i18n="product.orange.story1Title">Product Overview</h4>
             <p data-i18n="product.orange.story1Text">
-              Orange Radiance Cream is presented as a comfort-first daily cream within the Eins
-              collection, balancing soft texture, polished appearance, and an elevated skincare identity.
-              It is suitable as a hero moisturizer page for brand storytelling, investment presentation,
-              and future retail channel communication.
+              This cream is designed around antioxidant care, brightness, and a lighter skin feel for people who dislike overly rich moisturizers. With idebenone, niacinamide, and an antioxidant complex, it helps skin maintain a clearer, smoother, and more refined-looking finish while fitting comfortably into a daily routine.
             </p>
           </div>
 
           <div class="section-card story-card">
             <h4 data-i18n="product.orange.story2Title">How to Use</h4>
             <ul>
-              <li data-i18n="product.orange.story2Point1">
-                Apply after toner, serum, or essence as the moisturizing step of your routine.
-              </li>
-              <li data-i18n="product.orange.story2Point2">
-                Smooth evenly across face and neck with gentle upward motions.
-              </li>
-              <li data-i18n="product.orange.story2Point3">
-                Use morning and evening, or adjust according to your daily skincare needs.
-              </li>
+              <li data-i18n="product.orange.story2Point1">Apply after toner, serum, or essence as the cream step in your routine.</li>
+              <li data-i18n="product.orange.story2Point2">Spread evenly across face and neck with gentle upward motions.</li>
+              <li data-i18n="product.orange.story2Point3">Use morning and evening, especially when skin looks dull or feels slightly tired.</li>
             </ul>
           </div>
         </div>
@@ -986,53 +926,40 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <h3 data-i18n="product.orange.visualTitle">Visual Content Ready Area</h3>
+            <h3 data-i18n="product.orange.visualTitle">Ingredient & Texture Highlights</h3>
           </div>
           <p data-i18n="product.orange.visualText">
-            These three modules are prepared for future real product photography and detail imagery.
-            Keep the file names unchanged and only replace the image files in the orange-cream folder.
+            This section highlights the antioxidant formula logic, the lighter cream texture, and the daily brightening role this product plays.
           </p>
         </div>
 
         <div class="visual-strip">
           <div class="section-card visual-card">
-            <img
-              src="assets/img/products/orange-cream/detail-ingredient.png"
-              alt="Orange Radiance Cream Feature 1"
-              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-            />
+            <img src="assets/img/products/orange-cream/detail-ingredient.png" alt="Orange Radiance Cream Ingredient Visual" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
             <div class="visual-text">
-              <h4 data-i18n="product.orange.visual1Title">Hero Ingredient Visual</h4>
+              <h4 data-i18n="product.orange.visual1Title">Brightening Formula Focus</h4>
               <p data-i18n="product.orange.visual1Text">
-                Reserved for future key visual storytelling, ingredient mood photography, or premium campaign art.
+                Built around idebenone, niacinamide, and antioxidant support to help maintain a fresher, clearer-looking complexion.
               </p>
             </div>
           </div>
 
           <div class="section-card visual-card">
-            <img
-              src="assets/img/products/orange-cream/detail-lifestyle.png"
-              alt="Orange Radiance Cream Feature 2"
-              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-            />
+            <img src="assets/img/products/orange-cream/detail-lifestyle.png" alt="Orange Radiance Cream Lifestyle Visual" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
             <div class="visual-text">
-              <h4 data-i18n="product.orange.visual2Title">Application Scene</h4>
+              <h4 data-i18n="product.orange.visual2Title">Daily Use Moment</h4>
               <p data-i18n="product.orange.visual2Text">
-                Reserved for lifestyle imagery showing texture, use scenario, or premium packaging display.
+                Fits easily into a daily routine as a lighter cream step for oily to combination skin.
               </p>
             </div>
           </div>
 
           <div class="section-card visual-card">
-            <img
-              src="assets/img/products/orange-cream/texture-closeup.png"
-              alt="Orange Radiance Cream Texture Visual"
-              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-            />
+            <img src="assets/img/products/orange-cream/texture-closeup.png" alt="Orange Radiance Cream Light Cream Texture" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
             <div class="visual-text">
-              <h4 data-i18n="product.orange.visual3Title">Texture Close-Up</h4>
+              <h4 data-i18n="product.orange.visual3Title">Light Cream Texture</h4>
               <p data-i18n="product.orange.visual3Text">
-                Reserved for cream texture imagery, swatch details, or formula finish presentation.
+                A smooth, elegant cream texture that feels nourishing without leaning overly thick or heavy.
               </p>
             </div>
           </div>
@@ -1047,8 +974,7 @@
             <h3 data-i18n="product.orange.specTitle">Product Information</h3>
           </div>
           <p data-i18n="product.orange.specText">
-            This section is intentionally structured for future product finalization and can be updated
-            after packaging, INCI, and SKU details are confirmed.
+            This area is already aligned to the standardized cream-50 folder structure, so future visual replacement can happen without changing the HTML again.
           </p>
         </div>
 
@@ -1064,12 +990,12 @@
           </div>
 
           <div class="section-card spec-card">
-            <span data-i18n="product.orange.spec3Label">Image Folder</span>
+            <span data-i18n="product.orange.spec3Label">Key Ingredients</span>
             <strong>assets/img/products/orange-cream/</strong>
           </div>
 
           <div class="section-card spec-card">
-            <span data-i18n="product.orange.spec4Label">Reserved Files</span>
+            <span data-i18n="product.orange.spec4Label">Best For</span>
             <strong>product-cover.png / product-main.png / detail-ingredient.png / detail-lifestyle.png / detail-packaging.png / texture-closeup.png</strong>
           </div>
         </div>
@@ -1082,8 +1008,7 @@
           <div>
             <h3 data-i18n="product.orange.ctaBlockTitle">Interested in Eins Products?</h3>
             <p data-i18n="product.orange.ctaBlockText">
-              Contact us for brand introduction, product cooperation, private label discussion,
-              or future retail and channel opportunities.
+              Contact us for brand introduction, channel cooperation, private label discussion, or future retail opportunities.
             </p>
           </div>
 
@@ -1121,7 +1046,6 @@
         <div class="footer-contact">
           <h4 data-i18n="footer.contactTitle">Contact</h4>
           <p>
-            <a href="https://www.einsskincare.com/" target="_blank" rel="noopener">einsskincare.com</a><br />
             <a href="contact.html" data-i18n="footer.contactLink">Send us an inquiry</a>
           </p>
         </div>
@@ -1152,94 +1076,70 @@
           "product.orange.breadcrumb": "Orange Radiance Cream",
           "product.orange.eyebrow": "Product Detail",
           "product.orange.title": "Orange Radiance Cream",
-          "product.orange.heroText":
-            "A daily cream designed for a smoother, softer, and more radiant-looking finish, with a rich yet elegant feel that fits the refined identity of Eins.",
+          "product.orange.heroText": "An antioxidant brightening cream designed for oily to combination skin, with a lighter feel and a more radiant-looking finish.",
 
-          "product.orange.heroCard1Title": "Daily Comfort",
-          "product.orange.heroCard1Text":
-            "Creamy care created for everyday use and a nourished skin feel.",
-          "product.orange.heroCard2Title": "Radiant Finish",
-          "product.orange.heroCard2Text":
-            "Helps skin appear fresher, brighter, and naturally polished.",
-          "product.orange.heroCard3Title": "Brand-Ready Page",
-          "product.orange.heroCard3Text":
-            "Structured for future product imagery, claims, and channel presentation.",
+          "product.orange.heroCard1Title": "Antioxidant Radiance",
+          "product.orange.heroCard1Text": "Built around idebenone, niacinamide, and an antioxidant complex for a fresher-looking complexion.",
+          "product.orange.heroCard2Title": "Lightweight Comfort",
+          "product.orange.heroCard2Text": "Creamy enough to feel nourishing, yet lighter and cleaner on skin than a heavy cream profile.",
+          "product.orange.heroCard3Title": "Oily-Skin Friendly",
+          "product.orange.heroCard3Text": "Created for daily brightening care without an overly thick or stuffy finish.",
 
-          "product.orange.badge": "Signature Cream",
-          "product.orange.summary":
-            "Created as a soft, elegant cream within the Eins skincare collection, this page presents a premium product structure ready for future final imagery, ingredient details, and retail information updates.",
-          "product.orange.point1":
-            "Helps support a smoother and more refined-looking skin appearance.",
-          "product.orange.point2":
-            "Rich cream texture with a comfortable finish suitable for daily routines.",
-          "product.orange.point3":
-            "Designed for brand presentation, product storytelling, and future partner use.",
+          "product.orange.badge": "Brightening Collection",
+          "product.orange.summary": "Orange Radiance Cream is designed around antioxidant care, visible brightness, and a lighter cream feel. It suits skin that looks dull, oily, or tired, while helping maintain a fresher and more polished-looking finish.",
+          "product.orange.point1": "Supports a brighter, clearer-looking complexion with antioxidant-focused daily care.",
+          "product.orange.point2": "Light cream texture designed for oily to combination skin that dislikes a heavy finish.",
+          "product.orange.point3": "Ideal for dullness, daily city stress, and skin that needs a fresher glow.",
           "product.orange.cta1": "Inquiry Now",
           "product.orange.cta2": "Become a Partner",
 
           "product.orange.meta1Label": "Texture",
-          "product.orange.meta1Value": "Creamy & Smooth",
+          "product.orange.meta1Value": "Light Cream",
           "product.orange.meta2Label": "Routine Step",
           "product.orange.meta2Value": "Moisturizer",
-          "product.orange.meta3Label": "Display Status",
-          "product.orange.meta3Value": "Brand Page Ready",
+          "product.orange.meta3Label": "Net Content",
+          "product.orange.meta3Value": "50 mL / 1.75 FL OZ",
 
-          "product.orange.featuresTitle": "Why It Stands Out",
-          "product.orange.featuresText":
-            "The page content below is written in a premium, flexible style suitable for future packaging adjustments, product imaging replacement, and multilingual brand rollout.",
+          "product.orange.featuresTitle": "Core Benefits",
+          "product.orange.featuresText": "Centered on antioxidant brightening, lightweight comfort, and a daily cream experience that suits oily to combination skin.",
+          "product.orange.feature1Title": "Antioxidant Brightening",
+          "product.orange.feature1Text": "Built around idebenone, niacinamide, and antioxidant support to help skin look clearer and more awake.",
+          "product.orange.feature2Title": "Comfort Without Heaviness",
+          "product.orange.feature2Text": "Designed to reduce the stuffy feeling that oily skin often dislikes in richer cream textures.",
+          "product.orange.feature3Title": "Daily Balance",
+          "product.orange.feature3Text": "Suitable for everyday use when skin looks dull, tired, or slightly uneven in tone.",
 
-          "product.orange.feature1Title": "Refined Daily Cream",
-          "product.orange.feature1Text":
-            "A polished moisturizer concept that aligns with a clean, sophisticated skincare brand presentation.",
-          "product.orange.feature2Title": "Radiance-Led Story",
-          "product.orange.feature2Text":
-            "The naming and visual direction support a bright, energetic, and elegant product positioning.",
-          "product.orange.feature3Title": "Easy to Expand",
-          "product.orange.feature3Text":
-            "Product claims, final net content, ingredient details, and shopping links can be added later without changing the page structure.",
-
-          "product.orange.story1Title": "Formula Story",
-          "product.orange.story1Text":
-            "Orange Radiance Cream is presented as a comfort-first daily cream within the Eins collection, balancing soft texture, polished appearance, and an elevated skincare identity. It is suitable as a hero moisturizer page for brand storytelling, investment presentation, and future retail channel communication.",
+          "product.orange.story1Title": "Product Overview",
+          "product.orange.story1Text": "This cream is designed around antioxidant care, brightness, and a lighter skin feel for people who dislike overly rich moisturizers. With idebenone, niacinamide, and an antioxidant complex, it helps skin maintain a clearer, smoother, and more refined-looking finish while fitting comfortably into a daily routine.",
           "product.orange.story2Title": "How to Use",
-          "product.orange.story2Point1":
-            "Apply after toner, serum, or essence as the moisturizing step of your routine.",
-          "product.orange.story2Point2":
-            "Smooth evenly across face and neck with gentle upward motions.",
-          "product.orange.story2Point3":
-            "Use morning and evening, or adjust according to your daily skincare needs.",
+          "product.orange.story2Point1": "Apply after toner, serum, or essence as the cream step in your routine.",
+          "product.orange.story2Point2": "Spread evenly across face and neck, then smooth gently until absorbed.",
+          "product.orange.story2Point3": "Use morning and evening, especially when skin looks dull or feels slightly tired.",
 
-          "product.orange.visualTitle": "Visual Content Ready Area",
-          "product.orange.visualText":
-            "These three modules are prepared for future real product photography and detail imagery. Keep the file names unchanged and only replace the image files in the orange-cream folder.",
-          "product.orange.visual1Title": "Hero Ingredient Visual",
-          "product.orange.visual1Text":
-            "Reserved for future key visual storytelling, ingredient mood photography, or premium campaign art.",
-          "product.orange.visual2Title": "Application Scene",
-          "product.orange.visual2Text":
-            "Reserved for lifestyle imagery showing texture, use scenario, or premium packaging display.",
-          "product.orange.visual3Title": "Texture Close-Up",
-          "product.orange.visual3Text":
-            "Reserved for cream texture imagery, swatch details, or formula finish presentation.",
+          "product.orange.visualTitle": "Ingredient & Texture Highlights",
+          "product.orange.visualText": "This section highlights the antioxidant formula logic, the lighter cream texture, and the daily brightening role this product plays.",
+          "product.orange.visual1Title": "Brightening Formula Focus",
+          "product.orange.visual1Text": "Built around idebenone, niacinamide, and antioxidant support to help maintain a fresher, clearer-looking complexion.",
+          "product.orange.visual2Title": "Daily Use Moment",
+          "product.orange.visual2Text": "Fits easily into a daily routine as a lighter cream step for oily to combination skin.",
+          "product.orange.visual3Title": "Light Cream Texture",
+          "product.orange.visual3Text": "A smooth, elegant cream texture that feels nourishing without leaning overly thick or heavy.",
 
           "product.orange.specTitle": "Product Information",
-          "product.orange.specText":
-            "This section is intentionally structured for future product finalization and can be updated after packaging, INCI, and SKU details are confirmed.",
+          "product.orange.specText": "An antioxidant brightening cream developed for daily radiance care and a lighter, more refined skin feel.",
           "product.orange.spec1Label": "Product Name",
           "product.orange.spec1Value": "Orange Radiance Cream",
           "product.orange.spec2Label": "Category",
           "product.orange.spec2Value": "Face Cream",
-          "product.orange.spec3Label": "Image Folder",
-          "product.orange.spec4Label": "Reserved Files",
+          "product.orange.spec3Label": "Key Ingredients",
+          "product.orange.spec4Label": "Best For",
 
           "product.orange.ctaBlockTitle": "Interested in Eins Products?",
-          "product.orange.ctaBlockText":
-            "Contact us for brand introduction, product cooperation, private label discussion, or future retail and channel opportunities.",
+          "product.orange.ctaBlockText": "Contact us for brand introduction, channel cooperation, product inquiries, or future retail opportunities.",
           "product.orange.ctaBlockBtn1": "View Partnership Page",
           "product.orange.ctaBlockBtn2": "Contact Eins",
 
-          "footer.brandText":
-            "Science-inspired skincare with a refined, modern identity. Crafted for long-term value, elegant presentation, and scalable brand growth.",
+          "footer.brandText": "Science-inspired skincare with a refined, modern identity. Crafted for long-term value, elegant presentation, and scalable brand growth.",
           "footer.quickLinks": "Quick Links",
           "footer.contactTitle": "Contact",
           "footer.contactLink": "Send us an inquiry",
@@ -1260,102 +1160,78 @@
           "product.orange.breadcrumb": "橘灿面霜",
           "product.orange.eyebrow": "产品详情",
           "product.orange.title": "橘灿面霜",
-          "product.orange.heroText":
-            "一款面向日常护理的精致面霜页面模板，强调柔润肤感、细腻质地与自然透亮的视觉表达，契合 Eins 的高级护肤品牌调性。",
+          "product.orange.heroText": "一款以抗氧与提亮为核心的轻润面霜，面向油皮与混油皮日常护理，帮助肌肤呈现更清透、匀净的观感。",
 
-          "product.orange.heroCard1Title": "日常舒润",
-          "product.orange.heroCard1Text":
-            "适合作为每日护肤流程中的面霜步骤，带来柔和舒适的肤感体验。",
-          "product.orange.heroCard2Title": "透亮感表达",
-          "product.orange.heroCard2Text":
-            "页面文案聚焦细腻、明亮、精致的产品印象，适合后续品牌传播使用。",
-          "product.orange.heroCard3Title": "可直接扩展",
-          "product.orange.heroCard3Text":
-            "后续可直接补入真实产品图、正式功效文案、成分信息与购买入口。",
+          "product.orange.heroCard1Title": "抗氧提亮",
+          "product.orange.heroCard1Text": "围绕艾地苯、烟酰胺与抗氧复配因子展开，帮助肌肤改善倦感与黯哑状态。",
+          "product.orange.heroCard2Title": "清爽舒适",
+          "product.orange.heroCard2Text": "有面霜的柔润感，同时尽量减少厚重与闷感，更适合油皮日常使用。",
+          "product.orange.heroCard3Title": "油皮友好",
+          "product.orange.heroCard3Text": "适合容易暗沉、出油或不喜欢厚重面霜触感的人群。",
 
-          "product.orange.badge": "主推面霜",
-          "product.orange.summary":
-            "本页以 Eins 系列中的高端面霜为核心展示方向，已搭建好适合后续替换实拍图、补充正式成分信息与零售内容的完整产品页结构。",
-          "product.orange.point1":
-            "页面表达聚焦柔滑、细腻、透亮的高端护肤感受。",
-          "product.orange.point2":
-            "适合作为品牌官网主推单品详情页或招商展示页使用。",
-          "product.orange.point3":
-            "后续仅需替换对应图片与补充最终产品信息，无需改动页面结构。",
+          "product.orange.badge": "提亮抗氧系列",
+          "product.orange.summary": "这款面霜围绕抗氧、提亮与轻盈肤感展开配方设计，适合容易暗沉、出油或不喜欢厚重面霜触感的人群使用。配方以艾地苯、烟酰胺与抗氧复配因子为核心，帮助肌肤改善倦感与黯哑状态，维持更清透匀净的肤感表现。",
+          "product.orange.point1": "帮助肌肤维持更清透、匀净、明亮的外观表现。",
+          "product.orange.point2": "轻润面霜质地，在保证滋润度的同时减少闷感。",
+          "product.orange.point3": "适合油皮或混油皮作为日常提亮修护面霜使用。",
           "product.orange.cta1": "立即咨询",
-          "product.orange.cta2": "查看合作",
+          "product.orange.cta2": "成为合作伙伴",
 
           "product.orange.meta1Label": "质地",
-          "product.orange.meta1Value": "柔润乳霜质地",
+          "product.orange.meta1Value": "轻润面霜",
           "product.orange.meta2Label": "护肤步骤",
           "product.orange.meta2Value": "面霜",
-          "product.orange.meta3Label": "页面状态",
-          "product.orange.meta3Value": "可用于官网展示",
+          "product.orange.meta3Label": "净含量",
+          "product.orange.meta3Value": "50 mL / 1.75 FL OZ",
 
-          "product.orange.featuresTitle": "产品页亮点",
-          "product.orange.featuresText":
-            "这一版内容采用高级、灵活的产品表达方式，便于后续包装信息、图片素材和多语言内容继续完善。",
+          "product.orange.featuresTitle": "核心亮点",
+          "product.orange.featuresText": "围绕抗氧提亮、清爽肤感与油皮适配展开表达，去掉网站中原先的模板与预留说明。",
+          "product.orange.feature1Title": "抗氧与提亮",
+          "product.orange.feature1Text": "通过艾地苯、烟酰胺与抗氧复配因子，帮助肌肤呈现更清透明亮的状态。",
+          "product.orange.feature2Title": "清爽不厚重",
+          "product.orange.feature2Text": "更关注油皮与混油皮对轻盈、贴肤、不闷感的实际需求。",
+          "product.orange.feature3Title": "日常维持好气色",
+          "product.orange.feature3Text": "适合在暗沉、倦感明显或肤色看起来不够通透时加入日常护理。",
 
-          "product.orange.feature1Title": "适合品牌主推",
-          "product.orange.feature1Text":
-            "页面结构和视觉节奏适合用于展示品牌主推面霜，整体更偏高端、简洁、耐看。",
-          "product.orange.feature2Title": "符合橘灿概念",
-          "product.orange.feature2Text":
-            "命名和文案调性围绕明亮、柔润、焕亮感展开，适合后续继续深化成分故事。",
-          "product.orange.feature3Title": "后续扩展方便",
-          "product.orange.feature3Text":
-            "净含量、正式成分、功效说明、购买链接等内容都可后续直接补入。",
-
-          "product.orange.story1Title": "产品故事",
-          "product.orange.story1Text":
-            "橘灿面霜在官网中可作为 Eins 代表性面霜单品进行展示，整体定位强调舒适肤感、细腻质地与优雅护肤体验。当前版本更偏品牌展示与招商展示用途，适合后续继续叠加真实包装图、成分表、渠道合作资料及零售信息。",
+          "product.orange.story1Title": "产品概览",
+          "product.orange.story1Text": "这款面霜围绕抗氧、提亮与轻盈肤感展开配方设计，适合容易暗沉、出油或不喜欢厚重面霜触感的人群使用。配方以艾地苯、烟酰胺与抗氧复配因子为核心，帮助肌肤改善倦感与黯哑状态，维持更清透匀净的肤感表现。整体质地强调轻薄延展与舒适贴肤，在保证滋润度的同时减少闷感，更适合作为油皮或混油皮的日常提亮修护面霜。",
           "product.orange.story2Title": "使用方式",
-          "product.orange.story2Point1":
-            "建议在爽肤水、精华或精华露之后使用，作为日常护肤的面霜步骤。",
-          "product.orange.story2Point2":
-            "取适量均匀涂抹于面部与颈部，轻柔推开并按摩吸收。",
-          "product.orange.story2Point3":
-            "可根据个人护理习惯于早晚使用。",
+          "product.orange.story2Point1": "在爽肤水、精华或精华露之后，作为面霜步骤使用。",
+          "product.orange.story2Point2": "取适量均匀涂抹于面部与颈部，轻柔推开并按压吸收。",
+          "product.orange.story2Point3": "早晚均可使用，尤其适合在肌肤显得暗沉或疲惫时加入护理流程。",
 
-          "product.orange.visualTitle": "图片内容预留区",
-          "product.orange.visualText":
-            "下面三个模块已为后续真实产品图和卖点图预留位置。保持 orange-cream 文件夹中的文件名不变，未来直接替换同名图片即可。",
-          "product.orange.visual1Title": "核心卖点图",
-          "product.orange.visual1Text":
-            "可替换为主成分概念图、品牌主视觉或重点卖点海报。",
-          "product.orange.visual2Title": "使用场景图",
-          "product.orange.visual2Text":
-            "可替换为产品摆拍图、使用氛围图或包装展示图。",
-          "product.orange.visual3Title": "质地图",
-          "product.orange.visual3Text":
-            "可替换为膏体质地特写、涂抹延展图或肤感表现图。",
+          "product.orange.visualTitle": "成分与质地亮点",
+          "product.orange.visualText": "以下模块用于表达抗氧提亮思路、日常使用场景与轻润质地，均已改成正式产品介绍语气。",
+          "product.orange.visual1Title": "提亮型配方思路",
+          "product.orange.visual1Text": "以艾地苯、烟酰胺与抗氧复配因子为核心，帮助肌肤维持更清透的状态。",
+          "product.orange.visual2Title": "日常使用场景",
+          "product.orange.visual2Text": "适合作为油皮与混油皮日常护理中的轻润面霜步骤，减少厚重负担。",
+          "product.orange.visual3Title": "轻润质地表达",
+          "product.orange.visual3Text": "顺滑延展的轻润霜体，兼顾舒适贴肤与清爽感。",
 
           "product.orange.specTitle": "产品信息",
-          "product.orange.specText":
-            "本区块已按后续正式产品落地需求预留，可在包装、INCI、SKU 等信息确认后直接更新。",
+          "product.orange.specText": "围绕抗氧、提亮与轻盈肤感展开的一款日常面霜。",
           "product.orange.spec1Label": "产品名称",
           "product.orange.spec1Value": "橘灿面霜",
           "product.orange.spec2Label": "产品类别",
-          "product.orange.spec2Value": "面部面霜",
-          "product.orange.spec3Label": "图片目录",
-          "product.orange.spec4Label": "预留文件名",
+          "product.orange.spec2Value": "面霜",
+          "product.orange.spec3Label": "核心成分",
+          "product.orange.spec4Label": "适合肤质",
 
-          "product.orange.ctaBlockTitle": "对 Eins 产品感兴趣？",
-          "product.orange.ctaBlockText":
-            "欢迎联系我们获取品牌介绍、产品合作、贴牌定制或后续零售与渠道合作信息。",
-          "product.orange.ctaBlockBtn1": "查看招商页",
+          "product.orange.ctaBlockTitle": "想了解 Eins 产品？",
+          "product.orange.ctaBlockText": "欢迎联系我们了解品牌介绍、渠道合作、产品咨询或未来零售合作机会。",
+          "product.orange.ctaBlockBtn1": "查看合作页面",
           "product.orange.ctaBlockBtn2": "联系 Eins",
 
-          "footer.brandText":
-            "以科学护肤为灵感，呈现现代、精致、有长期价值感的护肤品牌形象。",
+          "footer.brandText": "以科学逻辑为基础的现代护肤品牌，强调长期价值、优雅表达与可扩展的品牌成长。",
           "footer.quickLinks": "快捷链接",
-          "footer.contactTitle": "联系信息",
-          "footer.contactLink": "提交咨询",
+          "footer.contactTitle": "联系",
+          "footer.contactLink": "发送咨询",
           "footer.rights": "保留所有权利。"
         },
 
         fr: {
-          "site.tagline": "Soin de la peau",
+          "site.tagline": "Soins de la peau",
           "nav.home": "Accueil",
           "nav.brand": "Marque",
           "nav.products": "Produits",
@@ -1365,170 +1241,132 @@
           "breadcrumb.home": "Accueil",
           "breadcrumb.products": "Produits",
 
-          "product.orange.breadcrumb": "Crème Éclat Orange",
+          "product.orange.breadcrumb": "Crème Orange Éclat",
           "product.orange.eyebrow": "Détail Produit",
-          "product.orange.title": "Crème Éclat Orange",
-          "product.orange.heroText":
-            "Une crème de soin quotidienne conçue pour une peau visiblement plus douce, plus lisse et plus lumineuse, avec une sensation riche mais élégante fidèle à l’identité raffinée de Eins.",
+          "product.orange.title": "Crème Orange Éclat",
+          "product.orange.heroText": "Une crème légère orientée antioxydants et éclat, pensée pour les peaux mixtes à grasses avec un fini plus net et lumineux.",
 
-          "product.orange.heroCard1Title": "Confort Quotidien",
-          "product.orange.heroCard1Text":
-            "Un soin crémeux pensé pour un usage quotidien et une sensation nourrie.",
-          "product.orange.heroCard2Title": "Fini Lumineux",
-          "product.orange.heroCard2Text":
-            "Aide la peau à paraître plus fraîche, plus lumineuse et naturellement soignée.",
-          "product.orange.heroCard3Title": "Page Prête à Déployer",
-          "product.orange.heroCard3Text":
-            "Structure préparée pour accueillir ultérieurement les images, les allégations et la présentation produit.",
+          "product.orange.heroCard1Title": "Éclat Antioxydant",
+          "product.orange.heroCard1Text": "Construit autour de l'idébénone, de la niacinamide et d'un complexe antioxydant pour un teint plus frais.",
+          "product.orange.heroCard2Title": "Confort Léger",
+          "product.orange.heroCard2Text": "Suffisamment crémeuse pour nourrir, mais plus légère et plus propre sur la peau qu'une crème riche classique.",
+          "product.orange.heroCard3Title": "Adaptée aux Peaux Grasses",
+          "product.orange.heroCard3Text": "Conçue pour un soin quotidien illuminateur sans fini épais ni étouffant.",
 
-          "product.orange.badge": "Crème Signature",
-          "product.orange.summary":
-            "Conçue comme une crème douce et élégante au sein de la collection Eins, cette page présente une structure premium prête à accueillir les visuels finaux, les détails ingrédients et les informations retail.",
-          "product.orange.point1":
-            "Aide à soutenir une apparence de peau plus lisse et plus raffinée.",
-          "product.orange.point2":
-            "Texture riche et confortable adaptée aux routines quotidiennes.",
-          "product.orange.point3":
-            "Pensée pour la présentation de marque, le storytelling produit et l’usage futur en partenariat.",
+          "product.orange.badge": "Collection Éclat",
+          "product.orange.summary": "La Crème Orange Éclat est pensée autour du soin antioxydant, de la luminosité visible et d'une texture crème plus légère. Elle convient aux peaux ternes, grasses ou fatiguées tout en aidant à maintenir un fini plus frais et plus net.",
+          "product.orange.point1": "Aide à préserver un teint plus lumineux, plus clair et plus éveillé grâce à un soin quotidien antioxydant.",
+          "product.orange.point2": "Texture crème légère adaptée aux peaux mixtes à grasses qui n'aiment pas les finis lourds.",
+          "product.orange.point3": "Idéale pour le teint terne, le stress urbain quotidien et le besoin d'un éclat plus frais.",
           "product.orange.cta1": "Faire une demande",
           "product.orange.cta2": "Devenir partenaire",
 
           "product.orange.meta1Label": "Texture",
-          "product.orange.meta1Value": "Crémeuse & Soyeuse",
-          "product.orange.meta2Label": "Étape Routine",
-          "product.orange.meta2Value": "Hydratant",
-          "product.orange.meta3Label": "Statut d’Affichage",
-          "product.orange.meta3Value": "Page Marque Prête",
+          "product.orange.meta1Value": "Crème légère",
+          "product.orange.meta2Label": "Étape routine",
+          "product.orange.meta2Value": "Crème",
+          "product.orange.meta3Label": "Contenance",
+          "product.orange.meta3Value": "50 mL / 1.75 FL OZ",
 
-          "product.orange.featuresTitle": "Pourquoi Elle Se Distingue",
-          "product.orange.featuresText":
-            "Le contenu ci-dessous adopte un style premium et souple, adapté aux futures mises à jour d’emballage, au remplacement des visuels produit et au déploiement multilingue de la marque.",
+          "product.orange.featuresTitle": "Points Forts",
+          "product.orange.featuresText": "Centré sur l'éclat antioxydant, le confort léger et une expérience crème quotidienne adaptée aux peaux mixtes à grasses.",
+          "product.orange.feature1Title": "Éclat Antioxydant",
+          "product.orange.feature1Text": "L'idébénone, la niacinamide et le soutien antioxydant aident la peau à paraître plus claire et plus réveillée.",
+          "product.orange.feature2Title": "Confort sans lourdeur",
+          "product.orange.feature2Text": "Conçue pour réduire la sensation étouffante que les peaux grasses n'aiment pas dans les textures plus riches.",
+          "product.orange.feature3Title": "Équilibre Quotidien",
+          "product.orange.feature3Text": "Convient à l'usage quotidien quand la peau paraît terne, fatiguée ou légèrement inégale.",
 
-          "product.orange.feature1Title": "Crème Quotidienne Raffinée",
-          "product.orange.feature1Text":
-            "Un concept hydratant élégant qui correspond à une présentation skincare propre et sophistiquée.",
-          "product.orange.feature2Title": "Positionnement Axé Éclat",
-          "product.orange.feature2Text":
-            "Le nom et la direction visuelle soutiennent un positionnement lumineux, énergique et élégant.",
-          "product.orange.feature3Title": "Facile à Étendre",
-          "product.orange.feature3Text":
-            "Les allégations produit, le contenu net final, les détails ingrédients et les liens d’achat peuvent être ajoutés plus tard sans modifier la structure.",
+          "product.orange.story1Title": "Aperçu Produit",
+          "product.orange.story1Text": "Cette crème est pensée autour du soin antioxydant, de la luminosité et d'une sensation plus légère pour les personnes qui n'aiment pas les textures trop riches. Avec l'idébénone, la niacinamide et un complexe antioxydant, elle aide la peau à conserver un fini plus clair, plus lisse et plus raffiné tout en restant confortable au quotidien.",
+          "product.orange.story2Title": "Conseils d'utilisation",
+          "product.orange.story2Point1": "Appliquer après la lotion, le sérum ou l'essence comme étape crème de la routine.",
+          "product.orange.story2Point2": "Répartir sur le visage et le cou puis lisser délicatement jusqu'à absorption.",
+          "product.orange.story2Point3": "Utiliser matin et soir, surtout quand la peau paraît terne ou fatiguée.",
 
-          "product.orange.story1Title": "Histoire de la Formule",
-          "product.orange.story1Text":
-            "La Crème Éclat Orange est présentée comme une crème quotidienne centrée sur le confort au sein de la collection Eins, équilibrant texture douce, apparence soignée et identité skincare haut de gamme. Elle convient parfaitement à une page héros destinée au storytelling de marque, à la présentation commerciale et à la communication retail future.",
-          "product.orange.story2Title": "Conseils d’Utilisation",
-          "product.orange.story2Point1":
-            "Appliquer après la lotion, le sérum ou l’essence comme étape hydratante de la routine.",
-          "product.orange.story2Point2":
-            "Répartir uniformément sur le visage et le cou par mouvements doux vers le haut.",
-          "product.orange.story2Point3":
-            "Utiliser matin et soir, ou ajuster selon les besoins de votre routine.",
+          "product.orange.visualTitle": "Ingrédients & Texture",
+          "product.orange.visualText": "Cette section met en avant la logique de formule antioxydante, la texture crème légère et le rôle illuminateur quotidien du produit.",
+          "product.orange.visual1Title": "Focus Formule Éclat",
+          "product.orange.visual1Text": "Construit autour de l'idébénone, de la niacinamide et du soutien antioxydant pour aider à maintenir un teint plus frais et plus clair.",
+          "product.orange.visual2Title": "Moment d'Usage Quotidien",
+          "product.orange.visual2Text": "S'intègre facilement à une routine quotidienne comme étape crème plus légère pour peaux mixtes à grasses.",
+          "product.orange.visual3Title": "Texture Crème Légère",
+          "product.orange.visual3Text": "Une texture crème lisse et élégante, nourrissante sans être trop épaisse ou lourde.",
 
-          "product.orange.visualTitle": "Zone Prête pour le Contenu Visuel",
-          "product.orange.visualText":
-            "Ces trois modules sont préparés pour les futures photographies produit et visuels détaillés. Conservez les noms de fichiers inchangés et remplacez seulement les images dans le dossier orange-cream.",
-          "product.orange.visual1Title": "Visuel Ingrédient Héros",
-          "product.orange.visual1Text":
-            "Réservé pour un futur visuel clé, une ambiance ingrédient ou une création de campagne premium.",
-          "product.orange.visual2Title": "Scène d’Application",
-          "product.orange.visual2Text":
-            "Réservé pour une image lifestyle montrant la texture, l’usage ou la présentation du packaging.",
-          "product.orange.visual3Title": "Zoom Texture",
-          "product.orange.visual3Text":
-            "Réservé pour une image de texture, un swatch ou la présentation du fini formule.",
-
-          "product.orange.specTitle": "Informations Produit",
-          "product.orange.specText":
-            "Cette section est volontairement structurée pour la finalisation future du produit et pourra être mise à jour après validation du packaging, de l’INCI et des références SKU.",
-          "product.orange.spec1Label": "Nom du Produit",
-          "product.orange.spec1Value": "Crème Éclat Orange",
+          "product.orange.specTitle": "Informations produit",
+          "product.orange.specText": "Une crème antioxydante illuminateur développée pour l'éclat quotidien et une sensation de peau plus légère et raffinée.",
+          "product.orange.spec1Label": "Nom du produit",
+          "product.orange.spec1Value": "Crème Orange Éclat",
           "product.orange.spec2Label": "Catégorie",
-          "product.orange.spec2Value": "Crème Visage",
-          "product.orange.spec3Label": "Dossier Images",
-          "product.orange.spec4Label": "Fichiers Réservés",
+          "product.orange.spec2Value": "Crème visage",
+          "product.orange.spec3Label": "Ingrédients clés",
+          "product.orange.spec4Label": "Idéal pour",
 
           "product.orange.ctaBlockTitle": "Intéressé par les produits Eins ?",
-          "product.orange.ctaBlockText":
-            "Contactez-nous pour une présentation de la marque, une coopération produit, un projet private label ou de futures opportunités retail et distribution.",
+          "product.orange.ctaBlockText": "Contactez-nous pour la présentation de la marque, la coopération de canal, les demandes produit ou les opportunités retail.",
           "product.orange.ctaBlockBtn1": "Voir la page partenariat",
           "product.orange.ctaBlockBtn2": "Contacter Eins",
 
-          "footer.brandText":
-            "Une approche skincare inspirée par la science, avec une identité raffinée, moderne et pensée pour une croissance durable.",
-          "footer.quickLinks": "Liens Rapides",
+          "footer.brandText": "Des soins inspirés par la science avec une identité moderne et raffinée. Pensés pour une valeur durable, une présentation élégante et une croissance de marque évolutive.",
+          "footer.quickLinks": "Liens rapides",
           "footer.contactTitle": "Contact",
           "footer.contactLink": "Envoyer une demande",
           "footer.rights": "Tous droits réservés."
         }
       };
 
-      function getCurrentLang() {
-        return (
-          localStorage.getItem("language") ||
-          localStorage.getItem("lang") ||
-          document.documentElement.getAttribute("lang") ||
-          "en"
-        );
-      }
-
-      function setCurrentLang(lang) {
-        localStorage.setItem("language", lang);
-        localStorage.setItem("lang", lang);
-        document.documentElement.setAttribute("lang", lang);
-      }
-
-      function applyPageTranslations(lang) {
+      function applyTranslations(lang) {
         const dict = pageTranslations[lang] || pageTranslations.en;
-        document.querySelectorAll("[data-i18n]").forEach(function (el) {
-          const key = el.getAttribute("data-i18n");
-          if (dict[key]) {
-            el.textContent = dict[key];
-          }
+        document.documentElement.setAttribute("lang", lang);
+        document.querySelectorAll("[data-i18n]").forEach((node) => {
+          const key = node.getAttribute("data-i18n");
+          if (dict[key]) node.textContent = dict[key];
         });
 
-        document.title =
-          lang === "zh"
-            ? "Eins | 橘灿面霜"
-            : lang === "fr"
-            ? "Eins | Crème Éclat Orange"
-            : "Eins | Orange Radiance Cream";
+        const titleMap = {
+          en: "Eins | Orange Radiance Cream",
+          zh: "Eins | 橘灿面霜",
+          fr: "Eins | Crème Orange Éclat"
+        };
+        document.title = titleMap[lang] || titleMap.en;
 
-        document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-          btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+        document.querySelectorAll(".lang-switch button").forEach((button) => {
+          button.classList.toggle("active", button.dataset.lang === lang);
         });
+
+        try {
+          localStorage.setItem("eins-language", lang);
+        } catch (error) {}
       }
 
-      document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          const lang = btn.getAttribute("data-lang");
-          setCurrentLang(lang);
-          applyPageTranslations(lang);
+      document.querySelectorAll(".lang-switch button").forEach((button) => {
+        button.addEventListener("click", function () {
+          applyTranslations(this.dataset.lang);
         });
       });
 
-      applyPageTranslations(getCurrentLang());
-    })();
-
-    (function () {
       const mainImage = document.getElementById("mainProductImage");
       const thumbButtons = document.querySelectorAll(".thumb-btn");
-
-      thumbButtons.forEach(function (button) {
+      thumbButtons.forEach((button) => {
         button.addEventListener("click", function () {
-          const newSrc = button.getAttribute("data-full");
-          if (newSrc && mainImage) {
-            mainImage.src = newSrc;
-          }
-          thumbButtons.forEach(function (btn) {
-            btn.classList.remove("active");
-          });
-          button.classList.add("active");
+          thumbButtons.forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+          mainImage.src = this.dataset.full;
         });
       });
-    })();
 
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
+      const savedLang = (() => {
+        try {
+          return localStorage.getItem("eins-language");
+        } catch (error) {
+          return null;
+        }
+      })();
+      applyTranslations(savedLang || "en");
+
+      const yearEl = document.getElementById("currentYear");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
   </script>
 </body>
 </html>

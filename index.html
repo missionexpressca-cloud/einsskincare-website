@@ -6,65 +6,11 @@
   <title>Eins Skincare</title>
   <meta name="description" content="Eins Skincare - Science-led skincare centered on effective ingredients.">
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .site-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 16px 40px;
-    }
-    .brand-logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: inherit;
-      flex-shrink: 0;
-    }
-    .brand-logo img {
-      height: 72px;
-      width: auto;
-      display: block;
-      object-fit: contain;
-    }
-    .brand-logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
-    }
-    .brand-logo-text strong {
-      font-size: 1.15rem;
-      letter-spacing: 0.08em;
-      color: #2f2721;
-    }
-    .brand-logo-text span {
-      font-size: 0.86rem;
-      letter-spacing: 0.04em;
-      color: #6d5d50;
-    }
-    @media (max-width: 900px) {
-      .site-header {
-        flex-direction: column;
-        align-items: center;
-        padding: 16px 20px;
-      }
-      .brand-logo img {
-        height: 64px;
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="logo-wrap">
-      <a href="index.html" class="brand-logo" aria-label="Eins Home">
-        <img src="assets/img/logo/logo.png" alt="Eins logo">
-        <div class="brand-logo-text">
-          <strong>EINS</strong>
-          <span>Skincare</span>
-        </div>
-      </a>
+      <a href="index.html" class="logo-text">Eins</a>
     </div>
 
     <nav>
@@ -125,37 +71,37 @@
 
   <section class="content-section">
     <h2 class="center" data-i18n="home.featuredTitle">Featured Products</h2>
-    <p class="center narrow" data-i18n="home.featuredText">
-      Explore selected products from the Eins collection, with reserved image positions ready for future product photography.
+    <p class="center narrow" id="homeFeaturedText">
+      Explore selected products from the Eins collection, each built around a clear skincare need, refined texture, and daily use experience.
     </p>
 
     <section class="products-grid">
       <div class="product-card">
         <img src="assets/img/products/orange-cream/product-cover.png" alt="Orange Radiance Cream">
-        <h3 data-i18n="products.orangeCream.name">Orange Radiance Cream</h3>
-        <p data-i18n="products.orangeCream.subtitle">Antioxidant brightening cream for oily skin</p>
-        <a href="product-orange-cream.html" data-i18n="common.viewMore">View More</a>
+        <h3 id="home-orange-name">Orange Radiance Cream</h3>
+        <p id="home-orange-subtitle">Antioxidant brightening cream for oily to combination skin</p>
+        <a href="product-orange-cream.html" id="home-view-1">View More</a>
       </div>
 
       <div class="product-card">
-        <img src="assets/img/products/cream-50/cover.jpg" alt="50% Repair Cream">
-        <h3 data-i18n="products.cream50.name">50% Repair Cream</h3>
-        <p data-i18n="products.cream50.subtitle">Firming and barrier support cream</p>
-        <a href="product-50-cream.html" data-i18n="common.viewMore">View More</a>
+        <img src="assets/img/products/cream-50/product-cover.png" alt="50% Repair Cream">
+        <h3 id="home-repair-name">50% Repair Cream</h3>
+        <p id="home-repair-subtitle">Repair-focused cream with a rich, comforting finish</p>
+        <a href="product-50-cream.html" id="home-view-2">View More</a>
       </div>
 
       <div class="product-card">
         <img src="assets/img/products/essence-lotion/cover.jpg" alt="Caviar Essence Lotion">
-        <h3 data-i18n="products.essenceLotion.name">Caviar Essence Lotion</h3>
-        <p data-i18n="products.essenceLotion.subtitle">Luxurious revitalizing essence lotion</p>
-        <a href="product-essence-lotion.html" data-i18n="common.viewMore">View More</a>
+        <h3 id="home-essence-name">Caviar Essence Lotion</h3>
+        <p id="home-essence-subtitle">Nourishing essence lotion for firmness and radiance</p>
+        <a href="product-essence-lotion.html" id="home-view-3">View More</a>
       </div>
 
       <div class="product-card">
         <img src="assets/img/products/white-truffle-mask/cover.jpg" alt="White Truffle Sleeping Mask">
-        <h3 data-i18n="products.whiteTruffleMask.name">White Truffle Sleeping Mask</h3>
-        <p data-i18n="products.whiteTruffleMask.subtitle">Overnight radiance and recovery mask</p>
-        <a href="product-white-truffle-mask.html" data-i18n="common.viewMore">View More</a>
+        <h3 id="home-truffle-name">White Truffle Sleeping Mask</h3>
+        <p id="home-truffle-subtitle">Overnight mask for radiance, comfort, and recovery</p>
+        <a href="product-white-truffle-mask.html" id="home-view-4">View More</a>
       </div>
     </section>
   </section>
@@ -191,5 +137,68 @@
   </footer>
 
   <script src="assets/js/lang.js"></script>
+  <script>
+    (function () {
+      const copy = {
+        en: {
+          homeFeaturedText: "Explore selected products from the Eins collection, each built around a clear skincare need, refined texture, and daily use experience.",
+          "home-orange-name": "Orange Radiance Cream",
+          "home-orange-subtitle": "Antioxidant brightening cream for oily to combination skin",
+          "home-repair-name": "50% Repair Cream",
+          "home-repair-subtitle": "Repair-focused cream with a rich, comforting finish",
+          "home-essence-name": "Caviar Essence Lotion",
+          "home-essence-subtitle": "Nourishing essence lotion for firmness and radiance",
+          "home-truffle-name": "White Truffle Sleeping Mask",
+          "home-truffle-subtitle": "Overnight mask for radiance, comfort, and recovery"
+        },
+        zh: {
+          homeFeaturedText: "精选单品已按最新文档口径更新为正式产品名称与介绍，不再使用“预留”“后续补充”等占位表达。",
+          "home-orange-name": "橘灿面霜",
+          "home-orange-subtitle": "适合油皮与混油皮的抗氧提亮面霜",
+          "home-repair-name": "50% 面霜",
+          "home-repair-subtitle": "强调修护、柔润与屏障支持的丰润面霜",
+          "home-essence-name": "精华露",
+          "home-essence-subtitle": "兼顾紧致、焕活与柔润肤感的精华露",
+          "home-truffle-name": "白松露睡眠面膜",
+          "home-truffle-subtitle": "面向夜间修护、焕亮与保湿护理的睡眠面膜"
+        },
+        fr: {
+          homeFeaturedText: "Une sélection de produits présentés avec leurs noms et descriptions mis à jour, sans texte provisoire ni mention de réserve.",
+          "home-orange-name": "Crème Orange Éclat",
+          "home-orange-subtitle": "Crème antioxydante illuminateur pour peaux mixtes à grasses",
+          "home-repair-name": "Crème Réparatrice 50%",
+          "home-repair-subtitle": "Crème orientée réparation avec un fini riche et réconfortant",
+          "home-essence-name": "Lotion Essence Caviar",
+          "home-essence-subtitle": "Lotion essence nourrissante pour fermeté et éclat",
+          "home-truffle-name": "Masque de Nuit à la Truffe Blanche",
+          "home-truffle-subtitle": "Masque de nuit pour éclat, confort et récupération"
+        }
+      };
+
+      function getLang() {
+        return localStorage.getItem("language") || document.documentElement.lang || "en";
+      }
+
+      function applyCopy() {
+        const lang = copy[getLang()] ? getLang() : "en";
+        Object.entries(copy[lang]).forEach(([id, value]) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = value;
+        });
+      }
+
+      const originalSetLanguage = window.setLanguage;
+      if (typeof originalSetLanguage === "function") {
+        window.setLanguage = function (lang) {
+          originalSetLanguage(lang);
+          setTimeout(applyCopy, 0);
+        };
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(applyCopy, 0);
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -5,65 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eins Products</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .site-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 16px 40px;
-    }
-    .brand-logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-      color: inherit;
-      flex-shrink: 0;
-    }
-    .brand-logo img {
-      height: 72px;
-      width: auto;
-      display: block;
-      object-fit: contain;
-    }
-    .brand-logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
-    }
-    .brand-logo-text strong {
-      font-size: 1.15rem;
-      letter-spacing: 0.08em;
-      color: #2f2721;
-    }
-    .brand-logo-text span {
-      font-size: 0.86rem;
-      letter-spacing: 0.04em;
-      color: #6d5d50;
-    }
-    @media (max-width: 900px) {
-      .site-header {
-        flex-direction: column;
-        align-items: center;
-        padding: 16px 20px;
-      }
-      .brand-logo img {
-        height: 64px;
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="logo-wrap">
-      <a href="index.html" class="brand-logo" aria-label="Eins Home">
-        <img src="assets/img/logo/logo.png" alt="Eins logo">
-        <div class="brand-logo-text">
-          <strong>EINS</strong>
-          <span>Skincare</span>
-        </div>
-      </a>
+      <a href="index.html" class="logo-text">Eins</a>
     </div>
 
     <nav>
@@ -84,99 +30,99 @@
   <section class="page-hero">
     <img src="assets/img/hero/products-hero.jpg" alt="Eins products">
     <div class="page-hero-overlay">
-      <h1 data-i18n="productsPage.title">Product Collection</h1>
-      <p data-i18n="productsPage.subtitle">A complete skincare range designed around repair, radiance, hydration, and anti-aging care.</p>
+      <h1 id="productsPageTitle">Product Collection</h1>
+      <p id="productsPageSubtitle">A complete skincare range designed around radiance, repair, hydration, and daily anti-aging care.</p>
     </div>
   </section>
 
   <section class="section-intro">
-    <h2 data-i18n="productsPage.gridTitle">Explore Our Collection</h2>
-    <p data-i18n="productsPage.gridDesc">Discover targeted solutions for brightening, repair, hydration, and daily skin balance.</p>
+    <h2 id="productsGridTitle">Explore Our Collection</h2>
+    <p id="productsGridDesc">Discover targeted skincare directions built around clear product positioning, refined texture, and everyday use.</p>
   </section>
 
   <section class="products-grid">
     <div class="product-card">
       <img src="assets/img/products/orange-cream/product-cover.png" alt="Orange Radiance Cream">
-      <h3 data-i18n="products.orangeCream.name">Orange Radiance Cream</h3>
-      <p data-i18n="products.orangeCream.subtitle">Antioxidant brightening cream for oily skin</p>
-      <a href="product-orange-cream.html" data-i18n="common.viewMore">View More</a>
+      <h3 id="catalog-orange-name">Orange Radiance Cream</h3>
+      <p id="catalog-orange-subtitle">Antioxidant brightening cream for oily to combination skin</p>
+      <a href="product-orange-cream.html" id="catalog-view-1">View More</a>
     </div>
 
     <div class="product-card">
       <img src="assets/img/products/cream-50/product-cover.png" alt="50% Repair Cream">
-      <h3 data-i18n="products.cream50.name">50% Repair Cream</h3>
-      <p data-i18n="products.cream50.subtitle">Firming and barrier support cream</p>
-      <a href="product-50-cream.html" data-i18n="common.viewMore">View More</a>
+      <h3 id="catalog-repair-name">50% Repair Cream</h3>
+      <p id="catalog-repair-subtitle">Repair-focused cream with a rich, comforting finish</p>
+      <a href="product-50-cream.html" id="catalog-view-2">View More</a>
     </div>
 
     <div class="product-card">
       <img src="assets/img/products/essence-lotion/cover.jpg" alt="Caviar Essence Lotion">
-      <h3 data-i18n="products.essenceLotion.name">Caviar Essence Lotion</h3>
-      <p data-i18n="products.essenceLotion.subtitle">Luxurious revitalizing essence lotion</p>
-      <a href="product-essence-lotion.html" data-i18n="common.viewMore">View More</a>
+      <h3 id="catalog-essence-name">Caviar Essence Lotion</h3>
+      <p id="catalog-essence-subtitle">Nourishing essence lotion for firmness and radiance</p>
+      <a href="product-essence-lotion.html" id="catalog-view-3">View More</a>
     </div>
 
     <div class="product-card">
-      <img src="assets/img/products/eye-cream/cover.jpg" alt="Rose Pro-Xylane Eye Cream">
-      <h3 data-i18n="products.eyeCream.name">Rose Pro-Xylane Eye Cream</h3>
-      <p data-i18n="products.eyeCream.subtitle">Hydrating anti-aging eye care</p>
-      <a href="product-eye-cream.html" data-i18n="common.viewMore">View More</a>
+      <img src="assets/img/products/eye-cream/cover.jpg" alt="Eye Cream">
+      <h3 id="catalog-eye-name">Eye Cream</h3>
+      <p id="catalog-eye-subtitle">Smoothing eye care for hydration and daily repair</p>
+      <a href="product-eye-cream.html" id="catalog-view-4">View More</a>
     </div>
 
     <div class="product-card">
-      <img src="assets/img/products/orchid-oil/cover.jpg" alt="Orchid Facial Oil">
-      <h3 data-i18n="products.orchidOil.name">Orchid Facial Oil</h3>
-      <p data-i18n="products.orchidOil.subtitle">Nourishing antioxidant facial oil</p>
-      <a href="product-orchid-oil.html" data-i18n="common.viewMore">View More</a>
+      <img src="assets/img/products/orchid-oil/cover.jpg" alt="Orchid Oil">
+      <h3 id="catalog-orchid-name">Orchid Oil</h3>
+      <p id="catalog-orchid-subtitle">Nourishing facial oil for comfort and glow</p>
+      <a href="product-orchid-oil.html" id="catalog-view-5">View More</a>
     </div>
 
     <div class="product-card">
-      <img src="assets/img/products/purple-rice-serum/cover.jpg" alt="Purple Rice Serum">
-      <h3 data-i18n="products.purpleRiceSerum.name">Purple Rice Serum</h3>
-      <p data-i18n="products.purpleRiceSerum.subtitle">Plumping and smoothing serum</p>
-      <a href="product-purple-rice-serum.html" data-i18n="common.viewMore">View More</a>
+      <img src="assets/img/products/purple-rice-serum/cover.jpg" alt="Revitalizing Serum">
+      <h3 id="catalog-serum-name">Revitalizing Serum</h3>
+      <p id="catalog-serum-subtitle">Plumping serum for smoothness and daily anti-aging care</p>
+      <a href="product-purple-rice-serum.html" id="catalog-view-6">View More</a>
     </div>
 
     <div class="product-card">
       <img src="assets/img/products/white-truffle-mask/cover.jpg" alt="White Truffle Sleeping Mask">
-      <h3 data-i18n="products.whiteTruffleMask.name">White Truffle Sleeping Mask</h3>
-      <p data-i18n="products.whiteTruffleMask.subtitle">Overnight radiance and recovery mask</p>
-      <a href="product-white-truffle-mask.html" data-i18n="common.viewMore">View More</a>
+      <h3 id="catalog-truffle-name">White Truffle Sleeping Mask</h3>
+      <p id="catalog-truffle-subtitle">Overnight mask for radiance, comfort, and recovery</p>
+      <a href="product-white-truffle-mask.html" id="catalog-view-7">View More</a>
     </div>
 
     <div class="product-card">
       <img src="assets/img/products/oily-toner/cover.jpg" alt="Balancing Toner">
-      <h3 data-i18n="products.oilyToner.name">Balancing Toner</h3>
-      <p data-i18n="products.oilyToner.subtitle">Fresh hydration for oily skin</p>
-      <a href="product-oily-toner.html" data-i18n="common.viewMore">View More</a>
+      <h3 id="catalog-toner-name">Balancing Toner</h3>
+      <p id="catalog-toner-subtitle">Fresh balancing toner for oily skin</p>
+      <a href="product-oily-toner.html" id="catalog-view-8">View More</a>
     </div>
 
     <div class="product-card">
       <img src="assets/img/products/sea-fennel-emulsion/cover.jpg" alt="Sea Fennel Emulsion">
-      <h3 data-i18n="products.seaFennelEmulsion.name">Sea Fennel Emulsion</h3>
-      <p data-i18n="products.seaFennelEmulsion.subtitle">Lightweight repair emulsion for oily skin</p>
-      <a href="product-sea-fennel-emulsion.html" data-i18n="common.viewMore">View More</a>
+      <h3 id="catalog-fennel-name">Sea Fennel Emulsion</h3>
+      <p id="catalog-fennel-subtitle">Lightweight emulsion for repair and soft-matte comfort</p>
+      <a href="product-sea-fennel-emulsion.html" id="catalog-view-9">View More</a>
     </div>
 
     <div class="product-card">
       <img src="assets/img/products/olive-mask/cover.jpg" alt="Olive Repair Mask">
-      <h3 data-i18n="products.oliveMask.name">Olive Repair Mask</h3>
-      <p data-i18n="products.oliveMask.subtitle">Soothing and barrier-repair sheet mask</p>
-      <a href="product-olive-mask.html" data-i18n="common.viewMore">View More</a>
+      <h3 id="catalog-olive-name">Olive Repair Mask</h3>
+      <p id="catalog-olive-subtitle">Soothing mask for fragile or easily stressed skin</p>
+      <a href="product-olive-mask.html" id="catalog-view-10">View More</a>
     </div>
 
     <div class="product-card">
       <img src="assets/img/products/sea-grape-mask/cover.jpg" alt="Sea Grape Hydrating Mask">
-      <h3 data-i18n="products.seaGrapeMask.name">Sea Grape Hydrating Mask</h3>
-      <p data-i18n="products.seaGrapeMask.subtitle">Deep hydration and moisture-lock mask</p>
-      <a href="product-sea-grape-mask.html" data-i18n="common.viewMore">View More</a>
+      <h3 id="catalog-grape-name">Sea Grape Hydrating Mask</h3>
+      <p id="catalog-grape-subtitle">Hydrating mask for moisture, bounce, and daily comfort</p>
+      <a href="product-sea-grape-mask.html" id="catalog-view-11">View More</a>
     </div>
 
     <div class="product-card">
       <img src="assets/img/products/astaxanthin-mask/cover.jpg" alt="Astaxanthin Brightening Mask">
-      <h3 data-i18n="products.astaxanthinMask.name">Astaxanthin Brightening Mask</h3>
-      <p data-i18n="products.astaxanthinMask.subtitle">Antioxidant glow-boosting sheet mask</p>
-      <a href="product-astaxanthin-mask.html" data-i18n="common.viewMore">View More</a>
+      <h3 id="catalog-asta-name">Astaxanthin Brightening Mask</h3>
+      <p id="catalog-asta-subtitle">Brightening mask for antioxidant glow care</p>
+      <a href="product-astaxanthin-mask.html" id="catalog-view-12">View More</a>
     </div>
   </section>
 
@@ -185,5 +131,125 @@
   </footer>
 
   <script src="assets/js/lang.js"></script>
+  <script>
+    (function () {
+      const copy = {
+        en: {
+          productsPageTitle: "Product Collection",
+          productsPageSubtitle: "A complete skincare range designed around radiance, repair, hydration, and daily anti-aging care.",
+          productsGridTitle: "Explore Our Collection",
+          productsGridDesc: "Discover targeted skincare directions built around clear product positioning, refined texture, and everyday use.",
+          "catalog-orange-name": "Orange Radiance Cream",
+          "catalog-orange-subtitle": "Antioxidant brightening cream for oily to combination skin",
+          "catalog-repair-name": "50% Repair Cream",
+          "catalog-repair-subtitle": "Repair-focused cream with a rich, comforting finish",
+          "catalog-essence-name": "Caviar Essence Lotion",
+          "catalog-essence-subtitle": "Nourishing essence lotion for firmness and radiance",
+          "catalog-eye-name": "Eye Cream",
+          "catalog-eye-subtitle": "Smoothing eye care for hydration and daily repair",
+          "catalog-orchid-name": "Orchid Oil",
+          "catalog-orchid-subtitle": "Nourishing facial oil for comfort and glow",
+          "catalog-serum-name": "Revitalizing Serum",
+          "catalog-serum-subtitle": "Plumping serum for smoothness and daily anti-aging care",
+          "catalog-truffle-name": "White Truffle Sleeping Mask",
+          "catalog-truffle-subtitle": "Overnight mask for radiance, comfort, and recovery",
+          "catalog-toner-name": "Balancing Toner",
+          "catalog-toner-subtitle": "Fresh balancing toner for oily skin",
+          "catalog-fennel-name": "Sea Fennel Emulsion",
+          "catalog-fennel-subtitle": "Lightweight emulsion for repair and soft-matte comfort",
+          "catalog-olive-name": "Olive Repair Mask",
+          "catalog-olive-subtitle": "Soothing mask for fragile or easily stressed skin",
+          "catalog-grape-name": "Sea Grape Hydrating Mask",
+          "catalog-grape-subtitle": "Hydrating mask for moisture, bounce, and daily comfort",
+          "catalog-asta-name": "Astaxanthin Brightening Mask",
+          "catalog-asta-subtitle": "Brightening mask for antioxidant glow care"
+        },
+        zh: {
+          productsPageTitle: "产品系列",
+          productsPageSubtitle: "围绕提亮抗氧、修护维稳、保湿滋养与日常抗老构建的完整产品矩阵。",
+          productsGridTitle: "浏览产品系列",
+          productsGridDesc: "根据文档中的正式产品名称与定位，统一展示 Eins 当前产品线，并去除网站中的占位说明。",
+          "catalog-orange-name": "橘灿面霜",
+          "catalog-orange-subtitle": "适合油皮与混油皮的抗氧提亮面霜",
+          "catalog-repair-name": "50% 面霜",
+          "catalog-repair-subtitle": "强调修护、柔润与屏障支持的丰润面霜",
+          "catalog-essence-name": "精华露",
+          "catalog-essence-subtitle": "兼顾紧致、焕活与柔润肤感的精华露",
+          "catalog-eye-name": "眼霜",
+          "catalog-eye-subtitle": "围绕眼周细纹、干燥与疲惫感设计的眼霜",
+          "catalog-orchid-name": "兰花油",
+          "catalog-orchid-subtitle": "兼顾滋润、修护与轻盈吸收体验的精华油",
+          "catalog-serum-name": "色修精华",
+          "catalog-serum-subtitle": "强调弹润、细腻与温和肤感的日常抗老精华",
+          "catalog-truffle-name": "白松露睡眠面膜",
+          "catalog-truffle-subtitle": "面向夜间修护、焕亮与保湿护理的睡眠面膜",
+          "catalog-toner-name": "油皮爽肤水",
+          "catalog-toner-subtitle": "为油皮与混油皮设计的清爽维稳化妆水",
+          "catalog-fennel-name": "海茴香乳",
+          "catalog-fennel-subtitle": "兼顾修护感与轻盈哑光触感的乳液",
+          "catalog-olive-name": "油橄榄面膜",
+          "catalog-olive-subtitle": "适合脆弱、泛红或状态不稳定时使用的修护面膜",
+          "catalog-grape-name": "海葡萄面膜",
+          "catalog-grape-subtitle": "强调补水、锁水与水润饱满感的面膜",
+          "catalog-asta-name": "虾青素面膜",
+          "catalog-asta-subtitle": "适合暗沉、熬夜后快速提亮气色的面膜"
+        },
+        fr: {
+          productsPageTitle: "Collection Produits",
+          productsPageSubtitle: "Une gamme complète pensée autour de l'éclat, de la réparation, de l'hydratation et de l'anti-âge quotidien.",
+          productsGridTitle: "Découvrir la Collection",
+          productsGridDesc: "Des produits organisés selon un positionnement clair, une texture raffinée et un usage quotidien.",
+          "catalog-orange-name": "Crème Orange Éclat",
+          "catalog-orange-subtitle": "Crème antioxydante illuminateur pour peaux mixtes à grasses",
+          "catalog-repair-name": "Crème Réparatrice 50%",
+          "catalog-repair-subtitle": "Crème orientée réparation avec un fini riche et réconfortant",
+          "catalog-essence-name": "Lotion Essence Caviar",
+          "catalog-essence-subtitle": "Lotion essence nourrissante pour fermeté et éclat",
+          "catalog-eye-name": "Crème Contour des Yeux",
+          "catalog-eye-subtitle": "Soin lissant du contour des yeux pour hydratation et réparation",
+          "catalog-orchid-name": "Huile Orchidée",
+          "catalog-orchid-subtitle": "Huile visage nourrissante pour confort et éclat",
+          "catalog-serum-name": "Sérum Revitalisant",
+          "catalog-serum-subtitle": "Sérum repulpant pour douceur et anti-âge quotidien",
+          "catalog-truffle-name": "Masque de Nuit à la Truffe Blanche",
+          "catalog-truffle-subtitle": "Masque de nuit pour éclat, confort et récupération",
+          "catalog-toner-name": "Lotion Équilibrante",
+          "catalog-toner-subtitle": "Lotion fraîche équilibrante pour peaux grasses",
+          "catalog-fennel-name": "Émulsion au Fenouil Marin",
+          "catalog-fennel-subtitle": "Émulsion légère pour réparation et confort mat doux",
+          "catalog-olive-name": "Masque Réparateur Olive",
+          "catalog-olive-subtitle": "Masque apaisant pour peaux fragiles ou stressées",
+          "catalog-grape-name": "Masque Hydratant Raisin de Mer",
+          "catalog-grape-subtitle": "Masque hydratant pour souplesse, rebond et confort quotidien",
+          "catalog-asta-name": "Masque Éclat Astaxanthine",
+          "catalog-asta-subtitle": "Masque illuminateur pour un soin antioxydant éclat"
+        }
+      };
+
+      function getLang() {
+        return localStorage.getItem("language") || document.documentElement.lang || "en";
+      }
+
+      function applyCopy() {
+        const lang = copy[getLang()] ? getLang() : "en";
+        Object.entries(copy[lang]).forEach(([id, value]) => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = value;
+        });
+      }
+
+      const originalSetLanguage = window.setLanguage;
+      if (typeof originalSetLanguage === "function") {
+        window.setLanguage = function (lang) {
+          originalSetLanguage(lang);
+          setTimeout(applyCopy, 0);
+        };
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(applyCopy, 0);
+      });
+    })();
+  </script>
 </body>
 </html>

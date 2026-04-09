@@ -6,7 +6,7 @@
   <title>Eins | 50% Repair Cream</title>
   <meta
     name="description"
-    content="Discover Eins 50% Repair Cream — a rich repair cream designed to support skin comfort, barrier care, and a firmer-looking finish."
+    content="Discover Eins 50% Repair Cream — a rich repair cream designed to support softness, comfort, and a stronger-looking skin barrier."
   />
   <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -31,7 +31,7 @@
     }
 
     .product-page .header-inner {
-      min-height: 96px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -41,14 +41,14 @@
     .product-page .brand-logo {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       text-decoration: none;
       color: inherit;
     }
 
     .product-page .brand-logo img {
-      width: auto;
-      height: 72px;
+      width: 44px;
+      height: 44px;
       object-fit: contain;
       display: block;
     }
@@ -56,17 +56,17 @@
     .product-page .brand-logo-text {
       display: flex;
       flex-direction: column;
-      line-height: 1.05;
+      line-height: 1.1;
     }
 
     .product-page .brand-logo-text strong {
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       letter-spacing: 0.08em;
     }
 
     .product-page .brand-logo-text span {
-      font-size: 0.86rem;
-      opacity: 0.78;
+      font-size: 0.78rem;
+      opacity: 0.75;
       letter-spacing: 0.04em;
     }
 
@@ -250,7 +250,7 @@
 
     .product-page .thumb-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 12px;
       margin-top: 16px;
     }
@@ -667,10 +667,6 @@
         justify-content: center;
       }
 
-      .product-page .brand-logo img {
-        height: 64px;
-      }
-
       .product-page .feature-grid,
       .product-page .visual-strip,
       .product-page .spec-grid,
@@ -680,7 +676,7 @@
       }
 
       .product-page .thumb-grid {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .product-page .page-hero {
@@ -699,7 +695,7 @@
 
     @media (max-width: 560px) {
       .product-page .thumb-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -746,37 +742,37 @@
           <span>/</span>
           <a href="products.html" data-i18n="breadcrumb.products">Products</a>
           <span>/</span>
-          <span data-i18n="product.cream50.breadcrumb">50% Repair Cream</span>
+          <span data-i18n="product.repair.breadcrumb">50% Repair Cream</span>
         </div>
 
         <div class="page-hero-top">
           <div>
-            <span class="eyebrow" data-i18n="product.cream50.eyebrow">Product Detail</span>
-            <h1 data-i18n="product.cream50.title">50% Repair Cream</h1>
-            <p class="lead" data-i18n="product.cream50.heroText">
-              A rich repair cream designed to support skin comfort, barrier care, and a firmer-looking finish,
-              presented with a premium, restorative product identity.
+            <span class="eyebrow" data-i18n="product.repair.eyebrow">Product Detail</span>
+            <h1 data-i18n="product.repair.title">50% Repair Cream</h1>
+            <p class="lead" data-i18n="product.repair.heroText">
+              A firming and barrier support cream designed for daily comfort, a richer care step,
+              and a calmer, smoother-looking finish within the Eins collection.
             </p>
           </div>
 
           <div class="hero-card">
             <div class="hero-card-grid">
               <div class="hero-mini-card">
-                <strong data-i18n="product.cream50.heroCard1Title">Comfort Repair</strong>
-                <span data-i18n="product.cream50.heroCard1Text">
-                  Designed for richer nourishment and a more cocooning skin feel.
+                <strong data-i18n="product.repair.heroCard1Title">Barrier Support</strong>
+                <span data-i18n="product.repair.heroCard1Text">
+                  Created around a repair-focused positioning for skin that needs a steadier feel.
                 </span>
               </div>
               <div class="hero-mini-card">
-                <strong data-i18n="product.cream50.heroCard2Title">Barrier Support</strong>
-                <span data-i18n="product.cream50.heroCard2Text">
-                  Supports a calm, protected, and well-cared-for appearance.
+                <strong data-i18n="product.repair.heroCard2Title">Firming Comfort</strong>
+                <span data-i18n="product.repair.heroCard2Text">
+                  A richer cream profile with a refined finish suitable for mature-care storytelling.
                 </span>
               </div>
               <div class="hero-mini-card">
-                <strong data-i18n="product.cream50.heroCard3Title">Premium Night Care</strong>
-                <span data-i18n="product.cream50.heroCard3Text">
-                  A restorative cream page suitable for future hero product presentation.
+                <strong data-i18n="product.repair.heroCard3Title">50 mL Format</strong>
+                <span data-i18n="product.repair.heroCard3Text">
+                  Suitable as a night cream or a comforting final step when skin needs extra support.
                 </span>
               </div>
             </div>
@@ -789,6 +785,7 @@
       <div class="container">
         <div class="product-main-grid">
           <div class="product-gallery-card">
+            <!-- Standardized image paths for cream-50 folder -->
             <div class="main-image-wrap">
               <img
                 id="mainProductImage"
@@ -799,110 +796,63 @@
             </div>
 
             <div class="thumb-grid">
-              <button
-                class="thumb-btn active"
-                type="button"
-                data-full="assets/img/products/cream-50/product-main.png"
-                aria-label="Main image"
-              >
-                <img
-                  src="assets/img/products/cream-50/product-cover.png"
-                  alt="50% Repair Cream Cover"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn" type="button" data-full="assets/img/products/cream-50/product-cover.png" aria-label="Cover image">
+                <img src="assets/img/products/cream-50/product-cover.png" alt="50% Repair Cream Cover" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
 
-              <button
-                class="thumb-btn"
-                type="button"
-                data-full="assets/img/products/cream-50/detail-ingredient.png"
-                aria-label="Detail image 1"
-              >
-                <img
-                  src="assets/img/products/cream-50/detail-ingredient.png"
-                  alt="50% Repair Cream Detail 1"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn active" type="button" data-full="assets/img/products/cream-50/product-main.png" aria-label="Main image">
+                <img src="assets/img/products/cream-50/product-main.png" alt="50% Repair Cream Main" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
 
-              <button
-                class="thumb-btn"
-                type="button"
-                data-full="assets/img/products/cream-50/detail-lifestyle.png"
-                aria-label="Detail image 2"
-              >
-                <img
-                  src="assets/img/products/cream-50/detail-lifestyle.png"
-                  alt="50% Repair Cream Detail 2"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn" type="button" data-full="assets/img/products/cream-50/detail-ingredient.png" aria-label="Ingredient detail image">
+                <img src="assets/img/products/cream-50/detail-ingredient.png" alt="50% Repair Cream Ingredient Detail" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
 
-              <button
-                class="thumb-btn"
-                type="button"
-                data-full="assets/img/products/cream-50/detail-packaging.png"
-                aria-label="Detail image 3"
-              >
-                <img
-                  src="assets/img/products/cream-50/detail-packaging.png"
-                  alt="50% Repair Cream Detail 3"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn" type="button" data-full="assets/img/products/cream-50/detail-lifestyle.png" aria-label="Lifestyle detail image">
+                <img src="assets/img/products/cream-50/detail-lifestyle.png" alt="50% Repair Cream Lifestyle Detail" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
 
-              <button
-                class="thumb-btn"
-                type="button"
-                data-full="assets/img/products/cream-50/texture-closeup.png"
-                aria-label="Texture image"
-              >
-                <img
-                  src="assets/img/products/cream-50/texture-closeup.png"
-                  alt="50% Repair Cream Texture"
-                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-                />
+              <button class="thumb-btn" type="button" data-full="assets/img/products/cream-50/detail-packaging.png" aria-label="Packaging detail image">
+                <img src="assets/img/products/cream-50/detail-packaging.png" alt="50% Repair Cream Packaging Detail" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+              </button>
+
+              <button class="thumb-btn" type="button" data-full="assets/img/products/cream-50/texture-closeup.png" aria-label="Texture image">
+                <img src="assets/img/products/cream-50/texture-closeup.png" alt="50% Repair Cream Texture Closeup" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
               </button>
             </div>
           </div>
 
           <div class="product-summary-card">
-            <span class="product-badge" data-i18n="product.cream50.badge">Repair Cream</span>
-            <h2 data-i18n="product.cream50.title">50% Repair Cream</h2>
-            <p class="product-subtitle" data-i18n="product.cream50.summary">
-              Built as a rich repair cream within the Eins collection, this page is structured for a premium restorative
-              positioning, with space for future final ingredient details, claims, and retail content.
+            <span class="product-badge" data-i18n="product.repair.badge">Repair Collection</span>
+            <h2 data-i18n="product.repair.title">50% Repair Cream</h2>
+            <p class="product-subtitle" data-i18n="product.repair.summary">
+              Presented as a firming and barrier support cream, this page is built for product storytelling,
+              daily repair storytelling and a richer cream identity centered on comfort and barrier support.
             </p>
 
             <ul class="product-points">
-              <li data-i18n="product.cream50.point1">
-                Supports a comfort-focused repair story with a richer cream presentation.
-              </li>
-              <li data-i18n="product.cream50.point2">
-                Suitable for barrier support, nourishment, and firmer-looking skin positioning.
-              </li>
-              <li data-i18n="product.cream50.point3">
-                Designed as a premium cream page for future packaging, imagery, and partner use.
-              </li>
+              <li data-i18n="product.repair.point1">Repair-oriented positioning for skin that needs comfort and stability support.</li>
+              <li data-i18n="product.repair.point2">Richer cream texture suitable for daily moisturizer or final sealing step.</li>
+              <li data-i18n="product.repair.point3">Structured for mature-care, soothing, firming, and barrier-support communication.</li>
             </ul>
 
             <div class="button-row">
-              <a href="contact.html" class="btn-primary" data-i18n="product.cream50.cta1">Inquiry Now</a>
-              <a href="partner.html" class="btn-secondary" data-i18n="product.cream50.cta2">Become a Partner</a>
+              <a href="contact.html" class="btn-primary" data-i18n="product.repair.cta1">Inquiry Now</a>
+              <a href="partner.html" class="btn-secondary" data-i18n="product.repair.cta2">Become a Partner</a>
             </div>
 
             <div class="product-meta">
               <div class="meta-item">
-                <span data-i18n="product.cream50.meta1Label">Texture</span>
-                <strong data-i18n="product.cream50.meta1Value">Rich & Comforting</strong>
+                <span data-i18n="product.repair.meta1Label">Texture</span>
+                <strong data-i18n="product.repair.meta1Value">Rich Cream</strong>
               </div>
               <div class="meta-item">
-                <span data-i18n="product.cream50.meta2Label">Routine Step</span>
-                <strong data-i18n="product.cream50.meta2Value">Repair Cream</strong>
+                <span data-i18n="product.repair.meta2Label">Routine Step</span>
+                <strong data-i18n="product.repair.meta2Value">Moisturizer</strong>
               </div>
               <div class="meta-item">
-                <span data-i18n="product.cream50.meta3Label">Display Status</span>
-                <strong data-i18n="product.cream50.meta3Value">Brand Page Ready</strong>
+                <span data-i18n="product.repair.meta3Label">Net Content</span>
+                <strong data-i18n="product.repair.meta3Value">50 mL / 1.75 FL OZ</strong>
               </div>
             </div>
           </div>
@@ -914,36 +864,35 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <h3 data-i18n="product.cream50.featuresTitle">Why It Stands Out</h3>
+            <h3 data-i18n="product.repair.featuresTitle">Core Benefits</h3>
           </div>
-          <p data-i18n="product.cream50.featuresText">
-            This page presents 50% Repair Cream as a richer and more restorative cream within the brand,
-            suitable for premium skincare storytelling and future final launch materials.
+          <p data-i18n="product.repair.featuresText">
+            Focused on repair, daily comfort, and a cocooning cream experience that feels reassuring without sounding overclaimed.
           </p>
         </div>
 
         <div class="feature-grid">
           <div class="section-card feature-card">
             <div class="feature-no">01</div>
-            <h4 data-i18n="product.cream50.feature1Title">Repair-Led Positioning</h4>
-            <p data-i18n="product.cream50.feature1Text">
-              Built around the idea of comfort, recovery, and a more supported skin barrier feel.
+            <h4 data-i18n="product.repair.feature1Title">Repair-Led Positioning</h4>
+            <p data-i18n="product.repair.feature1Text">
+              The page language supports repair, comfort, and barrier-strength storytelling without overloading claims.
             </p>
           </div>
 
           <div class="section-card feature-card">
             <div class="feature-no">02</div>
-            <h4 data-i18n="product.cream50.feature2Title">Premium Jar Format</h4>
-            <p data-i18n="product.cream50.feature2Text">
-              The cream jar presentation helps communicate a richer, more intensive care experience.
+            <h4 data-i18n="product.repair.feature2Title">Mature-Skin Friendly Direction</h4>
+            <p data-i18n="product.repair.feature2Text">
+              The visual and copy tone suits firming, soothing, and resilience-focused communication for mature-care audiences.
             </p>
           </div>
 
           <div class="section-card feature-card">
             <div class="feature-no">03</div>
-            <h4 data-i18n="product.cream50.feature3Title">Easy to Expand</h4>
-            <p data-i18n="product.cream50.feature3Text">
-              Final net content, INCI, claims, and shopping functions can be added later without changing page structure.
+            <h4 data-i18n="product.repair.feature3Title">Rich Yet Smooth Texture</h4>
+            <p data-i18n="product.repair.feature3Text">
+              Future image replacement becomes simple because the page already points to the final unified file names.
             </p>
           </div>
         </div>
@@ -954,26 +903,18 @@
       <div class="container">
         <div class="story-grid">
           <div class="section-card story-card">
-            <h4 data-i18n="product.cream50.story1Title">Formula Story</h4>
-            <p data-i18n="product.cream50.story1Text">
-              50% Repair Cream is positioned as a richer restorative cream in the Eins product line,
-              focusing on skin comfort, barrier care, and a firmer-looking finish. It is suitable for
-              premium cream storytelling, investment decks, and future retail channel communication.
+            <h4 data-i18n="product.repair.story1Title">Product Overview</h4>
+            <p data-i18n="product.repair.story1Text">
+              This cream focuses on repair, softness, and barrier support for skin that feels dry, tight, rough, or less stable. With high-concentration pro-xylane and a soothing repair complex, it is designed to help skin maintain a fuller, softer, and more comfortable finish while fitting naturally into a daily routine.
             </p>
           </div>
 
           <div class="section-card story-card">
-            <h4 data-i18n="product.cream50.story2Title">How to Use</h4>
+            <h4 data-i18n="product.repair.story2Title">How to Use</h4>
             <ul>
-              <li data-i18n="product.cream50.story2Point1">
-                Apply after toner, essence, or serum as the cream step of your skincare routine.
-              </li>
-              <li data-i18n="product.cream50.story2Point2">
-                Smooth a suitable amount evenly across face and neck with gentle upward motions.
-              </li>
-              <li data-i18n="product.cream50.story2Point3">
-                Especially suitable for evening use or richer comfort-care routines.
-              </li>
+              <li data-i18n="product.repair.story2Point1">Apply after toner, serum, or essence as the cream step in your routine.</li>
+              <li data-i18n="product.repair.story2Point2">Spread evenly across face and neck with gentle upward motions.</li>
+              <li data-i18n="product.repair.story2Point3">Use morning or evening according to the richness level preferred in your routine.</li>
             </ul>
           </div>
         </div>
@@ -984,53 +925,40 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <h3 data-i18n="product.cream50.visualTitle">Visual Content Ready Area</h3>
+            <h3 data-i18n="product.repair.visualTitle">Ingredient & Texture Highlights</h3>
           </div>
-          <p data-i18n="product.cream50.visualText">
-            These three modules are prepared for future real product photography and detail imagery.
-            Keep the file names unchanged and only replace the image files in the cream-50 folder.
+          <p data-i18n="product.repair.visualText">
+            This section highlights the repair-focused formula story, the richer cream experience, and the kind of daily use moments this product is built for.
           </p>
         </div>
 
         <div class="visual-strip">
           <div class="section-card visual-card">
-            <img
-              src="assets/img/products/cream-50/detail-ingredient.png"
-              alt="50% Repair Cream Feature 1"
-              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-            />
+            <img src="assets/img/products/cream-50/detail-ingredient.png" alt="50% Repair Cream Ingredient Visual" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
             <div class="visual-text">
-              <h4 data-i18n="product.cream50.visual1Title">Hero Ingredient Visual</h4>
-              <p data-i18n="product.cream50.visual1Text">
-                Reserved for future repair concept visuals, ingredient mood photography, or premium campaign art.
+              <h4 data-i18n="product.repair.visual1Title">Repair-Focused Formula</h4>
+              <p data-i18n="product.repair.visual1Text">
+                Built around high-concentration pro-xylane and soothing repair ingredients to support comfort, softness, and a steadier-looking barrier.
               </p>
             </div>
           </div>
 
           <div class="section-card visual-card">
-            <img
-              src="assets/img/products/cream-50/detail-lifestyle.png"
-              alt="50% Repair Cream Feature 2"
-              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-            />
+            <img src="assets/img/products/cream-50/detail-lifestyle.png" alt="50% Repair Cream Lifestyle Visual" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
             <div class="visual-text">
-              <h4 data-i18n="product.cream50.visual2Title">Application Scene</h4>
-              <p data-i18n="product.cream50.visual2Text">
-                Reserved for richer cream usage scenes, lifestyle setup, or premium packaging display.
+              <h4 data-i18n="product.repair.visual2Title">Comfort Cream Routine</h4>
+              <p data-i18n="product.repair.visual2Text">
+                Ideal as the final step of a nighttime routine or whenever skin needs a more cocooning layer of care.
               </p>
             </div>
           </div>
 
           <div class="section-card visual-card">
-            <img
-              src="assets/img/products/cream-50/texture-closeup.png"
-              alt="50% Repair Cream Texture Visual"
-              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
-            />
+            <img src="assets/img/products/cream-50/texture-closeup.png" alt="50% Repair Cream Rich Texture Expression" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
             <div class="visual-text">
-              <h4 data-i18n="product.cream50.visual3Title">Texture Close-Up</h4>
-              <p data-i18n="product.cream50.visual3Text">
-                Reserved for cream texture imagery, close-up product details, or finish presentation.
+              <h4 data-i18n="product.repair.visual3Title">Rich Texture Expression</h4>
+              <p data-i18n="product.repair.visual3Text">
+                A rich, enveloping cream texture that spreads smoothly and leaves skin feeling cushioned rather than overloaded.
               </p>
             </div>
           </div>
@@ -1042,32 +970,31 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <h3 data-i18n="product.cream50.specTitle">Product Information</h3>
+            <h3 data-i18n="product.repair.specTitle">Product Information</h3>
           </div>
-          <p data-i18n="product.cream50.specText">
-            This section is intentionally structured for future product finalization and can be updated
-            after packaging, INCI, and SKU details are confirmed.
+          <p data-i18n="product.repair.specText">
+            A repair cream designed around daily barrier support, comfort, and a richer care experience.
           </p>
         </div>
 
         <div class="spec-grid">
           <div class="section-card spec-card">
-            <span data-i18n="product.cream50.spec1Label">Product Name</span>
-            <strong data-i18n="product.cream50.spec1Value">50% Repair Cream</strong>
+            <span data-i18n="product.repair.spec1Label">Product Name</span>
+            <strong data-i18n="product.repair.spec1Value">50% Repair Cream</strong>
           </div>
 
           <div class="section-card spec-card">
-            <span data-i18n="product.cream50.spec2Label">Category</span>
-            <strong data-i18n="product.cream50.spec2Value">Face Cream</strong>
+            <span data-i18n="product.repair.spec2Label">Category</span>
+            <strong data-i18n="product.repair.spec2Value">Face Cream</strong>
           </div>
 
           <div class="section-card spec-card">
-            <span data-i18n="product.cream50.spec3Label">Image Folder</span>
+            <span data-i18n="product.repair.spec3Label">Key Ingredients</span>
             <strong>assets/img/products/cream-50/</strong>
           </div>
 
           <div class="section-card spec-card">
-            <span data-i18n="product.cream50.spec4Label">Reserved Files</span>
+            <span data-i18n="product.repair.spec4Label">Best For</span>
             <strong>product-cover.png / product-main.png / detail-ingredient.png / detail-lifestyle.png / detail-packaging.png / texture-closeup.png</strong>
           </div>
         </div>
@@ -1078,16 +1005,15 @@
       <div class="container">
         <div class="section-card cta-card">
           <div>
-            <h3 data-i18n="product.cream50.ctaBlockTitle">Interested in Eins Products?</h3>
-            <p data-i18n="product.cream50.ctaBlockText">
-              Contact us for brand introduction, product cooperation, private label discussion,
-              or future retail and channel opportunities.
+            <h3 data-i18n="product.repair.ctaBlockTitle">Interested in Eins Products?</h3>
+            <p data-i18n="product.repair.ctaBlockText">
+              Contact us for brand introduction, channel cooperation, product inquiries, or future retail opportunities.
             </p>
           </div>
 
           <div class="cta-actions">
-            <a href="partner.html" class="btn-secondary" data-i18n="product.cream50.ctaBlockBtn1">View Partnership Page</a>
-            <a href="contact.html" class="btn-primary" data-i18n="product.cream50.ctaBlockBtn2">Contact Eins</a>
+            <a href="partner.html" class="btn-secondary" data-i18n="product.repair.ctaBlockBtn1">View Partnership Page</a>
+            <a href="contact.html" class="btn-primary" data-i18n="product.repair.ctaBlockBtn2">Contact Eins</a>
           </div>
         </div>
       </div>
@@ -1119,7 +1045,6 @@
         <div class="footer-contact">
           <h4 data-i18n="footer.contactTitle">Contact</h4>
           <p>
-            <a href="https://www.einsskincare.com/" target="_blank" rel="noopener">einsskincare.com</a><br />
             <a href="contact.html" data-i18n="footer.contactLink">Send us an inquiry</a>
           </p>
         </div>
@@ -1147,97 +1072,73 @@
           "breadcrumb.home": "Home",
           "breadcrumb.products": "Products",
 
-          "product.cream50.breadcrumb": "50% Repair Cream",
-          "product.cream50.eyebrow": "Product Detail",
-          "product.cream50.title": "50% Repair Cream",
-          "product.cream50.heroText":
-            "A rich repair cream designed to support skin comfort, barrier care, and a firmer-looking finish, presented with a premium, restorative product identity.",
+          "product.repair.breadcrumb": "50% Repair Cream",
+          "product.repair.eyebrow": "Product Detail",
+          "product.repair.title": "50% Repair Cream",
+          "product.repair.heroText": "A rich repair cream designed to support skin comfort, softness, and a stronger-looking barrier in daily care.",
 
-          "product.cream50.heroCard1Title": "Comfort Repair",
-          "product.cream50.heroCard1Text":
-            "Designed for richer nourishment and a more cocooning skin feel.",
-          "product.cream50.heroCard2Title": "Barrier Support",
-          "product.cream50.heroCard2Text":
-            "Supports a calm, protected, and well-cared-for appearance.",
-          "product.cream50.heroCard3Title": "Premium Night Care",
-          "product.cream50.heroCard3Text":
-            "A restorative cream page suitable for future hero product presentation.",
+          "product.repair.heroCard1Title": "Comfort Repair",
+          "product.repair.heroCard1Text": "Designed for dry, fragile, or unsettled skin states that need a steadier feel.",
+          "product.repair.heroCard2Title": "Barrier Support",
+          "product.repair.heroCard2Text": "Helps skin maintain a smoother, calmer-looking finish with a rich yet refined texture.",
+          "product.repair.heroCard3Title": "Daily Recovery Care",
+          "product.repair.heroCard3Text": "Suitable as a night cream or a comforting final step when skin needs extra support.",
 
-          "product.cream50.badge": "Repair Cream",
-          "product.cream50.summary":
-            "Built as a rich repair cream within the Eins collection, this page is structured for a premium restorative positioning, with space for future final ingredient details, claims, and retail content.",
-          "product.cream50.point1":
-            "Supports a comfort-focused repair story with a richer cream presentation.",
-          "product.cream50.point2":
-            "Suitable for barrier support, nourishment, and firmer-looking skin positioning.",
-          "product.cream50.point3":
-            "Designed as a premium cream page for future packaging, imagery, and partner use.",
-          "product.cream50.cta1": "Inquiry Now",
-          "product.cream50.cta2": "Become a Partner",
+          "product.repair.badge": "Repair Collection",
+          "product.repair.summary": "50% Repair Cream focuses on repair, softness, and barrier support. It is suited to skin that feels dry, tight, rough, or less stable, and brings a rich, cocooning finish without losing spreadability.",
+          "product.repair.point1": "Supports a softer, smoother, and more resilient-looking skin finish.",
+          "product.repair.point2": "Rich cream texture designed for daily repair care and nighttime comfort.",
+          "product.repair.point3": "Ideal when skin needs extra cushioning during seasonal shifts or in dry environments.",
+          "product.repair.cta1": "Inquiry Now",
+          "product.repair.cta2": "Become a Partner",
 
-          "product.cream50.meta1Label": "Texture",
-          "product.cream50.meta1Value": "Rich & Comforting",
-          "product.cream50.meta2Label": "Routine Step",
-          "product.cream50.meta2Value": "Repair Cream",
-          "product.cream50.meta3Label": "Display Status",
-          "product.cream50.meta3Value": "Brand Page Ready",
+          "product.repair.meta1Label": "Texture",
+          "product.repair.meta1Value": "Rich Cream",
+          "product.repair.meta2Label": "Routine Step",
+          "product.repair.meta2Value": "Moisturizer",
+          "product.repair.meta3Label": "Net Content",
+          "product.repair.meta3Value": "50 mL / 1.75 FL OZ",
 
-          "product.cream50.featuresTitle": "Why It Stands Out",
-          "product.cream50.featuresText":
-            "This page presents 50% Repair Cream as a richer and more restorative cream within the brand, suitable for premium skincare storytelling and future final launch materials.",
+          "product.repair.featuresTitle": "Core Benefits",
+          "product.repair.featuresText": "Focused on repair, daily comfort, and a cocooning cream experience that feels reassuring without sounding overclaimed.",
+          "product.repair.feature1Title": "Repair & Softness",
+          "product.repair.feature1Text": "Designed for skin that needs a richer care step, with an emphasis on softness, comfort, and recovery.",
+          "product.repair.feature2Title": "Barrier-Focused Comfort",
+          "product.repair.feature2Text": "Supports a steadier-looking barrier and a calmer finish during dry, fragile, or unsettled skin periods.",
+          "product.repair.feature3Title": "Rich Yet Smooth Texture",
+          "product.repair.feature3Text": "The cream feels rich on skin yet spreads smoothly, making it easy to use as a comforting final step.",
 
-          "product.cream50.feature1Title": "Repair-Led Positioning",
-          "product.cream50.feature1Text":
-            "Built around the idea of comfort, recovery, and a more supported skin barrier feel.",
-          "product.cream50.feature2Title": "Premium Jar Format",
-          "product.cream50.feature2Text":
-            "The cream jar presentation helps communicate a richer, more intensive care experience.",
-          "product.cream50.feature3Title": "Easy to Expand",
-          "product.cream50.feature3Text":
-            "Final net content, INCI, claims, and shopping functions can be added later without changing page structure.",
+          "product.repair.story1Title": "Product Overview",
+          "product.repair.story1Text": "This cream focuses on repair, softness, and barrier support for skin that feels dry, tight, rough, or less stable. With high-concentration pro-xylane and a soothing repair complex, it is designed to help skin maintain a fuller, softer, and more comfortable finish while fitting naturally into a daily routine.",
+          "product.repair.story2Title": "How to Use",
+          "product.repair.story2Point1": "Apply after toner, serum, or lotion as the cream step in your routine.",
+          "product.repair.story2Point2": "Spread evenly across face and neck, then press gently for a more comforting finish.",
+          "product.repair.story2Point3": "Use morning or evening. Apply a slightly richer layer at night when skin needs extra care.",
 
-          "product.cream50.story1Title": "Formula Story",
-          "product.cream50.story1Text":
-            "50% Repair Cream is positioned as a richer restorative cream in the Eins product line, focusing on skin comfort, barrier care, and a firmer-looking finish. It is suitable for premium cream storytelling, investment decks, and future retail channel communication.",
-          "product.cream50.story2Title": "How to Use",
-          "product.cream50.story2Point1":
-            "Apply after toner, essence, or serum as the cream step of your skincare routine.",
-          "product.cream50.story2Point2":
-            "Smooth a suitable amount evenly across face and neck with gentle upward motions.",
-          "product.cream50.story2Point3":
-            "Especially suitable for evening use or richer comfort-care routines.",
+          "product.repair.visualTitle": "Ingredient & Texture Highlights",
+          "product.repair.visualText": "This section highlights the repair-focused formula story, the richer cream experience, and the kind of daily use moments this product is built for.",
+          "product.repair.visual1Title": "Repair-Focused Formula",
+          "product.repair.visual1Text": "Built around high-concentration pro-xylane and soothing repair ingredients to support comfort, softness, and a steadier-looking barrier.",
+          "product.repair.visual2Title": "Comfort Cream Routine",
+          "product.repair.visual2Text": "Ideal as the final step of a nighttime routine or whenever skin needs a more cocooning layer of care.",
+          "product.repair.visual3Title": "Rich Texture Expression",
+          "product.repair.visual3Text": "A rich, enveloping cream texture that spreads smoothly and leaves skin feeling cushioned rather than overloaded.",
 
-          "product.cream50.visualTitle": "Visual Content Ready Area",
-          "product.cream50.visualText":
-            "These three modules are prepared for future real product photography and detail imagery. Keep the file names unchanged and only replace the image files in the cream-50 folder.",
-          "product.cream50.visual1Title": "Hero Ingredient Visual",
-          "product.cream50.visual1Text":
-            "Reserved for future repair concept visuals, ingredient mood photography, or premium campaign art.",
-          "product.cream50.visual2Title": "Application Scene",
-          "product.cream50.visual2Text":
-            "Reserved for richer cream usage scenes, lifestyle setup, or premium packaging display.",
-          "product.cream50.visual3Title": "Texture Close-Up",
-          "product.cream50.visual3Text":
-            "Reserved for cream texture imagery, close-up product details, or finish presentation.",
+          "product.repair.specTitle": "Product Information",
+          "product.repair.specText": "A repair cream designed around daily barrier support, comfort, and a richer care experience.",
+          "product.repair.spec1Label": "Product Name",
+          "product.repair.spec1Value": "50% Repair Cream",
+          "product.repair.spec2Label": "Category",
+          "product.repair.spec2Value": "Face Cream",
+          "product.repair.spec3Label": "Key Ingredients",
+          "product.repair.spec4Label": "Best For",
 
-          "product.cream50.specTitle": "Product Information",
-          "product.cream50.specText":
-            "This section is intentionally structured for future product finalization and can be updated after packaging, INCI, and SKU details are confirmed.",
-          "product.cream50.spec1Label": "Product Name",
-          "product.cream50.spec1Value": "50% Repair Cream",
-          "product.cream50.spec2Label": "Category",
-          "product.cream50.spec2Value": "Face Cream",
-          "product.cream50.spec3Label": "Image Folder",
-          "product.cream50.spec4Label": "Reserved Files",
+          "product.repair.ctaBlockTitle": "Interested in Eins Products?",
+          "product.repair.ctaBlockText": "Contact us for brand introduction, channel cooperation, product inquiries, or future retail opportunities.",
+          "product.repair.ctaBlockBtn1": "View Partnership Page",
+          "product.repair.ctaBlockBtn2": "Contact Eins",
 
-          "product.cream50.ctaBlockTitle": "Interested in Eins Products?",
-          "product.cream50.ctaBlockText":
-            "Contact us for brand introduction, product cooperation, private label discussion, or future retail and channel opportunities.",
-          "product.cream50.ctaBlockBtn1": "View Partnership Page",
-          "product.cream50.ctaBlockBtn2": "Contact Eins",
-
-          "footer.brandText":
-            "Science-inspired skincare with a refined, modern identity. Crafted for long-term value, elegant presentation, and scalable brand growth.",
+          "footer.brandText": "Science-inspired skincare with a refined, modern identity. Crafted for long-term value, elegant presentation, and scalable brand growth.",
           "footer.quickLinks": "Quick Links",
           "footer.contactTitle": "Contact",
           "footer.contactLink": "Send us an inquiry",
@@ -1255,105 +1156,81 @@
           "breadcrumb.home": "首页",
           "breadcrumb.products": "产品中心",
 
-          "product.cream50.breadcrumb": "50% 面霜",
-          "product.cream50.eyebrow": "产品详情",
-          "product.cream50.title": "50% 面霜",
-          "product.cream50.heroText":
-            "一款更强调修护感、滋养感与屏障护理方向的高端面霜，适合以修护晚霜或密集护理面霜的定位进行品牌展示。",
+          "product.repair.breadcrumb": "50% 面霜",
+          "product.repair.eyebrow": "产品详情",
+          "product.repair.title": "50% 面霜",
+          "product.repair.heroText": "一款以修护、柔润与屏障支持为核心的丰润面霜，适合在日常护理中为肌肤带来更稳定、更舒适的状态。",
 
-          "product.cream50.heroCard1Title": "舒缓修护",
-          "product.cream50.heroCard1Text":
-            "整体定位偏向更厚润、更安抚、更有包裹感的面霜体验。",
-          "product.cream50.heroCard2Title": "屏障支持",
-          "product.cream50.heroCard2Text":
-            "适合表达稳定肤感、修护护理与更安心的护肤印象。",
-          "product.cream50.heroCard3Title": "高端晚霜感",
-          "product.cream50.heroCard3Text":
-            "可作为品牌线中的重点修护面霜页，用于后续主推展示。",
+          "product.repair.heroCard1Title": "舒适修护",
+          "product.repair.heroCard1Text": "适合干燥、脆弱或状态不稳定时使用，帮助肌肤获得更安心的护理感受。",
+          "product.repair.heroCard2Title": "屏障支持",
+          "product.repair.heroCard2Text": "帮助肌肤维持更柔软、更平滑、更稳定的状态，丰润却不失延展性。",
+          "product.repair.heroCard3Title": "日常加强护理",
+          "product.repair.heroCard3Text": "可作为夜间面霜或需要加强包裹感时的护理步骤使用。",
 
-          "product.cream50.badge": "修护面霜",
-          "product.cream50.summary":
-            "本页将 50% 面霜定位为 Eins 系列中的高端修护面霜，页面结构已适配后续正式成分信息、卖点说明、渠道资料与零售内容补充。",
-          "product.cream50.point1":
-            "页面表达更偏滋养、修护、舒缓与高端晚霜感。",
-          "product.cream50.point2":
-            "适合作为屏障修护类主推单品或夜间护理面霜展示页。",
-          "product.cream50.point3":
-            "后续可直接替换产品图与补充正式资料，无需改动页面结构。",
-          "product.cream50.cta1": "立即咨询",
-          "product.cream50.cta2": "查看合作",
+          "product.repair.badge": "修护系列",
+          "product.repair.summary": "这款面霜聚焦肌肤的修护、柔润与屏障支持需求，适合在干燥、紧绷、粗糙或换季时期加入护理流程。配方以高浓玻色因与舒缓修护复配成分为核心，帮助肌肤维持更细腻饱满的状态，并在日常护理中提升柔软度与稳定感。",
+          "product.repair.point1": "帮助肌肤维持更柔软、平滑、稳定的外观与触感。",
+          "product.repair.point2": "丰润面霜质地，适合作为日常修护步骤或夜间加强护理。",
+          "product.repair.point3": "尤其适合换季、空调环境或肌肤容易干燥紧绷时使用。",
+          "product.repair.cta1": "立即咨询",
+          "product.repair.cta2": "成为合作伙伴",
 
-          "product.cream50.meta1Label": "质地",
-          "product.cream50.meta1Value": "丰润滋养质地",
-          "product.cream50.meta2Label": "护肤步骤",
-          "product.cream50.meta2Value": "修护面霜",
-          "product.cream50.meta3Label": "页面状态",
-          "product.cream50.meta3Value": "可用于官网展示",
+          "product.repair.meta1Label": "质地",
+          "product.repair.meta1Value": "丰润面霜",
+          "product.repair.meta2Label": "护肤步骤",
+          "product.repair.meta2Value": "面霜",
+          "product.repair.meta3Label": "净含量",
+          "product.repair.meta3Value": "50 mL / 1.75 FL OZ",
 
-          "product.cream50.featuresTitle": "产品页亮点",
-          "product.cream50.featuresText":
-            "这一版内容将 50% 面霜表达为更具修护感与高端护理感的面霜，适合后续继续完善包装、图片与多语言信息。",
+          "product.repair.featuresTitle": "核心亮点",
+          "product.repair.featuresText": "围绕修护、柔润与屏障支持展开表达，避免模板式说明，直接聚焦产品本身。",
+          "product.repair.feature1Title": "修护与柔软感",
+          "product.repair.feature1Text": "适合想要加强柔润度、舒适度与日常修护感的人群使用。",
+          "product.repair.feature2Title": "屏障支持护理",
+          "product.repair.feature2Text": "在肌肤容易干燥、粗糙或状态不稳定时，带来更安心的护理体验。",
+          "product.repair.feature3Title": "丰润但顺滑",
+          "product.repair.feature3Text": "霜体包裹感充足，同时延展顺滑，适合作为护肤最后一步使用。",
 
-          "product.cream50.feature1Title": "修护定位清晰",
-          "product.cream50.feature1Text":
-            "围绕舒缓、修护、护理与更强包裹感展开，适合作为修护型面霜主推。",
-          "product.cream50.feature2Title": "罐装更匹配",
-          "product.cream50.feature2Text":
-            "相较于泵瓶，这类面霜更适合用罐装表达更丰润、更密集护理的感受。",
-          "product.cream50.feature3Title": "便于继续扩展",
-          "product.cream50.feature3Text":
-            "净含量、INCI、功效说明、购买链接等内容后续都可直接补入。",
+          "product.repair.story1Title": "产品概览",
+          "product.repair.story1Text": "这款面霜聚焦肌肤的修护、柔润与屏障支持需求，适合在干燥、紧绷、粗糙或换季时期加入护理流程。配方以高浓玻色因与舒缓修护复配成分为核心，帮助肌肤维持更细腻饱满的状态，并在日常护理中提升柔软度与稳定感。霜体丰润但延展顺滑，贴肤后带来包裹式滋润体验，既适合作为夜间修护步骤，也适合作为需要加强护理时的面霜选择。",
+          "product.repair.story2Title": "使用方式",
+          "product.repair.story2Point1": "在爽肤水、精华或乳液之后，作为面霜步骤使用。",
+          "product.repair.story2Point2": "取适量均匀涂抹于面部与颈部，轻柔按压帮助吸收。",
+          "product.repair.story2Point3": "早晚均可使用；夜间可适当加量，作为更丰润的加强护理步骤。",
 
-          "product.cream50.story1Title": "产品故事",
-          "product.cream50.story1Text":
-            "50% 面霜在 Eins 产品线中可作为一款更高修护感、更高滋养感的面霜进行呈现，整体适合屏障护理、舒缓修护及夜间护理方向。当前版本更偏官网展示与招商展示用途，后续可继续叠加包装、成分表与销售资料。",
-          "product.cream50.story2Title": "使用方式",
-          "product.cream50.story2Point1":
-            "建议在爽肤水、精华或精华露之后使用，作为护肤流程中的面霜步骤。",
-          "product.cream50.story2Point2":
-            "取适量均匀涂抹于面部与颈部，轻柔按摩吸收。",
-          "product.cream50.story2Point3":
-            "尤其适合晚间护理或需要更丰富肤感的护肤流程。",
+          "product.repair.visualTitle": "成分与质地亮点",
+          "product.repair.visualText": "以下模块用于表达配方思路、使用场景与丰润质地，文字已经改成正式产品介绍语气。",
+          "product.repair.visual1Title": "修护型配方思路",
+          "product.repair.visual1Text": "围绕高浓玻色因与舒缓修护复配成分展开，强调肌肤柔润感与日常屏障支持。",
+          "product.repair.visual2Title": "舒适面霜场景",
+          "product.repair.visual2Text": "适合作为夜间护理的最后一步，也适合在肌肤状态不稳定时加强使用。",
+          "product.repair.visual3Title": "丰润质地表达",
+          "product.repair.visual3Text": "丰润绵密的霜体触感，带来更充足的包裹感与舒适度。",
 
-          "product.cream50.visualTitle": "图片内容预留区",
-          "product.cream50.visualText":
-            "下面三个模块已为后续真实产品图和卖点图预留位置。保持 cream-50 文件夹中的文件名不变，未来直接替换同名图片即可。",
-          "product.cream50.visual1Title": "核心卖点图",
-          "product.cream50.visual1Text":
-            "可替换为修护概念图、主成分图或品牌主视觉海报。",
-          "product.cream50.visual2Title": "使用场景图",
-          "product.cream50.visual2Text":
-            "可替换为面霜使用场景、生活方式摆拍图或高端护理场景图。",
-          "product.cream50.visual3Title": "质地图",
-          "product.cream50.visual3Text":
-            "可替换为膏体质地特写、取膏细节图或肤感表现图。",
+          "product.repair.specTitle": "产品信息",
+          "product.repair.specText": "围绕修护、柔润与屏障支持展开的一款丰润面霜。",
+          "product.repair.spec1Label": "产品名称",
+          "product.repair.spec1Value": "50% 面霜",
+          "product.repair.spec2Label": "产品类别",
+          "product.repair.spec2Value": "面霜",
+          "product.repair.spec3Label": "核心成分",
+          "product.repair.spec4Label": "适合肤况",
 
-          "product.cream50.specTitle": "产品信息",
-          "product.cream50.specText":
-            "本区块已按后续正式产品落地需求预留，可在包装、INCI、SKU 等信息确认后直接更新。",
-          "product.cream50.spec1Label": "产品名称",
-          "product.cream50.spec1Value": "50% 面霜",
-          "product.cream50.spec2Label": "产品类别",
-          "product.cream50.spec2Value": "面部面霜",
-          "product.cream50.spec3Label": "图片目录",
-          "product.cream50.spec4Label": "预留文件名",
+          "product.repair.ctaBlockTitle": "想了解 Eins 产品？",
+          "product.repair.ctaBlockText": "欢迎联系我们了解品牌介绍、渠道合作、产品咨询或未来零售合作机会。",
+          "product.repair.ctaBlockBtn1": "查看合作页面",
+          "product.repair.ctaBlockBtn2": "联系 Eins",
 
-          "product.cream50.ctaBlockTitle": "对 Eins 产品感兴趣？",
-          "product.cream50.ctaBlockText":
-            "欢迎联系我们获取品牌介绍、产品合作、贴牌定制或后续零售与渠道合作信息。",
-          "product.cream50.ctaBlockBtn1": "查看招商页",
-          "product.cream50.ctaBlockBtn2": "联系 Eins",
-
-          "footer.brandText":
-            "以科学护肤为灵感，呈现现代、精致、有长期价值感的护肤品牌形象。",
+          "footer.brandText": "以科学逻辑为基础的现代护肤品牌，强调长期价值、优雅表达与可扩展的品牌成长。",
           "footer.quickLinks": "快捷链接",
-          "footer.contactTitle": "联系信息",
-          "footer.contactLink": "提交咨询",
+          "footer.contactTitle": "联系",
+          "footer.contactLink": "发送咨询",
           "footer.rights": "保留所有权利。"
         },
 
         fr: {
-          "site.tagline": "Soin de la peau",
+          "site.tagline": "Soins de la peau",
           "nav.home": "Accueil",
           "nav.brand": "Marque",
           "nav.products": "Produits",
@@ -1363,170 +1240,132 @@
           "breadcrumb.home": "Accueil",
           "breadcrumb.products": "Produits",
 
-          "product.cream50.breadcrumb": "Crème Réparatrice 50%",
-          "product.cream50.eyebrow": "Détail Produit",
-          "product.cream50.title": "Crème Réparatrice 50%",
-          "product.cream50.heroText":
-            "Une crème riche pensée pour le confort cutané, le soin de la barrière et une finition visiblement plus ferme, avec une identité premium et réparatrice.",
+          "product.repair.breadcrumb": "Crème Réparatrice 50%",
+          "product.repair.eyebrow": "Détail Produit",
+          "product.repair.title": "Crème Réparatrice 50%",
+          "product.repair.heroText": "Une crème riche orientée réparation, pensée pour soutenir le confort, la douceur et une barrière cutanée visiblement plus stable au quotidien.",
 
-          "product.cream50.heroCard1Title": "Réparation Confort",
-          "product.cream50.heroCard1Text":
-            "Pensée pour une nutrition plus riche et une sensation plus enveloppante.",
-          "product.cream50.heroCard2Title": "Soutien Barrière",
-          "product.cream50.heroCard2Text":
-            "Aide à exprimer une peau apaisée, protégée et bien soignée.",
-          "product.cream50.heroCard3Title": "Soin Nuit Premium",
-          "product.cream50.heroCard3Text":
-            "Une page crème réparatrice adaptée à une future présentation produit héro.",
+          "product.repair.heroCard1Title": "Réparation Confort",
+          "product.repair.heroCard1Text": "Adaptée aux peaux sèches, fragiles ou instables qui recherchent une sensation plus rassurante.",
+          "product.repair.heroCard2Title": "Soutien de la barrière",
+          "product.repair.heroCard2Text": "Aide la peau à paraître plus souple, plus lisse et plus calme avec une texture riche mais raffinée.",
+          "product.repair.heroCard3Title": "Soin Quotidien Renforcé",
+          "product.repair.heroCard3Text": "Convient comme crème de nuit ou comme dernière étape quand la peau a besoin de plus de confort.",
 
-          "product.cream50.badge": "Crème Réparatrice",
-          "product.cream50.summary":
-            "Construite comme une crème riche réparatrice au sein de la collection Eins, cette page est structurée pour un positionnement premium réparateur, avec un espace prêt pour les futurs détails ingrédients, allégations et contenus retail.",
-          "product.cream50.point1":
-            "Soutient un storytelling axé sur le confort et la réparation avec une présentation plus riche.",
-          "product.cream50.point2":
-            "Convient à un positionnement autour du soutien de la barrière, de la nutrition et d’une peau visiblement plus ferme.",
-          "product.cream50.point3":
-            "Conçue comme une page crème premium pour les futurs visuels, packagings et usages partenaires.",
-          "product.cream50.cta1": "Faire une demande",
-          "product.cream50.cta2": "Devenir partenaire",
+          "product.repair.badge": "Collection Réparation",
+          "product.repair.summary": "La Crème Réparatrice 50% met l'accent sur la réparation, la douceur et le soutien de la barrière. Elle convient aux peaux sèches, rêches, tiraillées ou moins stables, avec un fini riche et enveloppant mais facile à étaler.",
+          "product.repair.point1": "Aide à maintenir une peau visiblement plus souple, lisse et résistante.",
+          "product.repair.point2": "Texture de crème riche pensée pour le soin réparateur quotidien et le confort nocturne.",
+          "product.repair.point3": "Idéale lors des changements de saison ou dans les environnements secs.",
+          "product.repair.cta1": "Faire une demande",
+          "product.repair.cta2": "Devenir partenaire",
 
-          "product.cream50.meta1Label": "Texture",
-          "product.cream50.meta1Value": "Riche & Réconfortante",
-          "product.cream50.meta2Label": "Étape Routine",
-          "product.cream50.meta2Value": "Crème Réparatrice",
-          "product.cream50.meta3Label": "Statut d’Affichage",
-          "product.cream50.meta3Value": "Page Marque Prête",
+          "product.repair.meta1Label": "Texture",
+          "product.repair.meta1Value": "Crème riche",
+          "product.repair.meta2Label": "Étape routine",
+          "product.repair.meta2Value": "Crème",
+          "product.repair.meta3Label": "Contenance",
+          "product.repair.meta3Value": "50 mL / 1.75 FL OZ",
 
-          "product.cream50.featuresTitle": "Pourquoi Elle Se Distingue",
-          "product.cream50.featuresText":
-            "Cette page présente la Crème Réparatrice 50% comme une crème plus riche et plus restauratrice au sein de la marque, adaptée au storytelling skincare premium et aux futurs supports de lancement.",
+          "product.repair.featuresTitle": "Points Forts",
+          "product.repair.featuresText": "Un discours centré sur la réparation, le confort quotidien et une texture crème enveloppante, sans langage de maquette ni texte provisoire.",
+          "product.repair.feature1Title": "Réparation & Douceur",
+          "product.repair.feature1Text": "Pensée pour les peaux qui ont besoin d'une étape plus riche axée sur le confort, la douceur et la récupération.",
+          "product.repair.feature2Title": "Confort Axé Barrière",
+          "product.repair.feature2Text": "Soutient une barrière d'apparence plus stable et une finition plus calme lors des périodes de sécheresse ou d'instabilité.",
+          "product.repair.feature3Title": "Riche mais Fluide",
+          "product.repair.feature3Text": "La crème paraît enveloppante sur la peau tout en restant souple à l'application.",
 
-          "product.cream50.feature1Title": "Positionnement Réparation",
-          "product.cream50.feature1Text":
-            "Construite autour du confort, de la récupération et d’une sensation de barrière mieux soutenue.",
-          "product.cream50.feature2Title": "Format Pot Premium",
-          "product.cream50.feature2Text":
-            "La présentation en pot aide à exprimer une expérience plus riche et plus intensive.",
-          "product.cream50.feature3Title": "Facile à Étendre",
-          "product.cream50.feature3Text":
-            "Le contenu net final, l’INCI, les allégations et les fonctions d’achat pourront être ajoutés plus tard sans changer la structure.",
+          "product.repair.story1Title": "Aperçu Produit",
+          "product.repair.story1Text": "Cette crème est conçue pour les besoins de réparation, de douceur et de soutien de la barrière cutanée. Avec du proxylane à forte concentration et un complexe réparateur apaisant, elle aide la peau à conserver un aspect plus souple, plus plein et plus confortable au quotidien.",
+          "product.repair.story2Title": "Conseils d'utilisation",
+          "product.repair.story2Point1": "Appliquer après la lotion, le sérum ou l'émulsion comme étape crème.",
+          "product.repair.story2Point2": "Répartir sur le visage et le cou puis presser délicatement pour plus de confort.",
+          "product.repair.story2Point3": "Utiliser matin ou soir; le soir, appliquer une couche légèrement plus riche si nécessaire.",
 
-          "product.cream50.story1Title": "Histoire de la Formule",
-          "product.cream50.story1Text":
-            "La Crème Réparatrice 50% est positionnée comme une crème restauratrice plus riche dans la ligne Eins, axée sur le confort cutané, le soin de la barrière et une finition visiblement plus ferme. Elle convient au storytelling premium, aux présentations commerciales et à la communication retail future.",
-          "product.cream50.story2Title": "Conseils d’Utilisation",
-          "product.cream50.story2Point1":
-            "Appliquer après la lotion, l’essence ou le sérum comme étape crème de votre routine.",
-          "product.cream50.story2Point2":
-            "Répartir une quantité adaptée uniformément sur le visage et le cou avec des mouvements doux vers le haut.",
-          "product.cream50.story2Point3":
-            "Convient particulièrement aux routines du soir ou aux soins recherchant plus de confort.",
+          "product.repair.visualTitle": "Ingrédients & Texture",
+          "product.repair.visualText": "Cette section met en avant la logique de formule réparatrice, l'expérience d'une crème riche et les moments d'usage quotidiens auxquels elle répond.",
+          "product.repair.visual1Title": "Formule Axée Réparation",
+          "product.repair.visual1Text": "Construit autour d'un proxylane à forte concentration et d'ingrédients réparateurs apaisants pour soutenir douceur, confort et barrière.",
+          "product.repair.visual2Title": "Routine Crème Confort",
+          "product.repair.visual2Text": "Idéale comme dernière étape d'une routine du soir ou quand la peau a besoin d'une couche plus cocon.",
+          "product.repair.visual3Title": "Expression de Texture Riche",
+          "product.repair.visual3Text": "Une texture crème riche et enveloppante qui s'étale en douceur et laisse la peau confortable.",
 
-          "product.cream50.visualTitle": "Zone Prête pour le Contenu Visuel",
-          "product.cream50.visualText":
-            "Ces trois modules sont préparés pour les futures photographies produit et visuels détaillés. Conservez les noms de fichiers inchangés et remplacez seulement les images dans le dossier cream-50.",
-          "product.cream50.visual1Title": "Visuel Ingrédient Héros",
-          "product.cream50.visual1Text":
-            "Réservé pour de futurs visuels de réparation, ambiance ingrédient ou création de campagne premium.",
-          "product.cream50.visual2Title": "Scène d’Application",
-          "product.cream50.visual2Text":
-            "Réservé pour des scènes d’usage plus riches, un setup lifestyle ou une présentation premium du packaging.",
-          "product.cream50.visual3Title": "Zoom Texture",
-          "product.cream50.visual3Text":
-            "Réservé pour une image de texture, des détails rapprochés produit ou la présentation du fini.",
+          "product.repair.specTitle": "Informations produit",
+          "product.repair.specText": "Une crème réparatrice pensée autour du confort quotidien, du soutien de la barrière et d'une expérience de soin plus riche.",
+          "product.repair.spec1Label": "Nom du produit",
+          "product.repair.spec1Value": "Crème Réparatrice 50%",
+          "product.repair.spec2Label": "Catégorie",
+          "product.repair.spec2Value": "Crème visage",
+          "product.repair.spec3Label": "Ingrédients clés",
+          "product.repair.spec4Label": "Idéal pour",
 
-          "product.cream50.specTitle": "Informations Produit",
-          "product.cream50.specText":
-            "Cette section est volontairement structurée pour la finalisation future du produit et pourra être mise à jour après validation du packaging, de l’INCI et des références SKU.",
-          "product.cream50.spec1Label": "Nom du Produit",
-          "product.cream50.spec1Value": "Crème Réparatrice 50%",
-          "product.cream50.spec2Label": "Catégorie",
-          "product.cream50.spec2Value": "Crème Visage",
-          "product.cream50.spec3Label": "Dossier Images",
-          "product.cream50.spec4Label": "Fichiers Réservés",
+          "product.repair.ctaBlockTitle": "Intéressé par les produits Eins ?",
+          "product.repair.ctaBlockText": "Contactez-nous pour la présentation de la marque, la coopération de canal, les demandes produit ou les opportunités retail.",
+          "product.repair.ctaBlockBtn1": "Voir la page partenariat",
+          "product.repair.ctaBlockBtn2": "Contacter Eins",
 
-          "product.cream50.ctaBlockTitle": "Intéressé par les produits Eins ?",
-          "product.cream50.ctaBlockText":
-            "Contactez-nous pour une présentation de la marque, une coopération produit, un projet private label ou de futures opportunités retail et distribution.",
-          "product.cream50.ctaBlockBtn1": "Voir la page partenariat",
-          "product.cream50.ctaBlockBtn2": "Contacter Eins",
-
-          "footer.brandText":
-            "Une approche skincare inspirée par la science, avec une identité raffinée, moderne et pensée pour une croissance durable.",
-          "footer.quickLinks": "Liens Rapides",
+          "footer.brandText": "Des soins inspirés par la science avec une identité moderne et raffinée. Pensés pour une valeur durable, une présentation élégante et une croissance de marque évolutive.",
+          "footer.quickLinks": "Liens rapides",
           "footer.contactTitle": "Contact",
           "footer.contactLink": "Envoyer une demande",
           "footer.rights": "Tous droits réservés."
         }
       };
 
-      function getCurrentLang() {
-        return (
-          localStorage.getItem("language") ||
-          localStorage.getItem("lang") ||
-          document.documentElement.getAttribute("lang") ||
-          "en"
-        );
-      }
-
-      function setCurrentLang(lang) {
-        localStorage.setItem("language", lang);
-        localStorage.setItem("lang", lang);
-        document.documentElement.setAttribute("lang", lang);
-      }
-
-      function applyPageTranslations(lang) {
+      function applyTranslations(lang) {
         const dict = pageTranslations[lang] || pageTranslations.en;
-        document.querySelectorAll("[data-i18n]").forEach(function (el) {
-          const key = el.getAttribute("data-i18n");
-          if (dict[key]) {
-            el.textContent = dict[key];
-          }
+        document.documentElement.setAttribute("lang", lang);
+        document.querySelectorAll("[data-i18n]").forEach((node) => {
+          const key = node.getAttribute("data-i18n");
+          if (dict[key]) node.textContent = dict[key];
         });
 
-        document.title =
-          lang === "zh"
-            ? "Eins | 50% 面霜"
-            : lang === "fr"
-            ? "Eins | Crème Réparatrice 50%"
-            : "Eins | 50% Repair Cream";
+        const titleMap = {
+          en: "Eins | 50% Repair Cream",
+          zh: "Eins | 50% 修护面霜",
+          fr: "Eins | Crème Réparatrice 50%"
+        };
+        document.title = titleMap[lang] || titleMap.en;
 
-        document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-          btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+        document.querySelectorAll(".lang-switch button").forEach((button) => {
+          button.classList.toggle("active", button.dataset.lang === lang);
         });
+
+        try {
+          localStorage.setItem("eins-language", lang);
+        } catch (error) {}
       }
 
-      document.querySelectorAll(".lang-switch button").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          const lang = btn.getAttribute("data-lang");
-          setCurrentLang(lang);
-          applyPageTranslations(lang);
+      document.querySelectorAll(".lang-switch button").forEach((button) => {
+        button.addEventListener("click", function () {
+          applyTranslations(this.dataset.lang);
         });
       });
 
-      applyPageTranslations(getCurrentLang());
-    })();
-
-    (function () {
       const mainImage = document.getElementById("mainProductImage");
       const thumbButtons = document.querySelectorAll(".thumb-btn");
-
-      thumbButtons.forEach(function (button) {
+      thumbButtons.forEach((button) => {
         button.addEventListener("click", function () {
-          const newSrc = button.getAttribute("data-full");
-          if (newSrc && mainImage) {
-            mainImage.src = newSrc;
-          }
-          thumbButtons.forEach(function (btn) {
-            btn.classList.remove("active");
-          });
-          button.classList.add("active");
+          thumbButtons.forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+          mainImage.src = this.dataset.full;
         });
       });
-    })();
 
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
+      const savedLang = (() => {
+        try {
+          return localStorage.getItem("eins-language");
+        } catch (error) {
+          return null;
+        }
+      })();
+      applyTranslations(savedLang || "en");
+
+      const yearEl = document.getElementById("currentYear");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
   </script>
 </body>
 </html>
