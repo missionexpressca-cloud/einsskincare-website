@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eins | Caviar Essence Lotion</title>
+  <meta
+    name="description"
+    content="Discover Eins Caviar Essence Lotion — a refined essence lotion designed to support firmness, radiance, and a smoother, plumper-looking complexion."
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .product-page {
+      background: linear-gradient(180deg, #fbf8f2 0%, #ffffff 32%, #fbf8f2 100%);
+      color: #3d342c;
+    }
+
+    .product-page .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .product-page .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 248, 242, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(126, 98, 70, 0.12);
+    }
+
+    .product-page .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .product-page .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-page .brand-logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .product-page .brand-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .product-page .brand-logo-text strong {
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+    }
+
+    .product-page .brand-logo-text span {
+      font-size: 0.78rem;
+      opacity: 0.75;
+      letter-spacing: 0.04em;
+    }
+
+    .product-page .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .product-page .main-nav a {
+      text-decoration: none;
+      color: #4b4037;
+      font-size: 0.96rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .product-page .main-nav a:hover,
+    .product-page .main-nav a.active {
+      opacity: 0.72;
+    }
+
+    .product-page .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .product-page .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(126, 98, 70, 0.18);
+      background: #fff;
+    }
+
+    .product-page .lang-switch button {
+      border: 0;
+      background: transparent;
+      color: #5a4b40;
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+    }
+
+    .product-page .lang-switch button.active {
+      background: #c8a97e;
+      color: #fff;
+    }
+
+    .product-page .page-hero {
+      padding: 54px 0 30px;
+    }
+
+    .product-page .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: #877363;
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+
+    .product-page .breadcrumb a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .product-page .page-hero-top {
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .product-page .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(200, 169, 126, 0.14);
+      color: #8a6d52;
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .product-page .page-hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 4vw, 3.55rem);
+      line-height: 1.08;
+      color: #2f2721;
+    }
+
+    .product-page .page-hero p.lead {
+      margin: 0;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: #65574b;
+      max-width: 620px;
+    }
+
+    .product-page .hero-card {
+      background: linear-gradient(180deg, #fff 0%, #f8f3eb 100%);
+      border: 1px solid rgba(126, 98, 70, 0.12);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(78, 59, 40, 0.08);
+    }
+
+    .product-page .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .product-page .hero-mini-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(126, 98, 70, 0.1);
+    }
+
+    .product-page .hero-mini-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #3a3129;
+    }
+
+    .product-page .hero-mini-card span {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #7a6859;
+    }
+
+    .product-page .product-main {
+      padding: 20px 0 34px;
+    }
+
+    .product-page .product-main-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .product-page .product-gallery-card,
+    .product-page .product-summary-card,
+    .product-page .section-card {
+      background: #fff;
+      border: 1px solid rgba(126, 98, 70, 0.11);
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(78, 59, 40, 0.06);
+    }
+
+    .product-page .product-gallery-card {
+      padding: 22px;
+    }
+
+    .product-page .main-image-wrap {
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #f8f3eb 0%, #f3ede5 100%);
+      border: 1px solid rgba(126, 98, 70, 0.08);
+    }
+
+    .product-page .main-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-page .thumb-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .product-page .thumb-btn {
+      border: 1px solid rgba(126, 98, 70, 0.14);
+      background: #fff;
+      border-radius: 16px;
+      padding: 0;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      aspect-ratio: 1 / 1;
+    }
+
+    .product-page .thumb-btn:hover,
+    .product-page .thumb-btn.active {
+      transform: translateY(-2px);
+      border-color: rgba(200, 169, 126, 0.75);
+    }
+
+    .product-page .thumb-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-page .product-summary-card {
+      padding: 30px;
+    }
+
+    .product-page .product-badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(200, 169, 126, 0.14);
+      color: #8a6d52;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .product-page .product-summary-card h2 {
+      margin: 0 0 12px;
+      font-size: 2.2rem;
+      line-height: 1.12;
+      color: #2e251f;
+    }
+
+    .product-page .product-subtitle {
+      margin: 0 0 20px;
+      color: #6f6053;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .product-page .product-points {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .product-page .product-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #4f4339;
+      line-height: 1.65;
+    }
+
+    .product-page .product-points li::before {
+      content: "✦";
+      color: #c8a97e;
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+
+    .product-page .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .product-page .btn-primary,
+    .product-page .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-size: 0.96rem;
+    }
+
+    .product-page .btn-primary {
+      background: #b79267;
+      color: #fff;
+      border: 1px solid #b79267;
+    }
+
+    .product-page .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .product-page .btn-secondary {
+      background: transparent;
+      color: #5a4a3e;
+      border: 1px solid rgba(126, 98, 70, 0.2);
+    }
+
+    .product-page .btn-secondary:hover {
+      background: rgba(200, 169, 126, 0.08);
+    }
+
+    .product-page .product-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .product-page .meta-item {
+      padding: 16px;
+      border-radius: 18px;
+      background: #faf7f2;
+      border: 1px solid rgba(126, 98, 70, 0.08);
+    }
+
+    .product-page .meta-item span {
+      display: block;
+      font-size: 0.82rem;
+      color: #8a786a;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .product-page .meta-item strong {
+      display: block;
+      font-size: 1rem;
+      color: #3a3129;
+      line-height: 1.5;
+    }
+
+    .product-page section.content-section {
+      padding: 34px 0;
+    }
+
+    .product-page .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .product-page .section-heading h3 {
+      margin: 0;
+      font-size: 1.9rem;
+      color: #2f2721;
+    }
+
+    .product-page .section-heading p {
+      margin: 0;
+      color: #746457;
+      line-height: 1.8;
+      max-width: 620px;
+    }
+
+    .product-page .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .product-page .feature-card {
+      padding: 24px;
+    }
+
+    .product-page .feature-no {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(200, 169, 126, 0.15);
+      color: #8a6d52;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .product-page .feature-card h4 {
+      margin: 0 0 10px;
+      font-size: 1.16rem;
+      color: #322922;
+    }
+
+    .product-page .feature-card p {
+      margin: 0;
+      line-height: 1.8;
+      color: #6d5d50;
+    }
+
+    .product-page .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .product-page .story-card {
+      padding: 28px;
+    }
+
+    .product-page .story-card h4 {
+      margin: 0 0 14px;
+      font-size: 1.32rem;
+      color: #322922;
+    }
+
+    .product-page .story-card p,
+    .product-page .story-card li {
+      color: #6c5d50;
+      line-height: 1.82;
+    }
+
+    .product-page .story-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .product-page .visual-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .product-page .visual-card {
+      overflow: hidden;
+    }
+
+    .product-page .visual-card img {
+      width: 100%;
+      aspect-ratio: 4 / 4.3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-page .visual-card .visual-text {
+      padding: 18px 20px 22px;
+    }
+
+    .product-page .visual-card h4 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      color: #342a23;
+    }
+
+    .product-page .visual-card p {
+      margin: 0;
+      line-height: 1.75;
+      color: #6d5d50;
+    }
+
+    .product-page .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .product-page .spec-card {
+      padding: 22px;
+    }
+
+    .product-page .spec-card span {
+      display: block;
+      font-size: 0.82rem;
+      color: #8a786a;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .product-page .spec-card strong {
+      display: block;
+      color: #332a23;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .product-page .cta-section {
+      padding: 16px 0 72px;
+    }
+
+    .product-page .cta-card {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: center;
+      background: linear-gradient(135deg, #f8f1e7 0%, #fff 100%);
+    }
+
+    .product-page .cta-card h3 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+      color: #2e251f;
+    }
+
+    .product-page .cta-card p {
+      margin: 0;
+      line-height: 1.8;
+      color: #67584c;
+      max-width: 640px;
+    }
+
+    .product-page .cta-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .product-page .site-footer {
+      background: #2c241e;
+      color: rgba(255, 255, 255, 0.82);
+      padding: 38px 0 30px;
+    }
+
+    .product-page .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .product-page .footer-brand h4,
+    .product-page .footer-links h4,
+    .product-page .footer-contact h4 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .product-page .footer-brand p,
+    .product-page .footer-contact p {
+      margin: 0;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .product-page .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .product-page .footer-links a,
+    .product-page .footer-contact a {
+      color: rgba(255, 255, 255, 0.82);
+      text-decoration: none;
+    }
+
+    .product-page .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    @media (max-width: 1080px) {
+      .product-page .page-hero-top,
+      .product-page .product-main-grid,
+      .product-page .story-grid,
+      .product-page .cta-card,
+      .product-page .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-page .feature-grid,
+      .product-page .visual-strip,
+      .product-page .spec-grid,
+      .product-page .hero-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-page .cta-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .product-page .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px 0;
+      }
+
+      .product-page .main-nav {
+        justify-content: center;
+      }
+
+      .product-page .header-actions {
+        justify-content: center;
+      }
+
+      .product-page .feature-grid,
+      .product-page .visual-strip,
+      .product-page .spec-grid,
+      .product-page .hero-card-grid,
+      .product-page .product-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .product-page .thumb-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .product-page .page-hero {
+        padding-top: 34px;
+      }
+
+      .product-page .product-summary-card,
+      .product-page .product-gallery-card,
+      .product-page .story-card,
+      .product-page .feature-card,
+      .product-page .spec-card,
+      .product-page .cta-card {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .product-page .thumb-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body class="product-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Eins Home">
+        <img
+          src="assets/img/logo/logo.png"
+          alt="Eins Logo"
+          onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+        />
+        <div class="brand-logo-text">
+          <strong>EINS</strong>
+          <span data-i18n="site.tagline">Skincare</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="brand.html" data-i18n="nav.brand">Brand</a>
+        <a href="products.html" class="active" data-i18n="nav.products">Products</a>
+        <a href="partner.html" data-i18n="nav.partner">Partner</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language Switcher">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="zh">中文</button>
+          <button type="button" data-lang="fr">FR</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html" data-i18n="breadcrumb.home">Home</a>
+          <span>/</span>
+          <a href="products.html" data-i18n="breadcrumb.products">Products</a>
+          <span>/</span>
+          <span data-i18n="product.caviar.breadcrumb">Caviar Essence Lotion</span>
+        </div>
+
+        <div class="page-hero-top">
+          <div>
+            <span class="eyebrow" data-i18n="product.caviar.eyebrow">Product Detail</span>
+            <h1 data-i18n="product.caviar.title">Caviar Essence Lotion</h1>
+            <p class="lead" data-i18n="product.caviar.heroText">
+              A refined essence lotion designed to support firmness, radiance, and a smoother, plumper-looking complexion with a silky, nourishing feel.
+            </p>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card-grid">
+              <div class="hero-mini-card">
+                <strong data-i18n="product.caviar.heroCard1Title">Firmness Support</strong>
+                <span data-i18n="product.caviar.heroCard1Text">
+                  Created for skin that looks tired, lacks bounce, or needs a more refined daily revitalizing step.
+                </span>
+              </div>
+              <div class="hero-mini-card">
+                <strong data-i18n="product.caviar.heroCard2Title">Silky Nourishing Feel</strong>
+                <span data-i18n="product.caviar.heroCard2Text">
+                  The formula focuses on a smooth, comfortable texture that leaves skin feeling softer and more polished.
+                </span>
+              </div>
+              <div class="hero-mini-card">
+                <strong data-i18n="product.caviar.heroCard3Title">Daily Revitalizing Care</strong>
+                <span data-i18n="product.caviar.heroCard3Text">
+                  Designed to fit into both morning and evening routines as a care step for radiance and suppleness.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-main">
+      <div class="container">
+        <div class="product-main-grid">
+          <div class="product-gallery-card">
+            <!-- Standardized image paths for caviar-essence-lotion folder -->
+            <div class="main-image-wrap">
+              <img
+                id="mainProductImage"
+                src="assets/img/products/caviar-essence-lotion/product-main.png"
+                alt="Caviar Essence Lotion"
+                onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+              />
+            </div>
+
+            <div class="thumb-grid">
+              <button class="thumb-btn" type="button" data-full="assets/img/products/caviar-essence-lotion/product-cover.png" aria-label="Cover image">
+                <img src="assets/img/products/caviar-essence-lotion/product-cover.png" alt="Caviar Essence Lotion Cover" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+              </button>
+
+              <button class="thumb-btn active" type="button" data-full="assets/img/products/caviar-essence-lotion/product-main.png" aria-label="Main image">
+                <img src="assets/img/products/caviar-essence-lotion/product-main.png" alt="Caviar Essence Lotion Main" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+              </button>
+
+              <button class="thumb-btn" type="button" data-full="assets/img/products/caviar-essence-lotion/detail-ingredient.png" aria-label="Ingredient detail image">
+                <img src="assets/img/products/caviar-essence-lotion/detail-ingredient.png" alt="Caviar Essence Lotion Ingredient Detail" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+              </button>
+
+              <button class="thumb-btn" type="button" data-full="assets/img/products/caviar-essence-lotion/detail-lifestyle.png" aria-label="Lifestyle detail image">
+                <img src="assets/img/products/caviar-essence-lotion/detail-lifestyle.png" alt="Caviar Essence Lotion Lifestyle Detail" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+              </button>
+
+              <button class="thumb-btn" type="button" data-full="assets/img/products/caviar-essence-lotion/detail-packaging.png" aria-label="Packaging detail image">
+                <img src="assets/img/products/caviar-essence-lotion/detail-packaging.png" alt="Caviar Essence Lotion Packaging Detail" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+              </button>
+
+              <button class="thumb-btn" type="button" data-full="assets/img/products/caviar-essence-lotion/texture-closeup.png" aria-label="Texture image">
+                <img src="assets/img/products/caviar-essence-lotion/texture-closeup.png" alt="Caviar Essence Lotion Texture Closeup" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+              </button>
+            </div>
+          </div>
+
+          <div class="product-summary-card">
+            <span class="product-badge" data-i18n="product.caviar.badge">Essence Collection</span>
+            <h2 data-i18n="product.caviar.title">Caviar Essence Lotion</h2>
+            <p class="product-subtitle" data-i18n="product.caviar.summary">
+              Caviar Essence Lotion is developed around the idea of firmness, radiance, and a more refined skin texture. With caviar extract, peptides, and hydrating support ingredients, it helps skin appear smoother, softer, and more luminous while maintaining a silky essence-lotion feel.
+            </p>
+
+            <ul class="product-points">
+              <li data-i18n="product.caviar.point1">Supports a smoother, plumper-looking complexion with a refined daily treatment feel.</li>
+              <li data-i18n="product.caviar.point2">Silky essence-lotion texture that sits between hydration and nourishing care.</li>
+              <li data-i18n="product.caviar.point3">Suitable for routines focused on radiance, firmness, and a more polished skin look.</li>
+            </ul>
+
+            <div class="button-row">
+              <a href="contact.html" class="btn-primary" data-i18n="product.caviar.cta1">Make an Inquiry</a>
+              <a href="partner.html" class="btn-secondary" data-i18n="product.caviar.cta2">Become a Partner</a>
+            </div>
+
+            <div class="product-meta">
+              <div class="meta-item">
+                <span data-i18n="product.caviar.meta1Label">Texture</span>
+                <strong data-i18n="product.caviar.meta1Value">Silky essence lotion</strong>
+              </div>
+              <div class="meta-item">
+                <span data-i18n="product.caviar.meta2Label">Routine Step</span>
+                <strong data-i18n="product.caviar.meta2Value">Essence</strong>
+              </div>
+              <div class="meta-item">
+                <span data-i18n="product.caviar.meta3Label">Net Content</span>
+                <strong data-i18n="product.caviar.meta3Value">50 mL / 1.69 FL OZ</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h3 data-i18n="product.caviar.featuresTitle">Core Highlights</h3>
+          </div>
+          <p data-i18n="product.caviar.featuresText">
+            A polished product story centered on firmness support, radiance, and a silky essence-lotion texture.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="section-card feature-card">
+            <div class="feature-no">01</div>
+            <h4 data-i18n="product.caviar.feature1Title">Refined Revitalizing Care</h4>
+            <p data-i18n="product.caviar.feature1Text">
+              Designed for skin that wants a more luminous, smoother, and better-rested appearance in daily care.
+            </p>
+          </div>
+
+          <div class="section-card feature-card">
+            <div class="feature-no">02</div>
+            <h4 data-i18n="product.caviar.feature2Title">Comfortable Nourishing Texture</h4>
+            <p data-i18n="product.caviar.feature2Text">
+              Delivers a soft, elegant finish without feeling heavy, making it easy to layer in a skincare routine.
+            </p>
+          </div>
+
+          <div class="section-card feature-card">
+            <div class="feature-no">03</div>
+            <h4 data-i18n="product.caviar.feature3Title">Firmness & Radiance Focus</h4>
+            <p data-i18n="product.caviar.feature3Text">
+              Balances the feel of hydration and care to support bounce, glow, and a more polished complexion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="section-card story-card">
+            <h4 data-i18n="product.caviar.story1Title">Product Overview</h4>
+            <p data-i18n="product.caviar.story1Text">
+              This essence lotion is crafted for skin that seeks a more refined, luminous, and supple appearance. The formula centers on caviar extract, peptides, and hydrating support ingredients to help improve the look of smoothness, softness, and visible vitality. Its silky texture glides on comfortably and fits naturally into both morning and evening routines.
+            </p>
+          </div>
+
+          <div class="section-card story-card">
+            <h4 data-i18n="product.caviar.story2Title">How to Use</h4>
+            <ul>
+              <li data-i18n="product.caviar.story2Point1">Apply after cleansing and toning, before cream or as the main essence step in your routine.</li>
+              <li data-i18n="product.caviar.story2Point2">Dispense an appropriate amount and smooth across the face and neck, then press gently for comfort.</li>
+              <li data-i18n="product.caviar.story2Point3">Use morning and evening to support a softer, brighter, and more supple-looking complexion.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h3 data-i18n="product.caviar.visualTitle">Ingredient & Texture Highlights</h3>
+          </div>
+          <p data-i18n="product.caviar.visualText">
+            These sections present the formula direction, the daily-use setting, and the silky sensory character of the product.
+          </p>
+        </div>
+
+        <div class="visual-strip">
+          <div class="section-card visual-card">
+            <img src="assets/img/products/caviar-essence-lotion/detail-ingredient.png" alt="Caviar Essence Lotion Ingredient Visual" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+            <div class="visual-text">
+              <h4 data-i18n="product.caviar.visual1Title">Revitalizing Formula Direction</h4>
+              <p data-i18n="product.caviar.visual1Text">
+                Built around caviar extract, firming-support peptides, and hydration-focused ingredients for a smoother and more luminous skin look.
+              </p>
+            </div>
+          </div>
+
+          <div class="section-card visual-card">
+            <img src="assets/img/products/caviar-essence-lotion/detail-lifestyle.png" alt="Caviar Essence Lotion Lifestyle Visual" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+            <div class="visual-text">
+              <h4 data-i18n="product.caviar.visual2Title">Daily Essence Ritual</h4>
+              <p data-i18n="product.caviar.visual2Text">
+                Works well as a morning or evening step when skin needs a more refined, radiant, and silky care experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="section-card visual-card">
+            <img src="assets/img/products/caviar-essence-lotion/texture-closeup.png" alt="Caviar Essence Lotion Silky Serum-Lotion Expression" onerror="this.src='assets/img/placeholders/product-placeholder.jpg';" />
+            <div class="visual-text">
+              <h4 data-i18n="product.caviar.visual3Title">Silky Serum-Lotion Expression</h4>
+              <p data-i18n="product.caviar.visual3Text">
+                The texture begins with the slip of an essence and settles with the soft comfort of a nourishing serum-lotion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h3 data-i18n="product.caviar.specTitle">Product Information</h3>
+          </div>
+          <p data-i18n="product.caviar.specText">
+            A caviar-inspired essence lotion created around firmness, radiance, and a smooth, silky care experience.
+          </p>
+        </div>
+
+        <div class="spec-grid">
+          <div class="section-card spec-card">
+            <span data-i18n="product.caviar.spec1Label">Product Name</span>
+            <strong data-i18n="product.caviar.spec1Value">Caviar Essence Lotion</strong>
+          </div>
+
+          <div class="section-card spec-card">
+            <span data-i18n="product.caviar.spec2Label">Category</span>
+            <strong data-i18n="product.caviar.spec2Value">Essence lotion</strong>
+          </div>
+
+          <div class="section-card spec-card">
+            <span data-i18n="product.caviar.spec3Label">Key Ingredients</span>
+            <strong data-i18n="product.caviar.spec3Value">Caviar extract / Peptides / Hydrating support ingredients</strong>
+          </div>
+
+          <div class="section-card spec-card">
+            <span data-i18n="product.caviar.spec4Label">Best For</span>
+            <strong data-i18n="product.caviar.spec4Value">Skin seeking firmness, radiance, smoothness, and a silky care finish</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="section-card cta-card">
+          <div>
+            <h3 data-i18n="product.caviar.ctaBlockTitle">Interested in Eins Products?</h3>
+            <p data-i18n="product.caviar.ctaBlockText">
+              Contact us for brand introductions, channel cooperation, product inquiries, or future retail opportunities.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a href="partner.html" class="btn-secondary" data-i18n="product.caviar.ctaBlockBtn1">View Partner Page</a>
+            <a href="contact.html" class="btn-primary" data-i18n="product.caviar.ctaBlockBtn2">Contact Eins</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>EINS</h4>
+          <p data-i18n="footer.brandText">
+            Science-inspired skincare with a refined, modern identity. Crafted for long-term value,
+            elegant presentation, and scalable brand growth.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="brand.html" data-i18n="nav.brand">Brand</a></li>
+            <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+            <li><a href="partner.html" data-i18n="nav.partner">Partner</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 data-i18n="footer.contactTitle">Contact</h4>
+          <p>
+            <a href="contact.html" data-i18n="footer.contactLink">Send us an inquiry</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> Eins.</span>
+        <span data-i18n="footer.rights">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/lang.js"></script>
+  <script>
+    (function () {
+      const pageTranslations = {
+        en: {
+          "site.tagline": "Skincare",
+          "nav.home": "Home",
+          "nav.brand": "Brand",
+          "nav.products": "Products",
+          "nav.partner": "Partner",
+          "nav.contact": "Contact",
+
+          "breadcrumb.home": "Home",
+          "breadcrumb.products": "Products",
+
+          "product.caviar.breadcrumb": "Caviar Essence Lotion",
+          "product.caviar.eyebrow": "Product Detail",
+          "product.caviar.title": "Caviar Essence Lotion",
+          "product.caviar.heroText": "A refined essence lotion designed to support firmness, radiance, and a smoother, plumper-looking complexion with a silky, nourishing feel.",
+
+          "product.caviar.heroCard1Title": "Firmness Support",
+          "product.caviar.heroCard1Text": "Created for skin that looks tired, lacks bounce, or needs a more refined daily revitalizing step.",
+          "product.caviar.heroCard2Title": "Silky Nourishing Feel",
+          "product.caviar.heroCard2Text": "The formula focuses on a smooth, comfortable texture that leaves skin feeling softer and more polished.",
+          "product.caviar.heroCard3Title": "Daily Revitalizing Care",
+          "product.caviar.heroCard3Text": "Designed to fit into both morning and evening routines as a care step for radiance and suppleness.",
+
+          "product.caviar.badge": "Essence Collection",
+          "product.caviar.summary": "Caviar Essence Lotion is developed around the idea of firmness, radiance, and a more refined skin texture. With caviar extract, peptides, and hydrating support ingredients, it helps skin appear smoother, softer, and more luminous while maintaining a silky essence-lotion feel.",
+          "product.caviar.point1": "Supports a smoother, plumper-looking complexion with a refined daily treatment feel.",
+          "product.caviar.point2": "Silky essence-lotion texture that sits between hydration and nourishing care.",
+          "product.caviar.point3": "Suitable for routines focused on radiance, firmness, and a more polished skin look.",
+          "product.caviar.cta1": "Make an Inquiry",
+          "product.caviar.cta2": "Become a Partner",
+
+          "product.caviar.meta1Label": "Texture",
+          "product.caviar.meta1Value": "Silky essence lotion",
+          "product.caviar.meta2Label": "Routine Step",
+          "product.caviar.meta2Value": "Essence",
+          "product.caviar.meta3Label": "Net Content",
+          "product.caviar.meta3Value": "50 mL / 1.69 FL OZ",
+
+          "product.caviar.featuresTitle": "Core Highlights",
+          "product.caviar.featuresText": "A polished product story centered on firmness support, radiance, and a silky essence-lotion texture.",
+          "product.caviar.feature1Title": "Refined Revitalizing Care",
+          "product.caviar.feature1Text": "Designed for skin that wants a more luminous, smoother, and better-rested appearance in daily care.",
+          "product.caviar.feature2Title": "Comfortable Nourishing Texture",
+          "product.caviar.feature2Text": "Delivers a soft, elegant finish without feeling heavy, making it easy to layer in a skincare routine.",
+          "product.caviar.feature3Title": "Firmness & Radiance Focus",
+          "product.caviar.feature3Text": "Balances the feel of hydration and care to support bounce, glow, and a more polished complexion.",
+
+          "product.caviar.story1Title": "Product Overview",
+          "product.caviar.story1Text": "This essence lotion is crafted for skin that seeks a more refined, luminous, and supple appearance. The formula centers on caviar extract, peptides, and hydrating support ingredients to help improve the look of smoothness, softness, and visible vitality. Its silky texture glides on comfortably and fits naturally into both morning and evening routines.",
+          "product.caviar.story2Title": "How to Use",
+          "product.caviar.story2Point1": "Apply after cleansing and toning, before cream or as the main essence step in your routine.",
+          "product.caviar.story2Point2": "Dispense an appropriate amount and smooth across the face and neck, then press gently for comfort.",
+          "product.caviar.story2Point3": "Use morning and evening to support a softer, brighter, and more supple-looking complexion.",
+
+          "product.caviar.visualTitle": "Ingredient & Texture Story",
+          "product.caviar.visualText": "These sections present the formula direction, the daily-use setting, and the silky sensory character of the product.",
+          "product.caviar.visual1Title": "Revitalizing Formula Direction",
+          "product.caviar.visual1Text": "Built around caviar extract, firming-support peptides, and hydration-focused ingredients for a smoother and more luminous skin look.",
+          "product.caviar.visual2Title": "Daily Essence Ritual",
+          "product.caviar.visual2Text": "Works well as a morning or evening step when skin needs a more refined, radiant, and silky care experience.",
+          "product.caviar.visual3Title": "Silky Serum-Lotion Expression",
+          "product.caviar.visual3Text": "The texture begins with the slip of an essence and settles with the soft comfort of a nourishing serum-lotion.",
+
+          "product.caviar.specTitle": "Product Information",
+          "product.caviar.specText": "A caviar-inspired essence lotion created around firmness, radiance, and a smooth, silky care experience.",
+          "product.caviar.spec1Label": "Product Name",
+          "product.caviar.spec1Value": "Caviar Essence Lotion",
+          "product.caviar.spec2Label": "Category",
+          "product.caviar.spec2Value": "Essence lotion",
+          "product.caviar.spec3Label": "Key Ingredients",
+          "product.caviar.spec3Value": "Caviar extract / Peptides / Hydrating support ingredients",
+          "product.caviar.spec4Label": "Ideal For",
+          "product.caviar.spec4Value": "Skin seeking firmness, radiance, smoothness, and a silky care finish",
+
+          "product.caviar.ctaBlockTitle": "Interested in Eins products?",
+          "product.caviar.ctaBlockText": "Contact us for brand introductions, channel cooperation, product inquiries, or future retail opportunities.",
+          "product.caviar.ctaBlockBtn1": "View Partner Page",
+          "product.caviar.ctaBlockBtn2": "Contact Eins",
+
+          "footer.brandText": "A modern skincare brand built on scientific logic, long-term value, and an elegant product expression.",
+          "footer.quickLinks": "Quick Links",
+          "footer.contactTitle": "Contact",
+          "footer.contactLink": "Send us an inquiry",
+          "footer.rights": "All rights reserved."
+        },
+
+        zh: {
+          "site.tagline": "护肤品牌",
+          "nav.home": "首页",
+          "nav.brand": "品牌",
+          "nav.products": "产品",
+          "nav.partner": "招商合作",
+          "nav.contact": "联系我们",
+
+          "breadcrumb.home": "首页",
+          "breadcrumb.products": "产品中心",
+
+          "product.caviar.breadcrumb": "鱼子精华露",
+          "product.caviar.eyebrow": "产品详情",
+          "product.caviar.title": "鱼子精华露",
+          "product.caviar.heroText": "一款兼顾紧致、焕亮与柔润肤感的鱼子精华露，帮助肌肤呈现更细腻、更饱满、更有光泽的状态。",
+
+          "product.caviar.heroCard1Title": "紧致焕活",
+          "product.caviar.heroCard1Text": "适合肌肤显得疲惫、松弛或缺少弹润感时，作为日常护理中的精致焕活步骤。",
+          "product.caviar.heroCard2Title": "丝滑柔润肤感",
+          "product.caviar.heroCard2Text": "关注丝滑、柔润而不厚重的使用感，让肌肤在护理后保持更细腻舒适的触感。",
+          "product.caviar.heroCard3Title": "日常焕亮护理",
+          "product.caviar.heroCard3Text": "适合早晚护理流程中使用，为肌肤带来更柔软、更透亮的日常护理体验。",
+
+          "product.caviar.badge": "精华系列",
+          "product.caviar.summary": "鱼子精华露围绕紧致、焕亮与柔润肤感展开设计。配方以鱼子提取物、紧致抗老多肽与保湿支持成分为核心，帮助肌肤呈现更细腻、柔软、透亮的外观与触感，同时带来丝滑精华露般的使用体验。",
+          "product.caviar.point1": "帮助肌肤呈现更细腻、饱满、有光泽的状态。",
+          "product.caviar.point2": "介于精华与精华乳之间的丝滑质地，兼顾柔润感与护理感。",
+          "product.caviar.point3": "适合关注紧致、焕亮与肤感精致度的日常护理流程。",
+          "product.caviar.cta1": "立即咨询",
+          "product.caviar.cta2": "成为合作伙伴",
+
+          "product.caviar.meta1Label": "质地",
+          "product.caviar.meta1Value": "丝滑精华露",
+          "product.caviar.meta2Label": "护肤步骤",
+          "product.caviar.meta2Value": "精华",
+          "product.caviar.meta3Label": "净含量",
+          "product.caviar.meta3Value": "50 mL / 1.69 FL OZ",
+
+          "product.caviar.featuresTitle": "核心亮点",
+          "product.caviar.featuresText": "围绕紧致感、焕亮感与丝滑精华露体验展开的正式产品表达。",
+          "product.caviar.feature1Title": "精致焕活护理",
+          "product.caviar.feature1Text": "适合希望肌肤看起来更明亮、更细腻、更有精神感的日常护理需求。",
+          "product.caviar.feature2Title": "柔润而不厚重",
+          "product.caviar.feature2Text": "保留柔润与滋养感，同时维持轻盈顺滑的延展体验，便于叠加使用。",
+          "product.caviar.feature3Title": "紧致与光泽表达",
+          "product.caviar.feature3Text": "在保湿支持与护理感之间取得平衡，帮助肌肤呈现更柔亮、更饱满的状态。",
+
+          "product.caviar.story1Title": "产品概览",
+          "product.caviar.story1Text": "这款鱼子精华露面向想要提升紧致感、细腻度与光泽度的肌肤状态而设计。配方围绕鱼子提取物、紧致抗老多肽与保湿支持成分展开，帮助肌肤在日常护理中呈现更柔软、更平滑、更有活力的外观。质地丝滑细腻，贴肤舒适，适合早晚使用，也适合在需要精致护理感时加入流程。",
+          "product.caviar.story2Title": "使用方式",
+          "product.caviar.story2Point1": "洁面与爽肤后使用，可作为面霜前的精华步骤。",
+          "product.caviar.story2Point2": "取适量均匀涂抹于面部与颈部，轻柔按压帮助吸收。",
+          "product.caviar.story2Point3": "建议早晚使用，帮助肌肤维持更柔润、透亮、细腻的状态。",
+
+          "product.caviar.visualTitle": "成分与质地亮点",
+          "product.caviar.visualText": "以下模块用于表达配方思路、使用场景与丝滑精华露般的感官体验。",
+          "product.caviar.visual1Title": "焕活型配方思路",
+          "product.caviar.visual1Text": "围绕鱼子提取物、紧致抗老多肽与保湿支持成分展开，帮助肌肤呈现更柔亮、更细腻的状态。",
+          "product.caviar.visual2Title": "日常精华护理场景",
+          "product.caviar.visual2Text": "适合早晚护理中作为关键精华步骤使用，满足对紧致感与光泽感的日常需求。",
+          "product.caviar.visual3Title": "丝滑质地表达",
+          "product.caviar.visual3Text": "兼具精华的流动感与精华乳的柔润度，带来顺滑、细腻、舒适的使用体验。",
+
+          "product.caviar.specTitle": "产品信息",
+          "product.caviar.specText": "一款围绕紧致、焕亮与丝滑护理体验打造的鱼子精华露。",
+          "product.caviar.spec1Label": "产品名称",
+          "product.caviar.spec1Value": "鱼子精华露",
+          "product.caviar.spec2Label": "产品类别",
+          "product.caviar.spec2Value": "精华露",
+          "product.caviar.spec3Label": "核心成分",
+          "product.caviar.spec3Value": "鱼子提取物 / 紧致抗老多肽 / 保湿支持成分",
+          "product.caviar.spec4Label": "适合肤况",
+          "product.caviar.spec4Value": "关注紧致、焕亮、细腻度与丝滑护理感的肌肤状态",
+
+          "product.caviar.ctaBlockTitle": "想了解 Eins 产品？",
+          "product.caviar.ctaBlockText": "欢迎联系我们了解品牌介绍、渠道合作、产品咨询或未来零售合作机会。",
+          "product.caviar.ctaBlockBtn1": "查看合作页面",
+          "product.caviar.ctaBlockBtn2": "联系 Eins",
+
+          "footer.brandText": "以科学逻辑为基础的现代护肤品牌，强调长期价值、优雅表达与日常可持续使用体验。",
+          "footer.quickLinks": "快捷链接",
+          "footer.contactTitle": "联系",
+          "footer.contactLink": "发送咨询",
+          "footer.rights": "保留所有权利。"
+        },
+
+        fr: {
+          "site.tagline": "Soins de la peau",
+          "nav.home": "Accueil",
+          "nav.brand": "Marque",
+          "nav.products": "Produits",
+          "nav.partner": "Partenariat",
+          "nav.contact": "Contact",
+
+          "breadcrumb.home": "Accueil",
+          "breadcrumb.products": "Produits",
+
+          "product.caviar.breadcrumb": "Lotion Essence au Caviar",
+          "product.caviar.eyebrow": "Détail Produit",
+          "product.caviar.title": "Lotion Essence au Caviar",
+          "product.caviar.heroText": "Une lotion essence raffinée conçue pour favoriser la fermeté, l’éclat et une peau visiblement plus lisse et rebondie avec un toucher soyeux.",
+
+          "product.caviar.heroCard1Title": "Soutien de la Fermeté",
+          "product.caviar.heroCard1Text": "Pensée pour les peaux qui semblent fatiguées, moins rebondies ou qui recherchent une étape revitalisante plus raffinée.",
+          "product.caviar.heroCard2Title": "Texture Soyeuse Nourrissante",
+          "product.caviar.heroCard2Text": "La formule privilégie une sensation lisse et confortable qui laisse la peau plus douce et plus élégante au toucher.",
+          "product.caviar.heroCard3Title": "Soin Quotidien Revitalisant",
+          "product.caviar.heroCard3Text": "S’intègre naturellement aux routines du matin et du soir comme étape dédiée à l’éclat et à la souplesse.",
+
+          "product.caviar.badge": "Collection Essence",
+          "product.caviar.summary": "La Lotion Essence au Caviar est développée autour de la fermeté, de l’éclat et d’un grain de peau plus raffiné. Avec de l’extrait de caviar, des peptides et des ingrédients de soutien hydratant, elle aide la peau à paraître plus lisse, plus douce et plus lumineuse tout en offrant une texture soyeuse entre essence et sérum-lotion.",
+          "product.caviar.point1": "Soutient une peau visiblement plus lisse, plus rebondie et plus lumineuse.",
+          "product.caviar.point2": "Texture soyeuse située entre l’essence et le sérum-lotion, avec confort et soin.",
+          "product.caviar.point3": "Convient aux routines orientées fermeté, éclat et peau d’apparence plus raffinée.",
+          "product.caviar.cta1": "Faire une demande",
+          "product.caviar.cta2": "Devenir partenaire",
+
+          "product.caviar.meta1Label": "Texture",
+          "product.caviar.meta1Value": "Lotion essence soyeuse",
+          "product.caviar.meta2Label": "Étape routine",
+          "product.caviar.meta2Value": "Essence",
+          "product.caviar.meta3Label": "Contenance",
+          "product.caviar.meta3Value": "50 mL / 1.69 FL OZ",
+
+          "product.caviar.featuresTitle": "Points Forts",
+          "product.caviar.featuresText": "Un discours produit formel centré sur la fermeté, l’éclat et la texture soyeuse d’une lotion essence.",
+          "product.caviar.feature1Title": "Soin Revitalisant Raffiné",
+          "product.caviar.feature1Text": "Pour les peaux qui recherchent au quotidien plus d’éclat, plus de finesse et une apparence mieux reposée.",
+          "product.caviar.feature2Title": "Doux sans lourdeur",
+          "product.caviar.feature2Text": "Conserve le confort nourrissant tout en gardant une application légère et fluide facile à superposer.",
+          "product.caviar.feature3Title": "Expression Fermeté & Éclat",
+          "product.caviar.feature3Text": "Équilibre soutien hydratant et sensation de soin pour une peau plus souple, lumineuse et raffinée.",
+
+          "product.caviar.story1Title": "Aperçu Produit",
+          "product.caviar.story1Text": "Cette lotion essence au caviar est conçue pour les peaux qui souhaitent gagner en fermeté, en finesse et en éclat. La formule s’articule autour de l’extrait de caviar, de peptides de soutien et d’ingrédients hydratants afin d’aider la peau à paraître plus douce, plus lisse et plus pleine de vitalité au quotidien. Sa texture soyeuse se fond confortablement sur la peau et convient au matin comme au soir.",
+          "product.caviar.story2Title": "Conseils d’utilisation",
+          "product.caviar.story2Point1": "Appliquer après le nettoyage et la lotion, avant la crème ou comme étape essence principale.",
+          "product.caviar.story2Point2": "Prélever une quantité adaptée, lisser sur le visage et le cou puis presser délicatement.",
+          "product.caviar.story2Point3": "Utiliser matin et soir pour soutenir une peau plus douce, plus lumineuse et plus souple.",
+
+          "product.caviar.visualTitle": "Ingrédients & Texture",
+          "product.caviar.visualText": "Ces modules présentent la direction de formule, les moments d’usage quotidiens et le caractère sensoriel soyeux du produit.",
+          "product.caviar.visual1Title": "Direction de Formule Revitalisante",
+          "product.caviar.visual1Text": "Construit autour de l’extrait de caviar, de peptides orientés fermeté et d’ingrédients hydratants pour une peau plus lisse et plus lumineuse.",
+          "product.caviar.visual2Title": "Rituel Essence Quotidien",
+          "product.caviar.visual2Text": "Fonctionne aussi bien le matin que le soir lorsque la peau a besoin d’un soin plus raffiné, éclatant et soyeux.",
+          "product.caviar.visual3Title": "Expression d’une Texture Soyeuse",
+          "product.caviar.visual3Text": "La texture commence avec la glisse d’une essence et se dépose avec le confort doux d’un sérum-lotion nourrissant.",
+
+          "product.caviar.specTitle": "Informations produit",
+          "product.caviar.specText": "Une lotion essence au caviar pensée autour de la fermeté, de l’éclat et d’une expérience de soin soyeuse.",
+          "product.caviar.spec1Label": "Nom du produit",
+          "product.caviar.spec1Value": "Lotion Essence au Caviar",
+          "product.caviar.spec2Label": "Catégorie",
+          "product.caviar.spec2Value": "Lotion essence",
+          "product.caviar.spec3Label": "Ingrédients clés",
+          "product.caviar.spec3Value": "Extrait de caviar / Peptides / Ingrédients de soutien hydratant",
+          "product.caviar.spec4Label": "Idéal pour",
+          "product.caviar.spec4Value": "Les peaux recherchant fermeté, éclat, douceur et un fini de soin soyeux",
+
+          "product.caviar.ctaBlockTitle": "Intéressé par les produits Eins ?",
+          "product.caviar.ctaBlockText": "Contactez-nous pour la présentation de la marque, la coopération de canal, les demandes produit ou les opportunités retail.",
+          "product.caviar.ctaBlockBtn1": "Voir la page partenariat",
+          "product.caviar.ctaBlockBtn2": "Contacter Eins",
+
+          "footer.brandText": "Des soins inspirés par la science avec une identité moderne, raffinée et pensée pour un usage durable.",
+          "footer.quickLinks": "Liens rapides",
+          "footer.contactTitle": "Contact",
+          "footer.contactLink": "Envoyer une demande",
+          "footer.rights": "Tous droits réservés."
+        }
+      };
+
+      function applyTranslations(lang) {
+        const dict = pageTranslations[lang] || pageTranslations.en;
+        document.documentElement.setAttribute("lang", lang);
+        document.querySelectorAll("[data-i18n]").forEach((node) => {
+          const key = node.getAttribute("data-i18n");
+          if (dict[key]) node.textContent = dict[key];
+        });
+
+        const titleMap = {
+          en: "Eins | Caviar Essence Lotion",
+          zh: "Eins | 鱼子精华露",
+          fr: "Eins | Lotion Essence au Caviar"
+        };
+        document.title = titleMap[lang] || titleMap.en;
+
+        document.querySelectorAll(".lang-switch button").forEach((button) => {
+          button.classList.toggle("active", button.dataset.lang === lang);
+        });
+
+        try {
+          localStorage.setItem("language", lang);
+          localStorage.setItem("eins-language", lang);
+        } catch (error) {}
+      }
+
+      document.querySelectorAll(".lang-switch button").forEach((button) => {
+        button.addEventListener("click", function () {
+          applyTranslations(this.dataset.lang);
+        });
+      });
+
+      const originalSetLanguage = window.setLanguage;
+      if (typeof originalSetLanguage === "function") {
+        window.setLanguage = function (lang) {
+          originalSetLanguage(lang);
+          applyTranslations(lang);
+        };
+      } else {
+        window.setLanguage = applyTranslations;
+      }
+
+      const mainImage = document.getElementById("mainProductImage");
+      const thumbButtons = document.querySelectorAll(".thumb-btn");
+      thumbButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          thumbButtons.forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+          mainImage.src = this.dataset.full;
+        });
+      });
+
+      const savedLang = (() => {
+        try {
+          return document.documentElement.getAttribute("lang") || localStorage.getItem("eins-language") || localStorage.getItem("language");
+        } catch (error) {
+          return null;
+        }
+      })();
+      applyTranslations(savedLang || "en");
+
+      const yearEl = document.getElementById("currentYear");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
