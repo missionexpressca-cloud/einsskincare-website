@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eins | Orange Radiance Cream</title>
+  <meta
+    name="description"
+    content="Discover Eins Orange Radiance Cream — a nourishing daily cream designed to help skin look smoother, softer, and more radiant."
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    .product-page {
+      background: linear-gradient(180deg, #fbf8f2 0%, #ffffff 32%, #fbf8f2 100%);
+      color: #3d342c;
+    }
+
+    .product-page .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .product-page .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 248, 242, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(126, 98, 70, 0.12);
+    }
+
+    .product-page .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .product-page .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .product-page .brand-logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .product-page .brand-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .product-page .brand-logo-text strong {
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+    }
+
+    .product-page .brand-logo-text span {
+      font-size: 0.78rem;
+      opacity: 0.75;
+      letter-spacing: 0.04em;
+    }
+
+    .product-page .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .product-page .main-nav a {
+      text-decoration: none;
+      color: #4b4037;
+      font-size: 0.96rem;
+      transition: opacity 0.2s ease;
+    }
+
+    .product-page .main-nav a:hover,
+    .product-page .main-nav a.active {
+      opacity: 0.72;
+    }
+
+    .product-page .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .product-page .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 999px;
+      border: 1px solid rgba(126, 98, 70, 0.18);
+      background: #fff;
+    }
+
+    .product-page .lang-switch button {
+      border: 0;
+      background: transparent;
+      color: #5a4b40;
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+    }
+
+    .product-page .lang-switch button.active {
+      background: #c8a97e;
+      color: #fff;
+    }
+
+    .product-page .page-hero {
+      padding: 54px 0 30px;
+    }
+
+    .product-page .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: #877363;
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+
+    .product-page .breadcrumb a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .product-page .page-hero-top {
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .product-page .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(200, 169, 126, 0.14);
+      color: #8a6d52;
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .product-page .page-hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 4vw, 3.55rem);
+      line-height: 1.08;
+      color: #2f2721;
+    }
+
+    .product-page .page-hero p.lead {
+      margin: 0;
+      font-size: 1.02rem;
+      line-height: 1.8;
+      color: #65574b;
+      max-width: 620px;
+    }
+
+    .product-page .hero-card {
+      background: linear-gradient(180deg, #fff 0%, #f8f3eb 100%);
+      border: 1px solid rgba(126, 98, 70, 0.12);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(78, 59, 40, 0.08);
+    }
+
+    .product-page .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .product-page .hero-mini-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid rgba(126, 98, 70, 0.1);
+    }
+
+    .product-page .hero-mini-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #3a3129;
+    }
+
+    .product-page .hero-mini-card span {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #7a6859;
+    }
+
+    .product-page .product-main {
+      padding: 20px 0 34px;
+    }
+
+    .product-page .product-main-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 44px;
+      align-items: start;
+    }
+
+    .product-page .product-gallery-card,
+    .product-page .product-summary-card,
+    .product-page .section-card {
+      background: #fff;
+      border: 1px solid rgba(126, 98, 70, 0.11);
+      border-radius: 28px;
+      box-shadow: 0 18px 40px rgba(78, 59, 40, 0.06);
+    }
+
+    .product-page .product-gallery-card {
+      padding: 22px;
+    }
+
+    .product-page .main-image-wrap {
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(180deg, #f8f3eb 0%, #f3ede5 100%);
+      border: 1px solid rgba(126, 98, 70, 0.08);
+    }
+
+    .product-page .main-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-page .thumb-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .product-page .thumb-btn {
+      border: 1px solid rgba(126, 98, 70, 0.14);
+      background: #fff;
+      border-radius: 16px;
+      padding: 0;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      aspect-ratio: 1 / 1;
+    }
+
+    .product-page .thumb-btn:hover,
+    .product-page .thumb-btn.active {
+      transform: translateY(-2px);
+      border-color: rgba(200, 169, 126, 0.75);
+    }
+
+    .product-page .thumb-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-page .product-summary-card {
+      padding: 30px;
+    }
+
+    .product-page .product-badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(200, 169, 126, 0.14);
+      color: #8a6d52;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .product-page .product-summary-card h2 {
+      margin: 0 0 12px;
+      font-size: 2.2rem;
+      line-height: 1.12;
+      color: #2e251f;
+    }
+
+    .product-page .product-subtitle {
+      margin: 0 0 20px;
+      color: #6f6053;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .product-page .product-points {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .product-page .product-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #4f4339;
+      line-height: 1.65;
+    }
+
+    .product-page .product-points li::before {
+      content: "✦";
+      color: #c8a97e;
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+
+    .product-page .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .product-page .btn-primary,
+    .product-page .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-size: 0.96rem;
+    }
+
+    .product-page .btn-primary {
+      background: #b79267;
+      color: #fff;
+      border: 1px solid #b79267;
+    }
+
+    .product-page .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .product-page .btn-secondary {
+      background: transparent;
+      color: #5a4a3e;
+      border: 1px solid rgba(126, 98, 70, 0.2);
+    }
+
+    .product-page .btn-secondary:hover {
+      background: rgba(200, 169, 126, 0.08);
+    }
+
+    .product-page .product-meta {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .product-page .meta-item {
+      padding: 16px;
+      border-radius: 18px;
+      background: #faf7f2;
+      border: 1px solid rgba(126, 98, 70, 0.08);
+    }
+
+    .product-page .meta-item span {
+      display: block;
+      font-size: 0.82rem;
+      color: #8a786a;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .product-page .meta-item strong {
+      display: block;
+      font-size: 1rem;
+      color: #3a3129;
+      line-height: 1.5;
+    }
+
+    .product-page section.content-section {
+      padding: 34px 0;
+    }
+
+    .product-page .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .product-page .section-heading h3 {
+      margin: 0;
+      font-size: 1.9rem;
+      color: #2f2721;
+    }
+
+    .product-page .section-heading p {
+      margin: 0;
+      color: #746457;
+      line-height: 1.8;
+      max-width: 620px;
+    }
+
+    .product-page .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .product-page .feature-card {
+      padding: 24px;
+    }
+
+    .product-page .feature-no {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(200, 169, 126, 0.15);
+      color: #8a6d52;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .product-page .feature-card h4 {
+      margin: 0 0 10px;
+      font-size: 1.16rem;
+      color: #322922;
+    }
+
+    .product-page .feature-card p {
+      margin: 0;
+      line-height: 1.8;
+      color: #6d5d50;
+    }
+
+    .product-page .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .product-page .story-card {
+      padding: 28px;
+    }
+
+    .product-page .story-card h4 {
+      margin: 0 0 14px;
+      font-size: 1.32rem;
+      color: #322922;
+    }
+
+    .product-page .story-card p,
+    .product-page .story-card li {
+      color: #6c5d50;
+      line-height: 1.82;
+    }
+
+    .product-page .story-card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .product-page .visual-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .product-page .visual-card {
+      overflow: hidden;
+    }
+
+    .product-page .visual-card img {
+      width: 100%;
+      aspect-ratio: 4 / 4.3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-page .visual-card .visual-text {
+      padding: 18px 20px 22px;
+    }
+
+    .product-page .visual-card h4 {
+      margin: 0 0 10px;
+      font-size: 1.08rem;
+      color: #342a23;
+    }
+
+    .product-page .visual-card p {
+      margin: 0;
+      line-height: 1.75;
+      color: #6d5d50;
+    }
+
+    .product-page .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .product-page .spec-card {
+      padding: 22px;
+    }
+
+    .product-page .spec-card span {
+      display: block;
+      font-size: 0.82rem;
+      color: #8a786a;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .product-page .spec-card strong {
+      display: block;
+      color: #332a23;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .product-page .cta-section {
+      padding: 16px 0 72px;
+    }
+
+    .product-page .cta-card {
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: center;
+      background: linear-gradient(135deg, #f8f1e7 0%, #fff 100%);
+    }
+
+    .product-page .cta-card h3 {
+      margin: 0 0 12px;
+      font-size: 2rem;
+      color: #2e251f;
+    }
+
+    .product-page .cta-card p {
+      margin: 0;
+      line-height: 1.8;
+      color: #67584c;
+      max-width: 640px;
+    }
+
+    .product-page .cta-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .product-page .site-footer {
+      background: #2c241e;
+      color: rgba(255, 255, 255, 0.82);
+      padding: 38px 0 30px;
+    }
+
+    .product-page .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 0.9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .product-page .footer-brand h4,
+    .product-page .footer-links h4,
+    .product-page .footer-contact h4 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .product-page .footer-brand p,
+    .product-page .footer-contact p {
+      margin: 0;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    .product-page .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .product-page .footer-links a,
+    .product-page .footer-contact a {
+      color: rgba(255, 255, 255, 0.82);
+      text-decoration: none;
+    }
+
+    .product-page .footer-bottom {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.62);
+    }
+
+    @media (max-width: 1080px) {
+      .product-page .page-hero-top,
+      .product-page .product-main-grid,
+      .product-page .story-grid,
+      .product-page .cta-card,
+      .product-page .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-page .feature-grid,
+      .product-page .visual-strip,
+      .product-page .spec-grid,
+      .product-page .hero-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-page .cta-actions {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .product-page .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px 0;
+      }
+
+      .product-page .main-nav {
+        justify-content: center;
+      }
+
+      .product-page .header-actions {
+        justify-content: center;
+      }
+
+      .product-page .feature-grid,
+      .product-page .visual-strip,
+      .product-page .spec-grid,
+      .product-page .hero-card-grid,
+      .product-page .product-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .product-page .thumb-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .product-page .page-hero {
+        padding-top: 34px;
+      }
+
+      .product-page .product-summary-card,
+      .product-page .product-gallery-card,
+      .product-page .story-card,
+      .product-page .feature-card,
+      .product-page .spec-card,
+      .product-page .cta-card {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .product-page .thumb-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body class="product-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Eins Home">
+        <img
+          src="assets/img/logo/logo.png"
+          alt="Eins Logo"
+          onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+        />
+        <div class="brand-logo-text">
+          <strong>EINS</strong>
+          <span data-i18n="site.tagline">Skincare</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="brand.html" data-i18n="nav.brand">Brand</a>
+        <a href="products.html" class="active" data-i18n="nav.products">Products</a>
+        <a href="partner.html" data-i18n="nav.partner">Partner</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language Switcher">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="zh">中文</button>
+          <button type="button" data-lang="fr">FR</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html" data-i18n="breadcrumb.home">Home</a>
+          <span>/</span>
+          <a href="products.html" data-i18n="breadcrumb.products">Products</a>
+          <span>/</span>
+          <span data-i18n="product.orange.breadcrumb">Orange Radiance Cream</span>
+        </div>
+
+        <div class="page-hero-top">
+          <div>
+            <span class="eyebrow" data-i18n="product.orange.eyebrow">Product Detail</span>
+            <h1 data-i18n="product.orange.title">Orange Radiance Cream</h1>
+            <p class="lead" data-i18n="product.orange.heroText">
+              A daily cream designed for a smoother, softer, and more radiant-looking finish,
+              with a rich yet elegant feel that fits the refined identity of Eins.
+            </p>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card-grid">
+              <div class="hero-mini-card">
+                <strong data-i18n="product.orange.heroCard1Title">Daily Comfort</strong>
+                <span data-i18n="product.orange.heroCard1Text">
+                  Creamy care created for everyday use and a nourished skin feel.
+                </span>
+              </div>
+              <div class="hero-mini-card">
+                <strong data-i18n="product.orange.heroCard2Title">Radiant Finish</strong>
+                <span data-i18n="product.orange.heroCard2Text">
+                  Helps skin appear fresher, brighter, and naturally polished.
+                </span>
+              </div>
+              <div class="hero-mini-card">
+                <strong data-i18n="product.orange.heroCard3Title">Brand-Ready Page</strong>
+                <span data-i18n="product.orange.heroCard3Text">
+                  Structured for future product imagery, claims, and channel presentation.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-main">
+      <div class="container">
+        <div class="product-main-grid">
+          <div class="product-gallery-card">
+            <!-- Reserved image paths for orange-cream folder -->
+            <div class="main-image-wrap">
+              <img
+                id="mainProductImage"
+                src="assets/img/products/orange-cream/main.jpg"
+                alt="Orange Radiance Cream"
+                onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+              />
+            </div>
+
+            <div class="thumb-grid">
+              <button
+                class="thumb-btn active"
+                type="button"
+                data-full="assets/img/products/orange-cream/main.jpg"
+                aria-label="Main image"
+              >
+                <img
+                  src="assets/img/products/orange-cream/cover.jpg"
+                  alt="Orange Radiance Cream Cover"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+
+              <button
+                class="thumb-btn"
+                type="button"
+                data-full="assets/img/products/orange-cream/detail-1.jpg"
+                aria-label="Detail image 1"
+              >
+                <img
+                  src="assets/img/products/orange-cream/detail-1.jpg"
+                  alt="Orange Radiance Cream Detail 1"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+
+              <button
+                class="thumb-btn"
+                type="button"
+                data-full="assets/img/products/orange-cream/detail-2.jpg"
+                aria-label="Detail image 2"
+              >
+                <img
+                  src="assets/img/products/orange-cream/detail-2.jpg"
+                  alt="Orange Radiance Cream Detail 2"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+
+              <button
+                class="thumb-btn"
+                type="button"
+                data-full="assets/img/products/orange-cream/detail-3.jpg"
+                aria-label="Detail image 3"
+              >
+                <img
+                  src="assets/img/products/orange-cream/detail-3.jpg"
+                  alt="Orange Radiance Cream Detail 3"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+
+              <button
+                class="thumb-btn"
+                type="button"
+                data-full="assets/img/products/orange-cream/texture.jpg"
+                aria-label="Texture image"
+              >
+                <img
+                  src="assets/img/products/orange-cream/texture.jpg"
+                  alt="Orange Radiance Cream Texture"
+                  onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="product-summary-card">
+            <span class="product-badge" data-i18n="product.orange.badge">Signature Cream</span>
+            <h2 data-i18n="product.orange.title">Orange Radiance Cream</h2>
+            <p class="product-subtitle" data-i18n="product.orange.summary">
+              Created as a soft, elegant cream within the Eins skincare collection, this page
+              presents a premium product structure ready for future final imagery, ingredient
+              details, and retail information updates.
+            </p>
+
+            <ul class="product-points">
+              <li data-i18n="product.orange.point1">
+                Helps support a smoother and more refined-looking skin appearance.
+              </li>
+              <li data-i18n="product.orange.point2">
+                Rich cream texture with a comfortable finish suitable for daily routines.
+              </li>
+              <li data-i18n="product.orange.point3">
+                Designed for brand presentation, product storytelling, and future partner use.
+              </li>
+            </ul>
+
+            <div class="button-row">
+              <a href="contact.html" class="btn-primary" data-i18n="product.orange.cta1">Inquiry Now</a>
+              <a href="partner.html" class="btn-secondary" data-i18n="product.orange.cta2">Become a Partner</a>
+            </div>
+
+            <div class="product-meta">
+              <div class="meta-item">
+                <span data-i18n="product.orange.meta1Label">Texture</span>
+                <strong data-i18n="product.orange.meta1Value">Creamy & Smooth</strong>
+              </div>
+              <div class="meta-item">
+                <span data-i18n="product.orange.meta2Label">Routine Step</span>
+                <strong data-i18n="product.orange.meta2Value">Moisturizer</strong>
+              </div>
+              <div class="meta-item">
+                <span data-i18n="product.orange.meta3Label">Display Status</span>
+                <strong data-i18n="product.orange.meta3Value">Brand Page Ready</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h3 data-i18n="product.orange.featuresTitle">Why It Stands Out</h3>
+          </div>
+          <p data-i18n="product.orange.featuresText">
+            The page content below is written in a premium, flexible style suitable for future
+            packaging adjustments, product imaging replacement, and multilingual brand rollout.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="section-card feature-card">
+            <div class="feature-no">01</div>
+            <h4 data-i18n="product.orange.feature1Title">Refined Daily Cream</h4>
+            <p data-i18n="product.orange.feature1Text">
+              A polished moisturizer concept that aligns with a clean, sophisticated skincare brand presentation.
+            </p>
+          </div>
+
+          <div class="section-card feature-card">
+            <div class="feature-no">02</div>
+            <h4 data-i18n="product.orange.feature2Title">Radiance-Led Story</h4>
+            <p data-i18n="product.orange.feature2Text">
+              The naming and visual direction support a bright, energetic, and elegant product positioning.
+            </p>
+          </div>
+
+          <div class="section-card feature-card">
+            <div class="feature-no">03</div>
+            <h4 data-i18n="product.orange.feature3Title">Easy to Expand</h4>
+            <p data-i18n="product.orange.feature3Text">
+              Product claims, final net content, ingredient details, and shopping links can be added later without changing the page structure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="section-card story-card">
+            <h4 data-i18n="product.orange.story1Title">Formula Story</h4>
+            <p data-i18n="product.orange.story1Text">
+              Orange Radiance Cream is presented as a comfort-first daily cream within the Eins
+              collection, balancing soft texture, polished appearance, and an elevated skincare identity.
+              It is suitable as a hero moisturizer page for brand storytelling, investment presentation,
+              and future retail channel communication.
+            </p>
+          </div>
+
+          <div class="section-card story-card">
+            <h4 data-i18n="product.orange.story2Title">How to Use</h4>
+            <ul>
+              <li data-i18n="product.orange.story2Point1">
+                Apply after toner, serum, or essence as the moisturizing step of your routine.
+              </li>
+              <li data-i18n="product.orange.story2Point2">
+                Smooth evenly across face and neck with gentle upward motions.
+              </li>
+              <li data-i18n="product.orange.story2Point3">
+                Use morning and evening, or adjust according to your daily skincare needs.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h3 data-i18n="product.orange.visualTitle">Visual Content Ready Area</h3>
+          </div>
+          <p data-i18n="product.orange.visualText">
+            These three modules are prepared for future real product photography and detail imagery.
+            Keep the file names unchanged and only replace the image files in the orange-cream folder.
+          </p>
+        </div>
+
+        <div class="visual-strip">
+          <div class="section-card visual-card">
+            <img
+              src="assets/img/products/orange-cream/detail-1.jpg"
+              alt="Orange Radiance Cream Feature 1"
+              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+            />
+            <div class="visual-text">
+              <h4 data-i18n="product.orange.visual1Title">Hero Ingredient Visual</h4>
+              <p data-i18n="product.orange.visual1Text">
+                Reserved for future key visual storytelling, ingredient mood photography, or premium campaign art.
+              </p>
+            </div>
+          </div>
+
+          <div class="section-card visual-card">
+            <img
+              src="assets/img/products/orange-cream/detail-2.jpg"
+              alt="Orange Radiance Cream Feature 2"
+              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+            />
+            <div class="visual-text">
+              <h4 data-i18n="product.orange.visual2Title">Application Scene</h4>
+              <p data-i18n="product.orange.visual2Text">
+                Reserved for lifestyle imagery showing texture, use scenario, or premium packaging display.
+              </p>
+            </div>
+          </div>
+
+          <div class="section-card visual-card">
+            <img
+              src="assets/img/products/orange-cream/texture.jpg"
+              alt="Orange Radiance Cream Texture Visual"
+              onerror="this.src='assets/img/placeholders/product-placeholder.jpg';"
+            />
+            <div class="visual-text">
+              <h4 data-i18n="product.orange.visual3Title">Texture Close-Up</h4>
+              <p data-i18n="product.orange.visual3Text">
+                Reserved for cream texture imagery, swatch details, or formula finish presentation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h3 data-i18n="product.orange.specTitle">Product Information</h3>
+          </div>
+          <p data-i18n="product.orange.specText">
+            This section is intentionally structured for future product finalization and can be updated
+            after packaging, INCI, and SKU details are confirmed.
+          </p>
+        </div>
+
+        <div class="spec-grid">
+          <div class="section-card spec-card">
+            <span data-i18n="product.orange.spec1Label">Product Name</span>
+            <strong data-i18n="product.orange.spec1Value">Orange Radiance Cream</strong>
+          </div>
+
+          <div class="section-card spec-card">
+            <span data-i18n="product.orange.spec2Label">Category</span>
+            <strong data-i18n="product.orange.spec2Value">Face Cream</strong>
+          </div>
+
+          <div class="section-card spec-card">
+            <span data-i18n="product.orange.spec3Label">Image Folder</span>
+            <strong>assets/img/products/orange-cream/</strong>
+          </div>
+
+          <div class="section-card spec-card">
+            <span data-i18n="product.orange.spec4Label">Reserved Files</span>
+            <strong>cover.jpg / main.jpg / detail-1.jpg / detail-2.jpg / detail-3.jpg / texture.jpg</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="section-card cta-card">
+          <div>
+            <h3 data-i18n="product.orange.ctaBlockTitle">Interested in Eins Products?</h3>
+            <p data-i18n="product.orange.ctaBlockText">
+              Contact us for brand introduction, product cooperation, private label discussion,
+              or future retail and channel opportunities.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a href="partner.html" class="btn-secondary" data-i18n="product.orange.ctaBlockBtn1">View Partnership Page</a>
+            <a href="contact.html" class="btn-primary" data-i18n="product.orange.ctaBlockBtn2">Contact Eins</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>EINS</h4>
+          <p data-i18n="footer.brandText">
+            Science-inspired skincare with a refined, modern identity. Crafted for long-term value,
+            elegant presentation, and scalable brand growth.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="brand.html" data-i18n="nav.brand">Brand</a></li>
+            <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+            <li><a href="partner.html" data-i18n="nav.partner">Partner</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 data-i18n="footer.contactTitle">Contact</h4>
+          <p>
+            <a href="https://www.einsskincare.com/" target="_blank" rel="noopener">einsskincare.com</a><br />
+            <a href="contact.html" data-i18n="footer.contactLink">Send us an inquiry</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> Eins.</span>
+        <span data-i18n="footer.rights">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/lang.js"></script>
+  <script>
+    (function () {
+      const pageTranslations = {
+        en: {
+          "site.tagline": "Skincare",
+          "nav.home": "Home",
+          "nav.brand": "Brand",
+          "nav.products": "Products",
+          "nav.partner": "Partner",
+          "nav.contact": "Contact",
+
+          "breadcrumb.home": "Home",
+          "breadcrumb.products": "Products",
+
+          "product.orange.breadcrumb": "Orange Radiance Cream",
+          "product.orange.eyebrow": "Product Detail",
+          "product.orange.title": "Orange Radiance Cream",
+          "product.orange.heroText":
+            "A daily cream designed for a smoother, softer, and more radiant-looking finish, with a rich yet elegant feel that fits the refined identity of Eins.",
+
+          "product.orange.heroCard1Title": "Daily Comfort",
+          "product.orange.heroCard1Text":
+            "Creamy care created for everyday use and a nourished skin feel.",
+          "product.orange.heroCard2Title": "Radiant Finish",
+          "product.orange.heroCard2Text":
+            "Helps skin appear fresher, brighter, and naturally polished.",
+          "product.orange.heroCard3Title": "Brand-Ready Page",
+          "product.orange.heroCard3Text":
+            "Structured for future product imagery, claims, and channel presentation.",
+
+          "product.orange.badge": "Signature Cream",
+          "product.orange.summary":
+            "Created as a soft, elegant cream within the Eins skincare collection, this page presents a premium product structure ready for future final imagery, ingredient details, and retail information updates.",
+          "product.orange.point1":
+            "Helps support a smoother and more refined-looking skin appearance.",
+          "product.orange.point2":
+            "Rich cream texture with a comfortable finish suitable for daily routines.",
+          "product.orange.point3":
+            "Designed for brand presentation, product storytelling, and future partner use.",
+          "product.orange.cta1": "Inquiry Now",
+          "product.orange.cta2": "Become a Partner",
+
+          "product.orange.meta1Label": "Texture",
+          "product.orange.meta1Value": "Creamy & Smooth",
+          "product.orange.meta2Label": "Routine Step",
+          "product.orange.meta2Value": "Moisturizer",
+          "product.orange.meta3Label": "Display Status",
+          "product.orange.meta3Value": "Brand Page Ready",
+
+          "product.orange.featuresTitle": "Why It Stands Out",
+          "product.orange.featuresText":
+            "The page content below is written in a premium, flexible style suitable for future packaging adjustments, product imaging replacement, and multilingual brand rollout.",
+
+          "product.orange.feature1Title": "Refined Daily Cream",
+          "product.orange.feature1Text":
+            "A polished moisturizer concept that aligns with a clean, sophisticated skincare brand presentation.",
+          "product.orange.feature2Title": "Radiance-Led Story",
+          "product.orange.feature2Text":
+            "The naming and visual direction support a bright, energetic, and elegant product positioning.",
+          "product.orange.feature3Title": "Easy to Expand",
+          "product.orange.feature3Text":
+            "Product claims, final net content, ingredient details, and shopping links can be added later without changing the page structure.",
+
+          "product.orange.story1Title": "Formula Story",
+          "product.orange.story1Text":
+            "Orange Radiance Cream is presented as a comfort-first daily cream within the Eins collection, balancing soft texture, polished appearance, and an elevated skincare identity. It is suitable as a hero moisturizer page for brand storytelling, investment presentation, and future retail channel communication.",
+          "product.orange.story2Title": "How to Use",
+          "product.orange.story2Point1":
+            "Apply after toner, serum, or essence as the moisturizing step of your routine.",
+          "product.orange.story2Point2":
+            "Smooth evenly across face and neck with gentle upward motions.",
+          "product.orange.story2Point3":
+            "Use morning and evening, or adjust according to your daily skincare needs.",
+
+          "product.orange.visualTitle": "Visual Content Ready Area",
+          "product.orange.visualText":
+            "These three modules are prepared for future real product photography and detail imagery. Keep the file names unchanged and only replace the image files in the orange-cream folder.",
+          "product.orange.visual1Title": "Hero Ingredient Visual",
+          "product.orange.visual1Text":
+            "Reserved for future key visual storytelling, ingredient mood photography, or premium campaign art.",
+          "product.orange.visual2Title": "Application Scene",
+          "product.orange.visual2Text":
+            "Reserved for lifestyle imagery showing texture, use scenario, or premium packaging display.",
+          "product.orange.visual3Title": "Texture Close-Up",
+          "product.orange.visual3Text":
+            "Reserved for cream texture imagery, swatch details, or formula finish presentation.",
+
+          "product.orange.specTitle": "Product Information",
+          "product.orange.specText":
+            "This section is intentionally structured for future product finalization and can be updated after packaging, INCI, and SKU details are confirmed.",
+          "product.orange.spec1Label": "Product Name",
+          "product.orange.spec1Value": "Orange Radiance Cream",
+          "product.orange.spec2Label": "Category",
+          "product.orange.spec2Value": "Face Cream",
+          "product.orange.spec3Label": "Image Folder",
+          "product.orange.spec4Label": "Reserved Files",
+
+          "product.orange.ctaBlockTitle": "Interested in Eins Products?",
+          "product.orange.ctaBlockText":
+            "Contact us for brand introduction, product cooperation, private label discussion, or future retail and channel opportunities.",
+          "product.orange.ctaBlockBtn1": "View Partnership Page",
+          "product.orange.ctaBlockBtn2": "Contact Eins",
+
+          "footer.brandText":
+            "Science-inspired skincare with a refined, modern identity. Crafted for long-term value, elegant presentation, and scalable brand growth.",
+          "footer.quickLinks": "Quick Links",
+          "footer.contactTitle": "Contact",
+          "footer.contactLink": "Send us an inquiry",
+          "footer.rights": "All rights reserved."
+        },
+
+        zh: {
+          "site.tagline": "护肤品牌",
+          "nav.home": "首页",
+          "nav.brand": "品牌",
+          "nav.products": "产品",
+          "nav.partner": "招商合作",
+          "nav.contact": "联系我们",
+
+          "breadcrumb.home": "首页",
+          "breadcrumb.products": "产品中心",
+
+          "product.orange.breadcrumb": "橘灿面霜",
+          "product.orange.eyebrow": "产品详情",
+          "product.orange.title": "橘灿面霜",
+          "product.orange.heroText":
+            "一款面向日常护理的精致面霜页面模板，强调柔润肤感、细腻质地与自然透亮的视觉表达，契合 Eins 的高级护肤品牌调性。",
+
+          "product.orange.heroCard1Title": "日常舒润",
+          "product.orange.heroCard1Text":
+            "适合作为每日护肤流程中的面霜步骤，带来柔和舒适的肤感体验。",
+          "product.orange.heroCard2Title": "透亮感表达",
+          "product.orange.heroCard2Text":
+            "页面文案聚焦细腻、明亮、精致的产品印象，适合后续品牌传播使用。",
+          "product.orange.heroCard3Title": "可直接扩展",
+          "product.orange.heroCard3Text":
+            "后续可直接补入真实产品图、正式功效文案、成分信息与购买入口。",
+
+          "product.orange.badge": "主推面霜",
+          "product.orange.summary":
+            "本页以 Eins 系列中的高端面霜为核心展示方向，已搭建好适合后续替换实拍图、补充正式成分信息与零售内容的完整产品页结构。",
+          "product.orange.point1":
+            "页面表达聚焦柔滑、细腻、透亮的高端护肤感受。",
+          "product.orange.point2":
+            "适合作为品牌官网主推单品详情页或招商展示页使用。",
+          "product.orange.point3":
+            "后续仅需替换对应图片与补充最终产品信息，无需改动页面结构。",
+          "product.orange.cta1": "立即咨询",
+          "product.orange.cta2": "查看合作",
+
+          "product.orange.meta1Label": "质地",
+          "product.orange.meta1Value": "柔润乳霜质地",
+          "product.orange.meta2Label": "护肤步骤",
+          "product.orange.meta2Value": "面霜",
+          "product.orange.meta3Label": "页面状态",
+          "product.orange.meta3Value": "可用于官网展示",
+
+          "product.orange.featuresTitle": "产品页亮点",
+          "product.orange.featuresText":
+            "这一版内容采用高级、灵活的产品表达方式，便于后续包装信息、图片素材和多语言内容继续完善。",
+
+          "product.orange.feature1Title": "适合品牌主推",
+          "product.orange.feature1Text":
+            "页面结构和视觉节奏适合用于展示品牌主推面霜，整体更偏高端、简洁、耐看。",
+          "product.orange.feature2Title": "符合橘灿概念",
+          "product.orange.feature2Text":
+            "命名和文案调性围绕明亮、柔润、焕亮感展开，适合后续继续深化成分故事。",
+          "product.orange.feature3Title": "后续扩展方便",
+          "product.orange.feature3Text":
+            "净含量、正式成分、功效说明、购买链接等内容都可后续直接补入。",
+
+          "product.orange.story1Title": "产品故事",
+          "product.orange.story1Text":
+            "橘灿面霜在官网中可作为 Eins 代表性面霜单品进行展示，整体定位强调舒适肤感、细腻质地与优雅护肤体验。当前版本更偏品牌展示与招商展示用途，适合后续继续叠加真实包装图、成分表、渠道合作资料及零售信息。",
+          "product.orange.story2Title": "使用方式",
+          "product.orange.story2Point1":
+            "建议在爽肤水、精华或精华露之后使用，作为日常护肤的面霜步骤。",
+          "product.orange.story2Point2":
+            "取适量均匀涂抹于面部与颈部，轻柔推开并按摩吸收。",
+          "product.orange.story2Point3":
+            "可根据个人护理习惯于早晚使用。",
+
+          "product.orange.visualTitle": "图片内容预留区",
+          "product.orange.visualText":
+            "下面三个模块已为后续真实产品图和卖点图预留位置。保持 orange-cream 文件夹中的文件名不变，未来直接替换同名图片即可。",
+          "product.orange.visual1Title": "核心卖点图",
+          "product.orange.visual1Text":
+            "可替换为主成分概念图、品牌主视觉或重点卖点海报。",
+          "product.orange.visual2Title": "使用场景图",
+          "product.orange.visual2Text":
+            "可替换为产品摆拍图、使用氛围图或包装展示图。",
+          "product.orange.visual3Title": "质地图",
+          "product.orange.visual3Text":
+            "可替换为膏体质地特写、涂抹延展图或肤感表现图。",
+
+          "product.orange.specTitle": "产品信息",
+          "product.orange.specText":
+            "本区块已按后续正式产品落地需求预留，可在包装、INCI、SKU 等信息确认后直接更新。",
+          "product.orange.spec1Label": "产品名称",
+          "product.orange.spec1Value": "橘灿面霜",
+          "product.orange.spec2Label": "产品类别",
+          "product.orange.spec2Value": "面部面霜",
+          "product.orange.spec3Label": "图片目录",
+          "product.orange.spec4Label": "预留文件名",
+
+          "product.orange.ctaBlockTitle": "对 Eins 产品感兴趣？",
+          "product.orange.ctaBlockText":
+            "欢迎联系我们获取品牌介绍、产品合作、贴牌定制或后续零售与渠道合作信息。",
+          "product.orange.ctaBlockBtn1": "查看招商页",
+          "product.orange.ctaBlockBtn2": "联系 Eins",
+
+          "footer.brandText":
+            "以科学护肤为灵感，呈现现代、精致、有长期价值感的护肤品牌形象。",
+          "footer.quickLinks": "快捷链接",
+          "footer.contactTitle": "联系信息",
+          "footer.contactLink": "提交咨询",
+          "footer.rights": "保留所有权利。"
+        },
+
+        fr: {
+          "site.tagline": "Soin de la peau",
+          "nav.home": "Accueil",
+          "nav.brand": "Marque",
+          "nav.products": "Produits",
+          "nav.partner": "Partenariat",
+          "nav.contact": "Contact",
+
+          "breadcrumb.home": "Accueil",
+          "breadcrumb.products": "Produits",
+
+          "product.orange.breadcrumb": "Crème Éclat Orange",
+          "product.orange.eyebrow": "Détail Produit",
+          "product.orange.title": "Crème Éclat Orange",
+          "product.orange.heroText":
+            "Une crème de soin quotidienne conçue pour une peau visiblement plus douce, plus lisse et plus lumineuse, avec une sensation riche mais élégante fidèle à l’identité raffinée de Eins.",
+
+          "product.orange.heroCard1Title": "Confort Quotidien",
+          "product.orange.heroCard1Text":
+            "Un soin crémeux pensé pour un usage quotidien et une sensation nourrie.",
+          "product.orange.heroCard2Title": "Fini Lumineux",
+          "product.orange.heroCard2Text":
+            "Aide la peau à paraître plus fraîche, plus lumineuse et naturellement soignée.",
+          "product.orange.heroCard3Title": "Page Prête à Déployer",
+          "product.orange.heroCard3Text":
+            "Structure préparée pour accueillir ultérieurement les images, les allégations et la présentation produit.",
+
+          "product.orange.badge": "Crème Signature",
+          "product.orange.summary":
+            "Conçue comme une crème douce et élégante au sein de la collection Eins, cette page présente une structure premium prête à accueillir les visuels finaux, les détails ingrédients et les informations retail.",
+          "product.orange.point1":
+            "Aide à soutenir une apparence de peau plus lisse et plus raffinée.",
+          "product.orange.point2":
+            "Texture riche et confortable adaptée aux routines quotidiennes.",
+          "product.orange.point3":
+            "Pensée pour la présentation de marque, le storytelling produit et l’usage futur en partenariat.",
+          "product.orange.cta1": "Faire une demande",
+          "product.orange.cta2": "Devenir partenaire",
+
+          "product.orange.meta1Label": "Texture",
+          "product.orange.meta1Value": "Crémeuse & Soyeuse",
+          "product.orange.meta2Label": "Étape Routine",
+          "product.orange.meta2Value": "Hydratant",
+          "product.orange.meta3Label": "Statut d’Affichage",
+          "product.orange.meta3Value": "Page Marque Prête",
+
+          "product.orange.featuresTitle": "Pourquoi Elle Se Distingue",
+          "product.orange.featuresText":
+            "Le contenu ci-dessous adopte un style premium et souple, adapté aux futures mises à jour d’emballage, au remplacement des visuels produit et au déploiement multilingue de la marque.",
+
+          "product.orange.feature1Title": "Crème Quotidienne Raffinée",
+          "product.orange.feature1Text":
+            "Un concept hydratant élégant qui correspond à une présentation skincare propre et sophistiquée.",
+          "product.orange.feature2Title": "Positionnement Axé Éclat",
+          "product.orange.feature2Text":
+            "Le nom et la direction visuelle soutiennent un positionnement lumineux, énergique et élégant.",
+          "product.orange.feature3Title": "Facile à Étendre",
+          "product.orange.feature3Text":
+            "Les allégations produit, le contenu net final, les détails ingrédients et les liens d’achat peuvent être ajoutés plus tard sans modifier la structure.",
+
+          "product.orange.story1Title": "Histoire de la Formule",
+          "product.orange.story1Text":
+            "La Crème Éclat Orange est présentée comme une crème quotidienne centrée sur le confort au sein de la collection Eins, équilibrant texture douce, apparence soignée et identité skincare haut de gamme. Elle convient parfaitement à une page héros destinée au storytelling de marque, à la présentation commerciale et à la communication retail future.",
+          "product.orange.story2Title": "Conseils d’Utilisation",
+          "product.orange.story2Point1":
+            "Appliquer après la lotion, le sérum ou l’essence comme étape hydratante de la routine.",
+          "product.orange.story2Point2":
+            "Répartir uniformément sur le visage et le cou par mouvements doux vers le haut.",
+          "product.orange.story2Point3":
+            "Utiliser matin et soir, ou ajuster selon les besoins de votre routine.",
+
+          "product.orange.visualTitle": "Zone Prête pour le Contenu Visuel",
+          "product.orange.visualText":
+            "Ces trois modules sont préparés pour les futures photographies produit et visuels détaillés. Conservez les noms de fichiers inchangés et remplacez seulement les images dans le dossier orange-cream.",
+          "product.orange.visual1Title": "Visuel Ingrédient Héros",
+          "product.orange.visual1Text":
+            "Réservé pour un futur visuel clé, une ambiance ingrédient ou une création de campagne premium.",
+          "product.orange.visual2Title": "Scène d’Application",
+          "product.orange.visual2Text":
+            "Réservé pour une image lifestyle montrant la texture, l’usage ou la présentation du packaging.",
+          "product.orange.visual3Title": "Zoom Texture",
+          "product.orange.visual3Text":
+            "Réservé pour une image de texture, un swatch ou la présentation du fini formule.",
+
+          "product.orange.specTitle": "Informations Produit",
+          "product.orange.specText":
+            "Cette section est volontairement structurée pour la finalisation future du produit et pourra être mise à jour après validation du packaging, de l’INCI et des références SKU.",
+          "product.orange.spec1Label": "Nom du Produit",
+          "product.orange.spec1Value": "Crème Éclat Orange",
+          "product.orange.spec2Label": "Catégorie",
+          "product.orange.spec2Value": "Crème Visage",
+          "product.orange.spec3Label": "Dossier Images",
+          "product.orange.spec4Label": "Fichiers Réservés",
+
+          "product.orange.ctaBlockTitle": "Intéressé par les produits Eins ?",
+          "product.orange.ctaBlockText":
+            "Contactez-nous pour une présentation de la marque, une coopération produit, un projet private label ou de futures opportunités retail et distribution.",
+          "product.orange.ctaBlockBtn1": "Voir la page partenariat",
+          "product.orange.ctaBlockBtn2": "Contacter Eins",
+
+          "footer.brandText":
+            "Une approche skincare inspirée par la science, avec une identité raffinée, moderne et pensée pour une croissance durable.",
+          "footer.quickLinks": "Liens Rapides",
+          "footer.contactTitle": "Contact",
+          "footer.contactLink": "Envoyer une demande",
+          "footer.rights": "Tous droits réservés."
+        }
+      };
+
+      function getCurrentLang() {
+        return (
+          localStorage.getItem("language") ||
+          localStorage.getItem("lang") ||
+          document.documentElement.getAttribute("lang") ||
+          "en"
+        );
+      }
+
+      function setCurrentLang(lang) {
+        localStorage.setItem("language", lang);
+        localStorage.setItem("lang", lang);
+        document.documentElement.setAttribute("lang", lang);
+      }
+
+      function applyPageTranslations(lang) {
+        const dict = pageTranslations[lang] || pageTranslations.en;
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          const key = el.getAttribute("data-i18n");
+          if (dict[key]) {
+            el.textContent = dict[key];
+          }
+        });
+
+        document.title =
+          lang === "zh"
+            ? "Eins | 橘灿面霜"
+            : lang === "fr"
+            ? "Eins | Crème Éclat Orange"
+            : "Eins | Orange Radiance Cream";
+
+        document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+          btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+        });
+      }
+
+      document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const lang = btn.getAttribute("data-lang");
+          setCurrentLang(lang);
+          applyPageTranslations(lang);
+        });
+      });
+
+      applyPageTranslations(getCurrentLang());
+    })();
+
+    (function () {
+      const mainImage = document.getElementById("mainProductImage");
+      const thumbButtons = document.querySelectorAll(".thumb-btn");
+
+      thumbButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const newSrc = button.getAttribute("data-full");
+          if (newSrc && mainImage) {
+            mainImage.src = newSrc;
+          }
+          thumbButtons.forEach(function (btn) {
+            btn.classList.remove("active");
+          });
+          button.classList.add("active");
+        });
+      });
+    })();
+
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
